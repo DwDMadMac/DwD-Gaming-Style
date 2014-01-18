@@ -35,7 +35,17 @@
 <body{xen:if {$bodyClasses}, ' class="{$bodyClasses}"'}>
 <xen:hook name="body">
 
-<xen:if is="{$visitor.is_moderator} || {$visitor.is_admin}">
+    <xen:comment>
+        Staff Only = 16
+        Founder = 13
+        Community Operator = 3
+        Community Admin = 12
+        Community Moderator = 4
+        MC Network Operator = 11
+        MC Network Admin = 10
+        Mc Network Moderator = 9
+    </xen:comment>
+<xen:if is="{xen:helper ismemberof, $visitor, 16}">
 	<xen:include template="moderator_bar" />
 <xen:elseif is="!{$visitor.user_id} && !{$hideLoginBar}" />
 	<xen:include template="login_bar" />
