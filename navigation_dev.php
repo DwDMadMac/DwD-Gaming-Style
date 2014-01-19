@@ -1,3 +1,6 @@
+<div id="navigation" class="pageWidth {xen:if $canSearch, withSearch}">
+    <div class="pageContent">
+            
         <div class="wrap">
             <div class="header styled">
                 <div class="inner">
@@ -12,9 +15,9 @@
                 <div class="nav">
                     <ul id="nav">
                     <xen:if is="{$showHomeLink}">
-                        <li class="home PopupClosed"><a href="home"><span class='l'><a href="{$homeLink}" class="navLink">Home</a></span></a></li>
+                        <li class="home PopupClosed navi"><a href="home"><span class='l'><a href="{$homeLink}" class="navLink">Home</a></span></a></li>
                     </xen:if>
-                        <li class="dropdown" data-nav-colour='1494c5'><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class='l'>Forums<span class="caret"></span></span></a>
+                        <li class="dropdown navi" data-nav-colour='1494c5'><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class='l'>Forums<span class="caret"></span></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{xen:link 'board/dwd-network/'}">Minecraft Network</a></li>
                                 <li><a href="{xen:link 'leage-of-leagends'}">League Of Legends</a></li>
@@ -24,12 +27,14 @@
 
                             </ul>
                         </li>
-                        <li><a href="home"><span class='l'>Communities</span></a></li>
-                        <li><a href="home"><span class='l'>Servers</span></a></li>
-                        <li><a href="home"><span class='l'>Wiki</span></a></li>
-                        <li><a href="home"><span class='l'>Staff</span></a></li>
-                        <li><a href="home"><span class='l'>Support</span></a></li>
+                        <li class="navi"><a href="home"><span class='l'>Communities</span></a></li>
+                        <li class="navi"><a href="home"><span class='l'>Servers</span></a></li>
+                        <li class="navi"><a href="home"><span class='l'>Wiki</span></a></li>
+                        <li class="navi"><a href="home"><span class='l'>Staff</span></a></li>
+                        <li class="navi"><a href="home"><span class='l'>Support</span></a></li>
                     </ul>
                 </div>
             </div>
         </div>
+    </div>
+</div>
