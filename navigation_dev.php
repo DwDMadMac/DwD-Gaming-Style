@@ -20,7 +20,7 @@
                         <li class="dropdown navi" data-nav-colour='1494c5'><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class='l'>Forums<span class="caret"></span></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{xen:link 'board/dwd-network/'}">Minecraft Network</a></li>
-                                <li><a href="{xen:link 'leage-of-leagends'}">League Of Legends</a></li>
+                                <li><a href="{xen:link 'league-of-leagends'}">League Of Legends</a></li>
                                 <li><a href="{xen:link 'board/gta-online/'}">GTA Online</a></li>
                                 <li><a href="{xen:link 'board/call-of-duty'} ">Call of Duty</a></li>
                                 <li><a href="{xen:link ''}">Counter Strike</a></li>
