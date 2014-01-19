@@ -1,9 +1,9 @@
-#header
+/*#header
 {
 	@property "header";
 	background-color: @primaryMedium;
 	@property "/header";
-}
+}*/
 
 {xen:helper clearfix, '#header .pageWidth .pageContent'}
 
