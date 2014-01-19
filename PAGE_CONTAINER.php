@@ -30,6 +30,10 @@
 	<xen:if is="{$pageDescription.content} AND !{$pageDescription.skipmeta} AND !{$head.description}"><meta name="description" content="{xen:string wordTrim, {xen:helper stripHtml, {xen:raw $pageDescription.content}}, 200}" /></xen:if>
 	<xen:if is="{$head}"><xen:foreach loop="$head" value="$headElement">{xen:raw $headElement}</xen:foreach></xen:if>
         <!-- Custom Navi JS -->
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="easing.jquery.min.js"></script>
+        <script type="text/javascript" src="colour.jquery.min.js"></script>
+        <script type="text/javascript" src="bootstrap.min.js"></script>
         <script type="text/javascript">
             $(function() {
                 $("[title]").tooltip();

@@ -1,6 +1,5 @@
         <div class="wrap">
             <div class="header styled">
-                <div class="userbar">Log in or Sign up</div>
                 <div class="inner">
                     <img src="BioHazard.png" class="pull-left" />
 
