@@ -3,6 +3,17 @@
 	height: {xen:calc '@headerTabHeight * 2 + 2'}px;
 	position: relative;
 }
+#navigation
+{
+        padding-top: 50px;
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+}
+.pageWidth
+{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+}
 
 #navigation .menuIcon
 {
