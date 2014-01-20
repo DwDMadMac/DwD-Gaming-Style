@@ -16,16 +16,28 @@
                     <xen:if is="{$showHomeLink}">
                         <li class="navi"><a href="htt://dwdg.net/home"><span class='l'>Home</span></a></li>
                     </xen:if>
-                        <li class="dropdown navi active" data-nav-colour='1494c5'><a href="/board" class="dropdown-toggle" data-toggle="dropdown"><span class='l'>Forums<span class="caret"></span></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{xen:link 'board/dwd-network/'}">Minecraft Network</a></li>
-                                <li><a href="{xen:link 'league-of-leagends'}">League Of Legends</a></li>
-                                <li><a href="{xen:link 'board/gta-online/'}">GTA Online</a></li>
-                                <li><a href="{xen:link 'board/call-of-duty'} ">Call of Duty</a></li>
-                                <li><a href="{xen:link ''}">Counter Strike</a></li>
-
-                            </ul>
+		<!-- forums -->
+		<xen:if is="{$tabs.forums}">
+                        <li class="navi forums {xen:if $tabs.forums.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour='1494c5'>
+                            <a href="/board" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class='l'>
+                                    Forums
+                                    <span class="SplitCtrl caret" rel="Menu"></span>
+                                </span>
+                            </a>
+                            <div class=" forumsTabLinks">
+                                <ul class="dropdown-menu secondaryContent blockLinksList">
+                                    <xen:hook name="navigation_tabs_forums">
+                                        <li><a href="{xen:link 'board/dwd-network/'}">Minecraft Network</a></li>
+                                        <li><a href="{xen:link 'league-of-leagends'}">League Of Legends</a></li>
+                                        <li><a href="{xen:link 'board/gta-online/'}">GTA Online</a></li>
+                                        <li><a href="{xen:link 'board/call-of-duty'} ">Call of Duty</a></li>
+                                        <li><a href="{xen:link ''}">Counter Strike</a></li>
+                                    </xen:hook>
+                                </ul>
+                            </div>
                         </li>
+		</xen:if>
                         <li class="navi" data-nav-colour="2d46b2"><a href="home"><span class='l'>Servers</span></a></li>
                         <li class="navi" data-nav-colour="c329be"><a href="home"><span class='l'>Wiki</span></a></li>
                         <li class="navi" data-nav-colour="d39b38"><a href="home"><span class='l'>Staff</span></a></li>
