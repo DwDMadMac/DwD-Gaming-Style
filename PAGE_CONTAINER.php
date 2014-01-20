@@ -21,6 +21,9 @@
 	<link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style={xen:urlencode $_styleId}&amp;dir={$visitorLanguage.text_direction}&amp;d={$visitorStyle.last_modified_date}" />
 	<!--XenForo_Require:CSS-->	
 	{xen:helper ignoredCss, {$visitor.ignoredUsers}}
+        <xen:if is="{$contentTemplate} == 'navigation'">
+        <link rel="stylesheet" type="text/css" href="http://static.downwithdestruction.net/theme/css/bootstrap.min.css" />
+        </xen:if>
 
 	<xen:include template="google_analytics" />
 	<xen:include template="page_container_js_head" />
@@ -29,56 +32,6 @@
 	<link rel="alternate" type="application/rss+xml" title="{xen:phrase rss_feed_for_x, 'title={$xenOptions.boardTitle}'}" href="{xen:link forums/-/index.rss}" />
 	<xen:if is="{$pageDescription.content} AND !{$pageDescription.skipmeta} AND !{$head.description}"><meta name="description" content="{xen:string wordTrim, {xen:helper stripHtml, {xen:raw $pageDescription.content}}, 200}" /></xen:if>
 	<xen:if is="{$head}"><xen:foreach loop="$head" value="$headElement">{xen:raw $headElement}</xen:foreach></xen:if>
-        <!-- Custom Navi JS -->
-        <script type="text/javascript" src="jquery.min.js"></script>
-        <script type="text/javascript" src="easing.jquery.min.js"></script>
-        <script type="text/javascript" src="colour.jquery.min.js"></script>
-        <script type="text/javascript" src="bootstrap.min.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                $("[title]").tooltip();
-                if ($('#nav').length) {
-                    var $el, leftPos, newWidth, newColour,
-                            $mainNav = $("#nav");
-                    $mainNav.append("<li id='nav-line'></li>");
-                    
-                    if(!$mainNav.find(".active:first").length) {
-                        $mainNav.find("li:first").addClass("active");
-                    }
-                    
-                    var $magicLine = $("#nav-line");
-                    $magicLine
-                            .width($mainNav.find(".active:first").width())
-                            .css("left", $mainNav.find(".active:first").position().left)
-                            .data("origLeft", $mainNav.find(".active:first").position().left)
-                            .data("origWidth", $mainNav.find(".active:first").width())
-                            .data("bgColour", ($mainNav.find(".active:first").attr("data-nav-colour")) ? $mainNav.find(".active:first").data("nav-colour") : '78250e');
-                    
-                    $("#nav li a").hover(function() {
-                        $el = $(this);
-                        leftPos = $el.offset().left - $mainNav.offset().left;
-                        newWidth = $el.parent().width();
-                        newColour = "#" + ($el.parent().attr("data-nav-colour")) ? $el.parent().data("nav-colour") : '78250e';
-                        console.log(newColour);
-                        $magicLine.stop().animate({
-                            left: leftPos,
-                            width: newWidth,
-                            backgroundColor: newColour
-                        }, 800, "easeOutBack");
-                    }, function() {
-                        $magicLine
-                                .data("origLeft", $mainNav.find(".active:first").position().left)
-                                .data("origWidth", $mainNav.find(".active:first").width())
-                                .data("bgColour", ($mainNav.find(".active:first").attr("data-nav-colour")) ? $mainNav.data(".active:first").data("nav-colour") : '78250e');
-                        $magicLine.stop().animate({
-                            left: $magicLine.data("origLeft"),
-                            width: $magicLine.data("origWidth"),
-                            backgroundColor: $magicLine.data("bgColour")
-                        }, 800, "easeOutBack");
-                    });
-                }
-            });
-        </script>
 </xen:hook>
 </head>
 
