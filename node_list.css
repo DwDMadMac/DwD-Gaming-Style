@@ -1,0 +1,483 @@
+.nodeList { zoom: 1; }
+.nodeList .node {
+	zoom: 1;
+	vertical-align: bottom;
+}
+
+.nodeList .node.level_1
+{
+	margin-bottom: 20px;
+}
+
+.nodeList .node.level_1:last-child
+{
+	margin-bottom: 0;
+}
+
+.nodeList .node.groupNoChildren + .node.groupNoChildren
+{
+	margin-top: -20px;
+}
+
+.node .nodeInfo
+{
+	overflow: hidden; zoom: 1;
+	position: relative;
+}
+
+	.node .nodeInfo.primaryContent,
+	.node .nodeInfo.secondaryContent
+	{
+		padding: 0;
+	}
+
+.node .nodeIcon
+{
+	@property "nodeIcon";
+	margin: 10px 0 10px 10px;
+	float: left;
+	width: 36px;
+	height: 36px;
+	@property "/nodeIcon";	
+}
+
+	.node .forumNodeInfo .nodeIcon,
+	.node .categoryForumNodeInfo .nodeIcon
+	{
+		@property "nodeIconForum";
+		background-image: url('@imagePath/xenforo/node-sprite.png');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		@property "/nodeIconForum";
+	}
+
+	.node .forumNodeInfo.unread .nodeIcon,
+	.node .categoryForumNodeInfo.unread .nodeIcon
+	{
+		@property "nodeIconForumUnread";
+		background-image: url('@imagePath/xenforo/node-sprite.png');
+		background-repeat: no-repeat;
+		background-position: -36px 0;
+		@property "/nodeIconForumUnread";
+	}
+
+	.node .pageNodeInfo .nodeIcon
+	{
+		@property "nodeIconPage";
+		background-image: url('@imagePath/xenforo/node-sprite.png');
+		background-repeat: no-repeat;
+		background-position: -72px 0;
+		@property "/nodeIconPage";
+	}
+
+	.node .linkNodeInfo .nodeIcon
+	{
+		@property "nodeIconLink";
+		background-image: url('@imagePath/xenforo/node-sprite.png');
+		background-repeat: no-repeat;
+		background-position: -108px 0;
+		@property "/nodeIconLink";
+	}
+
+.node .nodeText
+{
+	@property "nodeText";
+	margin: 10px 270px 10px 56px;
+	@property "/nodeText";
+}
+
+	.node .nodeText .nodeTitle
+	{	
+		@property "nodeTitle";
+		font-size: 12pt;
+		@property "/nodeTitle";
+	}
+	
+		.node .unread .nodeText .nodeTitle
+		{
+			@property "nodeTitleUnread";
+			font-weight: bold;
+			@property "/nodeTitleUnread";
+		}
+
+	.node .nodeDescription
+	{
+		@property "nodeDescription";
+		font-size: 11px;
+		@property "/nodeDescription";
+	}
+	
+	.hasJs .node .nodeDescriptionTooltip
+	{
+		/* will be shown as a tooltip */
+		display: none;
+	}
+	
+	.Touch .node .nodeDescriptionTooltip
+	{
+		/* touch browsers don't see description tooltips */
+		display: block;
+	}
+
+	.node .nodeStats
+	{
+		@property "nodeStats";
+		font-size: 11px;
+		margin-top: 2px;
+		@property "/nodeStats";
+	}
+	
+	.node .nodeExtraNote
+	{
+		text-align: right;
+		font-size: 11px;
+		color: @mutedTextColor;
+	}
+	
+	.node .subForumList
+	{
+		overflow: hidden; *zoom: 1;
+		margin: -5px 0 @nodeText.margin-bottom;
+		margin-left: @nodeText.margin-left;
+	}
+	
+		.node .subForumList li
+		{
+			float: left;
+			width: 31%;
+			margin: 2px 0 2px 2%;
+		}
+		
+			.node .subForumList li .nodeTitle
+			{
+				font-size: 11px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			
+			.node .subForumList .unread .nodeTitle
+			{
+				@property "nodeTitleUnread";
+			font-weight: bold;
+			@property "/nodeTitleUnread";
+			}
+		
+			.node .subForumList li ol,
+			.node .subForumList li ul
+			{
+				display: none;
+			}
+
+.node .nodeLastPost
+{
+	@property "secondaryContent";
+	background: @primaryLightest url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top;
+	padding: 10px;
+	border-bottom: 1px solid @primaryLighterStill;
+	@property "/secondaryContent";
+	
+	@property "nodeLastPost";
+	font-size: 11px;
+	padding: 3px 10px;
+	margin: 10px;
+	border: 1px solid @primaryLighterStill;
+	border-radius: 3px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 14px;
+	white-space: nowrap;
+	word-wrap: normal;
+	overflow: hidden;
+	width: 210px;
+	height: 28px;
+	@property "/nodeLastPost";
+}
+
+.node .nodeLastPost .lastThreadTitle
+{
+	text-overflow: ellipsis;
+	max-width: 100%;
+	display: block;
+	overflow: hidden;
+}
+
+	.node .nodeLastPost .lastThreadMeta
+	{
+		display: block;
+	}
+
+	.node .nodeLastPost .noMessages
+	{
+		line-height: 28px;
+	}
+
+.node .nodeControls
+{
+	position: absolute;
+	top: 0;
+	right: {xen:calc '@nodeLastPost.border-left-width + @nodeLastPost.padding-left + @nodeLastPost.width + @nodeLastPost.padding-right + @nodeLastPost.border-right-width + @nodeLastPost.margin-right'}px;
+	margin: 20px 0;
+}
+
+	.node .tinyIcon
+	{
+		@property "nodeTinyIcon";
+		background: transparent url('@imagePath/xenforo/xenforo-ui-sprite.png') no-repeat -112px -16px;
+		margin: 1px 4px;
+		display: block;
+		white-space: nowrap;
+		text-indent: 9999px;
+		overflow: hidden;
+		opacity: 0.25;
+		width: 14px;
+		height: 14px;
+		@property "/nodeTinyIcon";
+	}
+
+	.node .nodeInfo:hover .tinyIcon[href],
+	.Touch .node .tinyIcon
+	{
+		@property "nodeTinyIconHover";
+		opacity: 1;
+		@property "/nodeTinyIconHover";
+	}
+
+		/*.node .feedIcon
+		{
+			background: transparent url('@imagePath/xenforo/xenforo-ui-sprite.png') no-repeat -112px -16px;
+		}*/
+
+/* description tooltip */
+
+.nodeDescriptionTip
+{
+	@property "nodeDescriptionTip";
+	padding: 4px 10px;
+	margin-top: -22px;
+	line-height: 1.5;
+	width: 350px;
+	height: auto;
+	@property "/nodeDescriptionTip";
+}
+
+	.nodeDescriptionTip .arrow
+	{
+		@property "nodeDescriptionTipArrow";
+		border: 6px solid transparent;
+		border-right-color: @tooltip.background-color;
+		border-left: 1px none black;
+		top: 6px;
+		left: -6px;
+		bottom: auto;
+		@property "/nodeDescriptionTipArrow";
+	}
+	
+	.nodeDescriptionTip.arrowBottom .arrow
+	{
+		top: auto;
+		left: 10px;
+		bottom: -6px;
+		border: 6px solid transparent;
+		border-top-color: @tooltip.background-color;
+		border-bottom: 1px none black;
+	}
+	
+/* main area - used for L2 categories and most other nodes */
+
+.nodeList .categoryForumNodeInfo,
+.nodeList .forumNodeInfo,
+.nodeList .pageNodeInfo,
+.nodeList .linkNodeInfo
+{
+	@property "primaryContent";
+	background-color: @contentBackground;
+	padding: 10px;
+	border-bottom: 1px solid @primaryLighterStill;
+	@property "/primaryContent";
+	
+	padding: 0;
+}
+
+/* category strip - used for L1 categories and group headers */
+
+.nodeList .categoryStrip
+{
+	@property "subHeading";
+	font-size: 11px;
+	color: @secondaryDarker;
+	background: @secondaryLighter url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top;
+	padding: 5px 10px;
+	margin: 3px auto 0;
+	border-top: 1px solid @secondaryLighter;
+	border-bottom: 1px solid @secondaryLight;
+	@property "/subHeading";
+	
+	@property "categoryStrip";
+	padding: 5px 10px;
+	margin: 0;
+	border-bottom-color: @subHeading.border-bottom-color;
+	border-radius: 5px;
+	min-height: 6px;
+	@property "/categoryStrip";
+}
+
+	.nodeList .categoryStrip .nodeTitle
+	{
+		@property "categoryStripTitle";
+		font-size: 10pt;
+		color: @secondaryDarker;
+		@property "/categoryStripTitle";
+	}
+	
+		.nodeList .categoryStrip .nodeTitle a
+		{
+			color: @categoryStripTitle.color;
+		}
+
+	.nodeList .categoryStrip .nodeDescription
+	{
+		@property "categoryStripDescription";
+		font-size: 10px;
+		color: @secondaryDarker;
+		@property "/categoryStripDescription";
+	}
+	
+		.nodeList .categoryStrip .nodeDescription a
+		{
+			color: @categoryStripDescription.color;
+		}
+
+.nodeList .node.groupNoChildren + .node.groupNoChildren .categoryStrip
+{
+	display: none;
+}
+
+/* node stats area */
+
+.nodeStats
+{
+	overflow: hidden; zoom: 1;
+}
+
+.nodeStats dl,
+.subForumsPopup
+{
+	float: left;
+	display: block;
+	margin-right: 3px;
+}
+
+.subForumsPopup.Popup .PopupControl.PopupOpen
+{
+	background-image: none;
+}
+
+.subForumsPopup a.PopupControl
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.subForumsPopup .dt
+{
+	color: @mutedTextColor;
+}
+
+.subForumsPopup .PopupOpen .dt
+{
+	color: @body.color;
+}
+
+.subForumsMenu .node .node /* for depths 2+ */
+{
+	padding-left: 10px;
+}
+
+	.subForumsMenu .node .nodeTitle
+	{
+		font-size: 11px;
+	}
+	
+	.subForumsMenu .node .unread .nodeTitle
+	{
+		@property "nodeTitleUnread";
+		font-weight: bold;
+		@property "/nodeTitleUnread";
+	}
+	
+/** new discussion button below nodelist **/
+
+.nodeListNewDiscussionButton
+{
+	margin-top: 10px;
+	text-align: right;
+}
+
+<xen:if is="@enableResponsive">
+@media (max-width:@maxResponsiveMediumWidth)
+{
+	.Responsive .node .nodeText
+	{
+		margin-right: 0;
+	}
+	
+	.Responsive.Touch .node .nodeDescriptionTooltip,
+	.Responsive .node .nodeDescription
+	{
+		display: none;
+	}
+
+	.Responsive .node .nodeLastPost
+	{
+		position: static;
+		height: auto;
+		width: auto;
+		background: none;
+		border: none;
+		padding: 0;
+		margin: -{xen:calc '@nodeText.margin-bottom - 2'}px 0 @nodeText.margin-bottom @nodeText.margin-left;
+	}
+	
+		.Responsive .node .nodeLastPost .noMessages 
+		{
+			display: none;
+		}
+		
+		.Responsive .node .nodeLastPost .lastThreadTitle,
+		.Responsive .node .nodeLastPost .lastThreadUser
+		{
+			display: none;
+		}
+				
+		.Responsive .node .nodeLastPost .lastThreadDate:before
+		{
+			content: attr(data-latest);
+		}
+
+	.Responsive .node .nodeControls
+	{
+		display: none;
+	}
+		
+	.Responsive .node .subForumList
+	{
+		display: none;
+	}
+	
+	.Responsive .nodeDescriptionTip
+	{
+		width: auto;
+		max-width: 350px;
+	}
+}
+
+@media (max-width:@maxResponsiveNarrowWidth)
+{
+	.Responsive .subForumsPopup
+	{
+		display: none;
+	}
+}
+</xen:if>
