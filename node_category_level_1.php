@@ -12,11 +12,13 @@
 		
 	</div>
 	
-	<xen:if is="{$renderedChildren}">		
+<xen:comment>
+        <xen:if is="{$renderedChildren}">		
 		<ol class="nodeList">
 			<xen:foreach loop="$renderedChildren" value="$child">{xen:raw $child}</xen:foreach>
 		</ol>
 	</xen:if>
+</xen:comment>
 	
 	<span class="tlc"></span>
 	<span class="trc"></span>
