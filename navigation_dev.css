@@ -1,0 +1,150 @@
+body {
+    background: #31140f url('ConceptBackgroundA.jpg') top center fixed;
+    text-align: center;
+}
+ 
+.padd {
+    height: 20px;
+}
+ 
+#nav-line {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #78250e;
+}
+ 
+div.wrap {
+    width: 960px;
+    margin: 0px auto;
+    text-align: left;
+}
+ 
+div.styled {
+    background: #fff;
+    box-shadow: 0 0 10px 6px rgba(0,0,0,.75);
+}
+ 
+div.header .userbar {
+    background: #000;
+    margin-right: 60px;
+    float: right;
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 16px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+ 
+div.header .inner {
+    height: 130px;
+    padding: 20px;
+    position:relative;
+}
+ 
+div.header .inner .status {
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+ 
+div.header>div.nav {
+    background: #f3f3f3;
+    height: 40px;
+    position:relative;
+}
+ 
+div.header>div.nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+div.header>div.nav>ul>li {
+    float: left;
+}
+ 
+div.header>div.nav>ul>li>a {
+    display: block;
+    font-weight:bolder;
+    line-height: 28px;
+    padding: 6px 18px;
+    color: #55595b;
+    transition-duration:200ms;
+    transition-delay:0s;
+    transition-timing-function:linear;
+}
+ 
+div.header>div.nav>ul>li>a:hover {
+    text-decoration: none;
+    background: #e1e1e1;
+}
+ 
+div.imageSlider {
+    width: 920px;
+    height: 300px;
+    border-radius: 3px;
+    background: #f3f3f3 url('imageSliderBG.png');
+    margin: 0px auto;
+}
+ 
+div.body .inner {
+    padding: 20px;
+    color: #55595b;
+}
+ 
+div.footer {
+    background: #242424;
+    color: #fafafa;
+    min-height: 180px;
+    padding-bottom:20px;
+}
+ 
+div.footer>.inner {
+    padding:20px;
+}
+ 
+div.footer .footerfooter {
+    margin-top: 40px;
+    border-bottom: 1px solid #111;
+    padding: 10px;
+    border-top: 1px solid #111;
+    font-size:11px;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+}
+ 
+div.footer .printnotes {
+    text-align: center;
+    font-size: 10px;
+    color: #939393;
+}
+ 
+div.footer h4 {
+    padding-bottom: 5px;
+    margin-bottom: 2px;
+    border-bottom:1px solid #111;
+}
+ 
+div.footer .col-md-4>ul {
+    list-style:none;
+    margin:0;
+    padding: 0;
+    font-size:12px;
+}
+ 
+div.footer .col-md-4>ul>li>a {
+    display:block;
+    padding: 2px 8px;
+}
+ 
+div.footer .col-md-4>ul.tile>li {
+    float: left;
+}
+ 
+div.footer .col-md-4>ul.tile>li>a {
+    padding: 2px;
+}
