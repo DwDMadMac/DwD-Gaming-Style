@@ -104,6 +104,17 @@ div.header>div.nav>ul>li>a:hover {
         box-shadow: 0 6px 12px rgba(0,0,0,0.175);
         background-clip: padding-box;
 }
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
  
 div.imageSlider {
     width: 920px;
