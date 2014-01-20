@@ -88,11 +88,8 @@
 						<xen:if is="!{$noH1}">						
 							<!-- h1 title, description -->
 							<div class="titleBar">
-								{xen:raw $beforeH1}
-								<h1><xen:if
-									is="{$h1}">{xen:raw $h1}<xen:elseif
-									is="{$title}" />{xen:raw $title}<xen:else
-									/>{$xenOptions.boardTitle}</xen:if></h1>
+                                                            <xen:comment>{xen:raw $beforeH1}</xen:comment>
+								<h1><xen:if is="{$title}">{xen:raw $title}</xen:if></h1>
 								
 								<xen:if is="{$pageDescription.content}"><p id="pageDescription" class="muted {$pageDescription.class}">{xen:raw $pageDescription.content}</p></xen:if>
 							</div>

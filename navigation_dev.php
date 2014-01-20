@@ -6,6 +6,9 @@
                     <img src="http://static.downwithdestruction.net/theme/img/BioHazard.png" class="pull-left" />
 
 
+                    <div class='SearchBarBox pull-right'>
+                        <xen:if is="{$canSearch}"><xen:include template="search_bar" /></xen:if>
+                    </div>
                     <div class='status pull-right'>
                         <img src='http://static.downwithdestruction.net/theme/img/online.png' data-placement="left" title="Online" /> TeamSpeak: ts.dwdg.net<br />
                         <img src='http://static.downwithdestruction.net/theme/img/semioffline.png' data-placement="left" title="Events is Offline" /> Minecraft: hub.dwdg.net<br />
