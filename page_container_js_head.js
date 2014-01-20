@@ -4,4 +4,8 @@
 	</xen:if><xen:if is="{$xenOptions.uncompressedJs} == 1 OR {$xenOptions.uncompressedJs} == 3">
 	<script src="{$javaScriptSource}/jquery/jquery.xenforo.rollup.js?_v={$xenOptions.jsVersion}"></script></xen:if>	
 	<script src="{xen:helper javaScriptUrl, '{$javaScriptSource}/xenforo/xenforo.js?_v={$xenOptions.jsVersion}'}"></script>
-<!--XenForo_Require:JS-->
+        <!-- Custom Navi JS -->
+        <script type="text/javascript" src="http://static.downwithdestruction.net/theme/js/custom.js"></script>
+        <script type="text/javascript" src="http://static.downwithdestruction.net/theme/js/colour.jquery.min.js"></script>
+        <script type="text/javascript" src="http://static.downwithdestruction.net/js/bootstrap.min.js"></script>
+        <!--XenForo_Require:JS-->
