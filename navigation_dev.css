@@ -15,12 +15,12 @@ body {
     background-color: #78250e;
 }
  
-div.styled {
+.styled {
     background: #fff;
     box-shadow: 0 5px 10px 6px rgba(0,0,0,.75);
 }
  
-div.header .userbar {
+.header .userbar {
     background: #000;
     margin-right: 60px;
     float: right;
@@ -31,36 +31,36 @@ div.header .userbar {
     border-bottom-right-radius: 3px;
 }
  
-div.header .inner {
+.header .inner {
     height: 130px;
     padding: 20px;
     position:relative;
 }
  
-div.header .inner .status {
+.header .inner .status {
     font-size: 12px;
     position: absolute;
     bottom: 10px;
     right: 20px;
 }
  
-div.header>div.nav {
+.header>div.nav {
     background: #f3f3f3;
     height: 40px;
     position:relative;
 }
  
-div.header>div.nav>ul {
+.header>div.nav>ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
  
-div.header>div.nav>ul>li {
+.header>div.nav>ul>li {
     float: left;
 }
  
-div.header>div.nav>ul>li>a {
+.header>div.nav>ul>li>a {
     display: block;
     font-weight:bolder;
     line-height: 28px;
@@ -71,12 +71,12 @@ div.header>div.nav>ul>li>a {
     transition-timing-function:linear;
 }
  
-div.header>div.nav>ul>li>a:hover {
+.header>div.nav>ul>li>a:hover {
     text-decoration: none;
     background: #e1e1e1;
 }
 
-div.dropdown-menu {
+.dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -97,7 +97,7 @@ div.dropdown-menu {
     background-clip: padding-box;
 }
 
-div.caret {
+.caret {
     display: inline-block;
     width: 0;
     height: 0;
@@ -108,7 +108,7 @@ div.caret {
     border-left: 4px solid transparent;
 }
  
-div.imageSlider {
+.imageSlider {
     width: 920px;
     height: 300px;
     border-radius: 3px;
@@ -116,23 +116,23 @@ div.imageSlider {
     margin: 0px auto;
 }
  
-div.body .inner {
+.body .inner {
     padding: 20px;
     color: #55595b;
 }
  
-div.footer {
+.footer {
     background: #242424;
     color: #fafafa;
     min-height: 180px;
     padding-bottom:20px;
 }
  
-div.footer>.inner {
+.footer>.inner {
     padding:20px;
 }
  
-div.footer .footerfooter {
+.footer .footerfooter {
     margin-top: 40px;
     border-bottom: 1px solid #111;
     padding: 10px;
@@ -142,34 +142,34 @@ div.footer .footerfooter {
     color: #f4f4f4;
 }
  
-div.footer .printnotes {
+.footer .printnotes {
     text-align: center;
     font-size: 10px;
     color: #939393;
 }
  
-div.footer h4 {
+.footer h4 {
     padding-bottom: 5px;
     margin-bottom: 2px;
     border-bottom:1px solid #111;
 }
  
-div.footer .col-md-4>ul {
+.footer .col-md-4>ul {
     list-style:none;
     margin:0;
     padding: 0;
     font-size:12px;
 }
  
-div.footer .col-md-4>ul>li>a {
+.footer .col-md-4>ul>li>a {
     display:block;
     padding: 2px 8px;
 }
  
-div.footer .col-md-4>ul.tile>li {
+.footer .col-md-4>ul.tile>li {
     float: left;
 }
  
-div.footer .col-md-4>ul.tile>li>a {
+.footer .col-md-4>ul.tile>li>a {
     padding: 2px;
 }
