@@ -6,7 +6,7 @@
 	<xen:if is="{$level} == 1"><div class="categoryStrip"></div></xen:if>
 	
 	<div class="nodeInfo linkNodeInfo">
-		<span class="nodeIcon"></span>
+            <xen:comment><span class="nodeIcon"></span></xen:comment>
 
 		<div class="nodeText">
 			<h3 class="nodeTitle"><a href="{xen:link link-forums, $link}" data-description-x="#nodeDescription-{$link.node_id}">{$link.title}</a></h3>
