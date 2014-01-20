@@ -7,7 +7,7 @@
 
 	<div class="nodeInfo forumNodeInfo primaryContent {xen:if $forum.hasNew, 'unread'}">
 
-		<span class="nodeIcon" title="{xen:if $forum.hasNew, '{xen:phrase unread_messages}', ''}"></span>
+            <xen:comment><span class="nodeIcon" title="{xen:if $forum.hasNew, '{xen:phrase unread_messages}', ''}"></span></xen:comment>
 
 		<div class="nodeText">
 			<h3 class="nodeTitle"><xen:if is="{$watchCheckBoxName}"><input type="checkbox" name="{$watchCheckBoxName}" value="{$forum.node_id}" />&nbsp;</xen:if><a href="{xen:link forums, $forum}" data-description="{xen:if @nodeListDescriptionTooltips, '#nodeDescription-{$forum.node_id}'}">{$forum.title}</a></h3>
