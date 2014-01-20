@@ -15,6 +15,7 @@
 		<div class="boardTitle"><strong>{$xenOptions.boardTitle}</strong></div>
 		
 		<span class="crumbs">
+                    <xen:comment>
 			<xen:if is="{$showHomeLink}">
 				<span class="crust homeCrumb"{xen:if $microdata, ' itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"'}>
 					<a href="{$homeLink}" class="crumb"{xen:if $microdata, ' rel="up" itemprop="url"'}><span{xen:if $microdata, ' itemprop="title"'}>{xen:phrase home}</span></a>
@@ -26,6 +27,7 @@
 					<span class="arrow"><span></span></span>
 				</span>
 			</xen:if>
+                    </xen:comment>
 			
 			<xen:if is="{$selectedTab}">
 				<span class="crust selectedTabCrumb"{xen:if $microdata, ' itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"'}>
