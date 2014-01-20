@@ -15,15 +15,12 @@
 		</script>
 	</xen:if>
 
-	<title><xen:if is="{$title}">{xen:raw $title} | {$xenOptions.boardTitle}<xen:else />{$xenOptions.boardTitle}</xen:if></title>
+	<title><xen:if is="{$title}">{xen:raw $title}<xen:else />{$xenOptions.boardTitle}</xen:if></title>
 	
 	<noscript><style>.JsOnly { display: none !important; }</style></noscript>
 	<link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style={xen:urlencode $_styleId}&amp;dir={$visitorLanguage.text_direction}&amp;d={$visitorStyle.last_modified_date}" />
 	<!--XenForo_Require:CSS-->	
 	{xen:helper ignoredCss, {$visitor.ignoredUsers}}
-        <xen:if is="{$contentTemplate} == 'navigation'">
-        <link rel="stylesheet" type="text/css" href="http://static.downwithdestruction.net/theme/css/bootstrap.min.css" />
-        </xen:if>
 
 	<xen:include template="google_analytics" />
 	<xen:include template="page_container_js_head" />
