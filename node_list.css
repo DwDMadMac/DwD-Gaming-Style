@@ -82,7 +82,7 @@
 .node .nodeText
 {
 	@property "nodeText";
-	margin: 10px 270px 10px 56px;
+	margin: 10px 270px 10px 20px;
 	@property "/nodeText";
 }
 
