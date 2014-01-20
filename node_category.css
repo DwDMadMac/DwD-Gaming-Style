@@ -1,10 +1,14 @@
-.nodeList  .node_94 .categoryStrip {
-    background: url('@imagePath/xenforo/gradients/category-gradient1.png') repeat-x center; /* Old browsers */
-    background: -moz-linear-gradient(top, #851313 0%, #5A0505 10%, #4D0505 60%, #2B0000 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#851313), color-stop(10%,#5A0505), color-stop(60%,#4D0505), color-stop(100%,#2B0000)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #851313 0%,#5A0505 10%,#4D0505 60%,#2B0000 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #851313 0%,#5A0505 10%,#4D0505 60%,#2B0000 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #851313 0%,#5A0505 10%,#4D0505 60%,#2B0000 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #851313 0%,#5A0505 10%,#4D0505 60%,#2B0000 100%); /* W3C */
-    border-color: #9f1919 #9f1919 #5f0c0c;
+.nodeList .node_94 .categoryStrip .categoryText .nodeTitle a,
+.nodeList .node_94 .categoryStrip .categoryText .nodeTitle {
+    font-size: 50px;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.nodeList .node_94 .categoryStrip {
+    background: url('http://static.downwithdestruction.net/img/mc/mc-category-icon.png');
+    background-position: 160px 170px;
+    background-size: 400px;
+    padding: 40px 0;
 }
