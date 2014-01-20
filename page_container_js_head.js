@@ -7,5 +7,5 @@
         <!-- Custom Navi JS -->
         <script type="text/javascript" src="http://static.downwithdestruction.net/theme/js/custom.js"></script>
         <script type="text/javascript" src="http://static.downwithdestruction.net/theme/js/colour.jquery.min.js"></script>
-        <script type="text/javascript" src="http://static.downwithdestruction.net/js/bootstrap.min.js"></script>
+        <xen:comment><script type="text/javascript" src="http://static.downwithdestruction.net/theme/js/bootstrap.min.js"></script></xen:comment>
         <!--XenForo_Require:JS-->
