@@ -76,6 +76,13 @@ body {
     background: #e1e1e1;
 }
 
+.SearchBarBox.pull-right {
+    right: 0;
+    display: block;
+    position: absolute;
+    top: 14px;
+}
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
