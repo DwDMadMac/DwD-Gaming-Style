@@ -1,3 +1,5 @@
+<xen:require css="footer_dev.css" />
+
 <div id="navigation" class="pageWidth {xen:if $canSearch, withSearch}">
     <div class="pageContent">
             <div class="footer">
@@ -5,11 +7,11 @@
                     <div class='col-md-4'>
                         <h4>Social</h4>
                         <ul class="tile">
-                            <li><a href="#"><img src="theme/img/facebook.png" /></a></li>
-                            <li><a href="#"><img src="theme/img/twitter.png" /></a></li>
-                            <li><a href="#"><img src="theme/img/youtube.png" /></a></li>
-                            <li><a href="#"><img src="theme/img/google.png" /></a></li>
-                            <li><a href="#"><img src="theme/img/rss.png" /></a></li>
+                            <li><a href="#"><img src="http://static.dwdg.net/theme/img/facebook.png" /></a></li>
+                            <li><a href="#"><img src="http://static.dwdg.net/theme/img/twitter.png" /></a></li>
+                            <li><a href="#"><img src="http://static.dwdg.net/theme/img/youtube.png" /></a></li>
+                            <li><a href="#"><img src="http://static.dwdg.net/theme/img/google.png" /></a></li>
+                            <li><a href="#"><img src="http://static.dwdg.net/theme/img/rss.png" /></a></li>
                         </ul>                    
                     </div>
                     <div class='col-md-4'>
