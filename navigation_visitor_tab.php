@@ -1,6 +1,6 @@
 <xen:edithint template="navigation.css" />
 
-<ul class="visitorTabs">
+<ul class="visitorTabs pull-right">
 
 	<xen:hook name="navigation_visitor_tabs_start" />
 
