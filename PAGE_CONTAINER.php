@@ -143,7 +143,7 @@
 </div>
 
 <footer>
-	<xen:include template="footer" />
+	<xen:include template="footer_dev" />
 </footer>
 
 <xen:include template="page_container_js_body" />
