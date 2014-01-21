@@ -1,11 +1,8 @@
 <div id="navigation" class="pageWidth {xen:if $canSearch, withSearch}">
     <div class="pageContent">
-            
             <div class="header styled">
                 <div class="inner">
                     <img src="http://static.downwithdestruction.net/theme/img/BioHazard.png" class="pull-left" />
-
-
                     <div class='SearchBarBox pull-right'>
                         <xen:if is="{$canSearch}"><xen:include template="search_bar" /></xen:if>
                     </div>
