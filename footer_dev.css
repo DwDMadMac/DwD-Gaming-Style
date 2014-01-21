@@ -50,3 +50,37 @@
 .footer .col-md-4>ul.tile>li>a {
     padding: 2px;
 }
+
+.col-md-4 {
+    width: 33.3333333333%;
+}
+
+.col-md-4 {
+    float: left;
+}
+
+.col-md-4 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: " ";
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.pull-right {
+    float: right !important;
+}
