@@ -139,3 +139,6 @@
 .forum_list .breadBoxTop, .forum_list .breadBoxBottom {
     display: none;
 }
+.col-md-6 .nodeInfo.categoryNodeInfo.categoryStrip:hover {
+    opacity: 0.6;
+}
