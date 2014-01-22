@@ -53,7 +53,7 @@
                                     <ul class="dropdown-menu secondaryContent blockLinksList">
                                         <div class="Menu JsOnly" id="AccountMenu">
                                             <div class="primaryContent menuHeader">
-                                                <xen:avatar user="$visitor" size="m" class="NoOverlay plainImage" title="{xen:phrase view_your_profile}" />
+                                                <xen:comment><xen:avatar user="$visitor" size="m" class="NoOverlay plainImage" title="{xen:phrase view_your_profile}" /></xen:comment>
 
                                                 <h3><a href="{xen:link members, $visitor}" class="concealed" title="{xen:phrase view_your_profile}">{$visitor.username}</a></h3>
 
