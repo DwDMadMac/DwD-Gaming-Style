@@ -1,5 +1,3 @@
-<xen:h1>{$xenOptions.boardTitle}</xen:h1>
-
 <xen:container var="$head.canonical"><link rel="canonical" href="{xen:link 'canonical:forums'}" /></xen:container>
 <xen:if is="{$xenOptions.boardDescription}"><xen:container var="$head.description">
 	<meta name="description" content="{$xenOptions.boardDescription}" /></xen:container></xen:if>
