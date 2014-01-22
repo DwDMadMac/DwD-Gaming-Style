@@ -44,6 +44,14 @@
                         <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="15a3a5"><a href="{xen:link misc/contact}"><span class='l'>Support</span></a></li>
                     </ul>
                     <ul id="nav" class="visitorTabs pull-right">
+                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
+                            <a href="{xen:link members, $visitor}" class="dropdown-toggle" data-toggle="dropdown" title="{xen:phrase view_your_profile}" rel="Menu">
+                                <span class="l">
+                                    <xen:avatar user="$visitor" size="s" class="NoOverlay plainImage"/>
+                                    {$visitor.username}
+                                </span>
+                            </a>
+                        </li>
                         <!-- account -->
                         <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
                             <a href="{xen:link account}" class="dropdown-toggle" data-toggle="dropdown" rel="Menu">
