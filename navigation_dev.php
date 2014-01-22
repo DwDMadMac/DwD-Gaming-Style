@@ -60,17 +60,19 @@
                                 <div class="forumsTabLinks">
                                     <ul class="dropdown-menu secondaryContent blockLinksList">
                                         <div class="Menu JsOnly" id="AccountMenu">
-                                            <div class="primaryContent menuHeader">
-                                                <xen:comment><xen:avatar user="$visitor" size="m" class="NoOverlay plainImage" title="{xen:phrase view_your_profile}" /></xen:comment>
+                                            <xen:comment>
+                                                <div class="primaryContent menuHeader">
+                                                    <xen:avatar user="$visitor" size="m" class="NoOverlay plainImage" title="{xen:phrase view_your_profile}" />
 
-                                                <h3><a href="{xen:link members, $visitor}" class="concealed" title="{xen:phrase view_your_profile}">{$visitor.username}</a></h3>
+                                                    <h3><a href="{xen:link members, $visitor}" class="concealed" title="{xen:phrase view_your_profile}">{$visitor.username}</a></h3>
 
-                                                <xen:if hascontent="true"><div class="muted"><xen:contentcheck>{xen:helper usertitle, $visitor}</xen:contentcheck></div></xen:if>
+                                                    <xen:if hascontent="true"><div class="muted"><xen:contentcheck>{xen:helper usertitle, $visitor}</xen:contentcheck></div></xen:if>
 
-                                                <ul class="links">
-                                                    <li class="fl"><a href="{xen:link members, $visitor}">{xen:phrase your_profile_page}</a></li>
-                                                </ul>
-                                            </div>
+                                                    <ul class="links">
+                                                        <li class="fl"><a href="{xen:link members, $visitor}">{xen:phrase your_profile_page}</a></li>
+                                                    </ul>
+                                                </div>
+                                            </xen:comment>
                                             <div class="menuColumns secondaryContent">
                                                 <ul class="col1 blockLinksList">
                                                 <xen:hook name="navigation_visitor_tab_links1">
