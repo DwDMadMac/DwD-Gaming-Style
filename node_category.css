@@ -129,3 +129,6 @@
     border-color: #9f1919 #9f1919 #5f0c0c;
     padding: 40px 0;
 }
+.node_95 .nodeTitle {
+    display: none;
+}
