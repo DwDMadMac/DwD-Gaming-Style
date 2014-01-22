@@ -1,7 +1,7 @@
 <xen:require css="node_list.css" />
 <xen:require css="node_category.css" />
     <li class="node category level_{$level} node_{$category.node_id} <xen:if is="in_array({$category.node_id}, array(94,95,96,97,98,99))">col-md-6</xen:if>" id="{xen:helper linktitle, $category.node_id, $category.title, 1}">
-        <a href="{xen:link categories, $category}">
+        <a href="{xen:link categories, $category}" class="nodeCatLink">
                     <div class="nodeInfo categoryNodeInfo categoryStrip">
                             <div class="categoryText">
                                     <h3 class="nodeTitle">{$category.title}</h3>
