@@ -136,3 +136,6 @@
     min-height: 150px;
     max-height: 150px;
 }
+.forum_list .breadBoxTop, .forum_list .breadBoxBottom {
+    display: none;
+}
