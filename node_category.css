@@ -55,7 +55,7 @@
 }
 .nodeList .node_96 .categoryStrip {
     background: url('http://static.downwithdestruction.net/img/lol/league_of_legends.jpg') top;
-    background-position: 0 -93px;
+    background-position: 0px -40px;
     background-size: 100%;
     padding: 40px 0;
 }
@@ -129,14 +129,16 @@
     border-color: #9f1919 #9f1919 #5f0c0c;
     padding: 40px 0;
 }
-.node_95 .nodeTitle {
+.node_95 .nodeTitle,
+.node_96 .nodeTitle {
     opacity: .4;
 }
 .col-md-6 {
     min-height: 150px;
     max-height: 150px;
 }
-.forum_list .breadBoxTop, .forum_list .breadBoxBottom {
+.forum_list .breadBoxTop,
+.forum_list .breadBoxBottom {
     display: none;
 }
 .col-md-6 .nodeInfo.categoryNodeInfo.categoryStrip:hover {
