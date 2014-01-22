@@ -1,7 +1,7 @@
 <xen:require css="node_list.css" />
 
 <xen:if hascontent="true">
-	<ol class="nodeList sectionMain" id="forums">
+	<ol class="nodeList" id="forums">
 	<xen:contentcheck>
 		<xen:foreach loop="$renderedNodes" value="$node">{xen:raw $node}</xen:foreach>
 	</xen:contentcheck>
