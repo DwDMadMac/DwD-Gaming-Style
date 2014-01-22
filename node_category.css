@@ -132,3 +132,7 @@
 .node_95 .nodeTitle {
     display: none;
 }
+.col-md-6 {
+    min-height: 150px;
+    max-height: 150px;
+}
