@@ -28,11 +28,11 @@
                                     <ul class="dropdown-menu secondaryContent blockLinksList">
                                         <div class="Menu JsOnly" id="AccountMenu">
                                             <div class="primaryContent menuHeader">
-                                                <li><a href="{xen:link 'board/dwd-network/'}">Minecraft Network</a></li>
-                                                <li><a href="{xen:link 'board/league-of-leagends'}">League Of Legends</a></li>
-                                                <li><a href="{xen:link 'board/gta-online/'}">GTA Online</a></li>
-                                                <li><a href="{xen:link 'board/call-of-duty'} ">Call of Duty</a></li>
-                                                <li><a href="{xen:link ''}">Counter Strike</a></li>
+                                                <li><a href="{xen:link 'forums/minecraft-network.94/'}">Minecraft Network</a></li>
+                                                <li><a href="{xen:link 'forums/league-of-legends.96/'}">League Of Legends</a></li>
+                                                <li><a href="{xen:link 'forums/gta-online.95/'}">GTA Online</a></li>
+                                                <li><a href="{xen:link 'forums/call-of-duty.97/'} ">Call of Duty</a></li>
+                                                <xen:comment><li><a href="{xen:link ''}">Counter Strike</a></li></xen:comment>
                                             </div>
                                         </div>
                                     </ul>
