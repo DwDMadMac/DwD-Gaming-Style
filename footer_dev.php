@@ -7,7 +7,7 @@
                     <div class='col-md-4'>
                         <h4>Social</h4>
                         <ul class="tile">
-                            <li><a href="#"><img src="http://static.dwdg.net/theme/img/facebook.png" /></a></li>
+                            <li><a href="https://www.facebook.com/DwDGamingCommunity" target="_blank"><img src="http://static.dwdg.net/theme/img/facebook.png" /></a></li>
                             <li><a href="#"><img src="http://static.dwdg.net/theme/img/twitter.png" /></a></li>
                             <li><a href="#"><img src="http://static.dwdg.net/theme/img/youtube.png" /></a></li>
                             <li><a href="#"><img src="http://static.dwdg.net/theme/img/google.png" /></a></li>
