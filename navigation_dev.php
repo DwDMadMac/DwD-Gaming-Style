@@ -39,7 +39,11 @@
                             </div>
                         </li>
                     <li class="navi" data-nav-colour="2d46b2"><a href="http://dwdg.net/servers"><span class='l'>Servers</span></a></li>
-                    <li class="navi" data-nav-colour="c329be"><a href="home"><span class='l'>Wiki</span></a></li>
+                    <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="c329be">
+                        <a href="{xen:link wiki}">
+                            <span class='l'>Wiki</span>
+                        </a>
+                    </li>
                     <li class="navi" data-nav-colour="d39b38"><a href="home"><span class='l'>Staff</span></a></li>
                     <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="15a3a5"><a href="{xen:link misc/contact}"><span class='l'>Support</span></a></li>
                 </ul>
