@@ -59,126 +59,130 @@
                             </span>
                         </a>
                     </li>
-                    <!-- account -->
-                    <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
-                        <a href="{xen:link account}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
-                            <span class="l">Account</span>
-                        </a>
-                            <div class="forumsTabLinks">
-                                <ul class="dropdown-menu secondaryContent blockLinksList">
-                                    <div class="Menu JsOnly" id="AccountMenu">
-                                        <xen:comment>
-                                            <div class="primaryContent menuHeader">
-                                                <xen:avatar user="$visitor" size="m" class="NoOverlay plainImage" title="{xen:phrase view_your_profile}" />
+                    <xen:if is="!{$visitor.user_id}">
+                        <xen:comment>Do Nothing Here</xen:comment>
+                    <xen:else />
+                        <!-- account -->
+                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
+                            <a href="{xen:link account}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
+                                <span class="l">Account</span>
+                            </a>
+                                <div class="forumsTabLinks">
+                                    <ul class="dropdown-menu secondaryContent blockLinksList">
+                                        <div class="Menu JsOnly" id="AccountMenu">
+                                            <xen:comment>
+                                                <div class="primaryContent menuHeader">
+                                                    <xen:avatar user="$visitor" size="m" class="NoOverlay plainImage" title="{xen:phrase view_your_profile}" />
 
-                                                <h3><a href="{xen:link members, $visitor}" class="concealed" title="{xen:phrase view_your_profile}">{$visitor.username}</a></h3>
+                                                    <h3><a href="{xen:link members, $visitor}" class="concealed" title="{xen:phrase view_your_profile}">{$visitor.username}</a></h3>
 
-                                                <xen:if hascontent="true"><div class="muted"><xen:contentcheck>{xen:helper usertitle, $visitor}</xen:contentcheck></div></xen:if>
+                                                    <xen:if hascontent="true"><div class="muted"><xen:contentcheck>{xen:helper usertitle, $visitor}</xen:contentcheck></div></xen:if>
 
-                                                <ul class="links">
-                                                    <li class="fl"><a href="{xen:link members, $visitor}">{xen:phrase your_profile_page}</a></li>
+                                                    <ul class="links">
+                                                        <li class="fl"><a href="{xen:link members, $visitor}">{xen:phrase your_profile_page}</a></li>
+                                                    </ul>
+                                                </div>
+                                            </xen:comment>
+                                            <div class="menuColumns secondaryContent">
+                                                <ul class="col1 blockLinksList">
+                                                    <li>				
+                                                        <form action="{xen:link account/toggle-visibility}" method="post" class="AutoValidator visibilityForm">
+                                                            <label><input type="checkbox" name="visible" value="1" class="SubmitOnChange" {xen:checked $visitor.visible} />
+                                                                {xen:phrase show_online_status}</label>
+                                                            <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+                                                        </form>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{xen:link account/alerts}">{xen:phrase alerts}
+                                                            <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}" id="VisitorExtraMenu_AlertsCounter">
+                                                                <span class="Total">{xen:number $visitor.alerts_unread}</span>
+                                                            </strong>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{xen:link conversations}">{xen:phrase conversations}
+                                                            <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
+                                                                <span class="Total">{xen:number $visitor.conversations_unread}</span>
+                                                            </strong>
+                                                        </a>
+                                                    </li>
+                                                    <xen:if is="{$canUploadAvatar}">
+                                                        <li>
+                                                            <a href="{xen:link account/avatar}" class="OverlayTrigger" data-cacheOverlay="true">{xen:phrase avatar}</a>
+                                                        </li>
+                                                    </xen:if>
+                                                    <li>
+                                                        <a href="{xen:link account/privacy}" class="OverlayTrigger">{xen:phrase privacy}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{xen:link account/security}" class="OverlayTrigger">{xen:phrase password}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{xen:link account/preferences}" class="OverlayTrigger">{xen:phrase preferences}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{xen:link account/alert-preferences}" class="OverlayTrigger">{xen:phrase alert_preferences}</a>
+                                                    </li>
+                                                    <xen:if is="{$canEditProfile}">
+                                                        <li>
+                                                            <a href="{xen:link account/personal-details}" class="OverlayTrigger">{xen:phrase personal_details}</a>
+                                                        </li>
+                                                    </xen:if>
+                                                    <xen:if is="{$canEditProfile}">
+                                                        <li>
+                                                            <a href="{xen:link account/contact-details}" class="OverlayTrigger">{xen:phrase contact_details}</a>
+                                                        </li>
+                                                    </xen:if>
+                                                    <li>
+                                                        <a href="{xen:link friend-inviter}" class="OverlayTrigger">Send Invite</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{xen:link account/bookmarks}">Your Bookmarks</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{xen:link account}">More...</a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="col2 blockLinksList">
+                                                    <xen:if is="{$xenCache.userUpgradeCount}">
+                                                        <li>
+                                                            <a href="{xen:link account/upgrades}">{xen:phrase account_upgrades}</a>
+                                                        </li>
+                                                    </xen:if>
+                                                    <xen:if is="{$visitor.facebook_auth_id}">
+                                                        <xen:if is="{$xenOptions.facebookAppId}">
+                                                            <li>
+                                                                <a href="{xen:link account/facebook}" class="OverlayTrigger">Unlink Your Facebook</a>
+                                                            </li>
+                                                        </xen:if>
+                                                            <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
+                                                    <xen:else />
+                                                        <xen:if is="{$xenOptions.facebookAppId}">
+                                                            <li>
+                                                                <a href="{xen:link account/facebook}" class="OverlayTrigger">Link Your Facebook</a>
+                                                            </li>
+                                                        </xen:if>
+                                                            <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
+                                                    </xen:if>
                                                 </ul>
                                             </div>
-                                        </xen:comment>
-                                        <div class="menuColumns secondaryContent">
-                                            <ul class="col1 blockLinksList">
-                                                <li>				
-                                                    <form action="{xen:link account/toggle-visibility}" method="post" class="AutoValidator visibilityForm">
-                                                        <label><input type="checkbox" name="visible" value="1" class="SubmitOnChange" {xen:checked $visitor.visible} />
-                                                            {xen:phrase show_online_status}</label>
-                                                        <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+                                            <xen:comment>
+                                                <xen:if is="{$canUpdateStatus}">
+                                                    <form action="{xen:link members/post, $visitor}" method="post" class="sectionFooter statusPoster AutoValidator" data-optInOut="OptIn">
+                                                        <textarea name="message" class="textCtrl StatusEditor Elastic" placeholder="{xen:phrase update_your_status}..." rows="1" cols="40" style="height:18px" data-statusEditorCounter="#visMenuSEdCount" data-nofocus="true"></textarea>
+                                                        <div class="submitUnit">
+                                                            <span id="visMenuSEdCount" title="{xen:phrase characters_remaining}"></span>
+                                                            <input type="submit" class="button primary MenuCloser" value="{xen:phrase post_verb}" />
+                                                            <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+                                                            <input type="hidden" name="return" value="1" /> 
+                                                        </div>
                                                     </form>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link account/alerts}">{xen:phrase alerts}
-                                                        <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}" id="VisitorExtraMenu_AlertsCounter">
-                                                            <span class="Total">{xen:number $visitor.alerts_unread}</span>
-                                                        </strong>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link conversations}">{xen:phrase conversations}
-                                                        <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
-                                                            <span class="Total">{xen:number $visitor.conversations_unread}</span>
-                                                        </strong>
-                                                    </a>
-                                                </li>
-                                                <xen:if is="{$canUploadAvatar}">
-                                                    <li>
-                                                        <a href="{xen:link account/avatar}" class="OverlayTrigger" data-cacheOverlay="true">{xen:phrase avatar}</a>
-                                                    </li>
                                                 </xen:if>
-                                                <li>
-                                                    <a href="{xen:link account/privacy}" class="OverlayTrigger">{xen:phrase privacy}</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link account/security}" class="OverlayTrigger">{xen:phrase password}</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link account/preferences}" class="OverlayTrigger">{xen:phrase preferences}</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link account/alert-preferences}" class="OverlayTrigger">{xen:phrase alert_preferences}</a>
-                                                </li>
-                                                <xen:if is="{$canEditProfile}">
-                                                    <li>
-                                                        <a href="{xen:link account/personal-details}" class="OverlayTrigger">{xen:phrase personal_details}</a>
-                                                    </li>
-                                                </xen:if>
-                                                <xen:if is="{$canEditProfile}">
-                                                    <li>
-                                                        <a href="{xen:link account/contact-details}" class="OverlayTrigger">{xen:phrase contact_details}</a>
-                                                    </li>
-                                                </xen:if>
-                                                <li>
-                                                    <a href="{xen:link friend-inviter}" class="OverlayTrigger">Send Invite</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link account/bookmarks}">Your Bookmarks</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link account}">More...</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="col2 blockLinksList">
-                                                <xen:if is="{$xenCache.userUpgradeCount}">
-                                                    <li>
-                                                        <a href="{xen:link account/upgrades}">{xen:phrase account_upgrades}</a>
-                                                    </li>
-                                                </xen:if>
-                                                <xen:if is="{$visitor.facebook_auth_id}">
-                                                    <xen:if is="{$xenOptions.facebookAppId}">
-                                                        <li>
-                                                            <a href="{xen:link account/facebook}" class="OverlayTrigger">Unlink Your Facebook</a>
-                                                        </li>
-                                                    </xen:if>
-                                                        <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
-                                                <xen:else />
-                                                    <xen:if is="{$xenOptions.facebookAppId}">
-                                                        <li>
-                                                            <a href="{xen:link account/facebook}" class="OverlayTrigger">Link Your Facebook</a>
-                                                        </li>
-                                                    </xen:if>
-                                                        <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
-                                                </xen:if>
-                                            </ul>
-                                        </div>
-                                        <xen:comment>
-                                            <xen:if is="{$canUpdateStatus}">
-                                                <form action="{xen:link members/post, $visitor}" method="post" class="sectionFooter statusPoster AutoValidator" data-optInOut="OptIn">
-                                                    <textarea name="message" class="textCtrl StatusEditor Elastic" placeholder="{xen:phrase update_your_status}..." rows="1" cols="40" style="height:18px" data-statusEditorCounter="#visMenuSEdCount" data-nofocus="true"></textarea>
-                                                    <div class="submitUnit">
-                                                        <span id="visMenuSEdCount" title="{xen:phrase characters_remaining}"></span>
-                                                        <input type="submit" class="button primary MenuCloser" value="{xen:phrase post_verb}" />
-                                                        <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
-                                                        <input type="hidden" name="return" value="1" /> 
-                                                    </div>
-                                                </form>
-                                            </xen:if>
-                                        </xen:comment>
-                                    </div>	
-                                </ul>
-                            </div>
+                                            </xen:comment>
+                                        </div>	
+                                    </ul>
+                                </div>
+                    </xen:if>
                 </ul>
             </div>
         </div>
