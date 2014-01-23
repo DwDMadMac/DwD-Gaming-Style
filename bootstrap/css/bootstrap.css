@@ -580,8 +580,7 @@ abbr[data-original-title] {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  padding: 5px 10px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p {
