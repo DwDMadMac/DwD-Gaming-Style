@@ -2,7 +2,7 @@
 
 <xen:require css="account.css" />
 
-<form method="post" class="xenForm privacyForm AutoValidator"
+<form method="post" class="xenForm privacyForm formOverlay NoFixedOverlay AutoValidator"
 	action="{xen:link 'account/privacy-save'}"
 	data-fieldValidatorUrl="{xen:link 'account/validate-field.json'}">
 	
