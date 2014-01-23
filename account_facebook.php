@@ -1,7 +1,7 @@
 <xen:title>{xen:phrase facebook_integration}</xen:title>
 
 <xen:if is="{$visitor.facebook_auth_id}">
-	<form action="{xen:link account/facebook}" method="post" class="xenForm">
+	<form action="{xen:link account/facebook}" method="post" class="xenForm formOverlay">
 		
 		<xen:hook name="account_facebook_associated">
 		<dl class="ctrlUnit">
@@ -40,7 +40,7 @@
 		<input type="hidden" name="_xfConfirm" value="1" />
 	</form>
 <xen:else />
-	<form action="{xen:link account}" method="post" class="xenForm">
+	<form action="{xen:link account}" method="post" class="xenForm formOverlay">
 	
 		<xen:hook name="account_facebook_not_associated">
 		<dl class="ctrlUnit">
