@@ -6,7 +6,7 @@
 <xen:edithint template="account_avatar_overlay.css" />
 <xen:edithint template="account_avatar_overlay" />
 
-<form method="post" class="xenForm personalDetailsForm AutoValidator"
+<form method="post" class="xenForm personalDetailsForm formOverlay NoFixedOverlay AutoValidator"
 	action="{xen:link 'account/personal-details-save'}"
 	data-fieldValidatorUrl="{xen:link 'account/validate-field.json'}">
 
@@ -104,7 +104,9 @@
 	<xen:hook name="account_personal_details_about">
 	<dl class="ctrlUnit OptOut">
 		<dt><label for="ctrl_about">{xen:phrase about_you}:</label> <dfn>{xen:phrase you_may_use_bb_code}</dfn></dt>
-		<dd>{xen:raw $aboutEditor}</dd>
+                <dd>
+                    <textarea name="status" rows="10" cols="60" id="ctrl_status" autofocus="autofocus" class="textCtrl StatusEditor Elastic OptOut" data-statusEditorCounter="#statusEditorCounter"></textarea>
+                </dd>
 	</dl>
 	</xen:hook>
 
