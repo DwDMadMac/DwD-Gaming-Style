@@ -81,16 +81,20 @@
                                                         <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
                                                     </form>
                                                 </li>
-                                                <li><a href="{xen:link conversations}">{xen:phrase conversations}
-                                                    <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}"
-                                                        id="VisitorExtraMenu_ConversationsCounter">
-                                                        <span class="Total">{xen:number $visitor.conversations_unread}</span>
-                                                    </strong></a></li>
-                                                <li><a href="{xen:link account/alerts}">{xen:phrase alerts}
-                                                    <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}"
-                                                        id="VisitorExtraMenu_AlertsCounter">
-                                                        <span class="Total">{xen:number $visitor.alerts_unread}</span>
-                                                    </strong></a></li>
+                                                <li>
+                                                    <a href="{xen:link account/alerts}">{xen:phrase alerts}
+                                                        <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}" id="VisitorExtraMenu_AlertsCounter">
+                                                            <span class="Total">{xen:number $visitor.alerts_unread}</span>
+                                                        </strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{xen:link conversations}">{xen:phrase conversations}
+                                                        <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
+                                                            <span class="Total">{xen:number $visitor.conversations_unread}</span>
+                                                        </strong>
+                                                    </a>
+                                                </li>
                                             <xen:hook name="navigation_visitor_tab_links1" />
                                             <xen:hook name="navigation_visitor_tab_links2" />
                                                 <xen:if is="{$canEditProfile}"><li><a href="{xen:link account/personal-details}">{xen:phrase personal_details}</a></li></xen:if>
