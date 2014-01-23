@@ -27,9 +27,11 @@
                     <div class='col-md-4'>
                         <h4>Legal</h4>
                         <ul>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Copyright</a></li>
-                            <li><a href="#">Credits</a></li>
+                            <li><a href="{xen:link doc/rules-and-regulations/}">Rules & Regulations</a></li>
+                            <li><a href="{xen:link doc/intelligence-clause/}">Intelligence Clause</a></li>
+                            <li><a href="{xen:link doc/copyright/}">Copyright</a></li>
+                            <li><a href="{xen:link doc/privacy-policy/}">Privacy Policy</a></li>
+                            <li><a href="{xen:link doc/terms-of-service/}">Terms & Conditions</a></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
