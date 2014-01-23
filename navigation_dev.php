@@ -48,7 +48,7 @@
                             <span class='l'>Wiki</span>
                         </a>
                     </li>
-                    <li class="navi" data-nav-colour="d39b38"><a href="htt://dwdg.net/staff"><span class='l'>Staff</span></a></li>
+                    <li class="navi" data-nav-colour="d39b38"><a href="http://dwdg.net/staff"><span class='l'>Staff</span></a></li>
                     <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="15a3a5"><a href="{xen:link misc/contact}"><span class='l'>Support</span></a></li>
                 </ul>
                 <ul id="nav" class="visitorTabs pull-right">
