@@ -122,11 +122,6 @@
                                                         <a href="{xen:link account/contact-details}" class="OverlayTrigger">{xen:phrase contact_details}</a>
                                                     </li>
                                                 </xen:if>
-                                                <xen:if is="{$canEditSignature}">
-                                                    <li>
-                                                        <a href="{xen:link account/signature}" class="OverlayTrigger">{xen:phrase signature}</a>
-                                                    </li>
-                                                </xen:if>
                                                 <li>
                                                     <a href="{xen:link friend-inviter}" class="OverlayTrigger">Send Invite</a>
                                                 </li>
