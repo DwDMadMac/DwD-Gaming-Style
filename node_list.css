@@ -4,11 +4,6 @@
 	vertical-align: bottom;
 }
 
-.nodeList .node.level_1
-{
-	margin-bottom: 20px;
-}
-
 .nodeList .node.level_1:last-child
 {
 	margin-bottom: 0;
