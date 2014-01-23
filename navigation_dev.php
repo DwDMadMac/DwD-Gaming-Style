@@ -102,8 +102,6 @@
                                                 <xen:if is="{$xenOptions.facebookAppId}"><li><a href="{xen:link account/facebook}">{xen:phrase facebook_integration}</a></li></xen:if>
                                                 <li><a href="{xen:link account/security}">{xen:phrase password}</a></li>
                                             </xen:hook>
-                                            </ul>
-                                            <ul class="col2 blockLinksList">
                                             <xen:hook name="navigation_visitor_tab_links2">
                                                 <xen:if is="{$xenOptions.enableNewsFeed}"><li><a href="{xen:link account/news-feed}">{xen:phrase your_news_feed}</a></li></xen:if>
                                                 <li><a href="{xen:link account/likes}">{xen:phrase likes_youve_received}</a></li>
