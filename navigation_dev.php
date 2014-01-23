@@ -104,7 +104,7 @@
                                                     </li>
                                                 </xen:if>
                                                 <li>
-                                                    <a href="{xen:link account/bookmarks}" class="OverlayTrigger">Your Bookmarks</a>
+                                                    <a href="{xen:link account/bookmarks}">Your Bookmarks</a>
                                                 </li>
                                                 <li>
                                                     <a href="{xen:link friend-inviter}" class="OverlayTrigger">Send Invite</a>
@@ -115,16 +115,34 @@
                                                 <li>
                                                     <a href="{xen:link account/security}" class="OverlayTrigger">{xen:phrase password}</a>
                                                 </li>
-                                                <xen:if is="{$canEditProfile}"><li><a href="{xen:link account/personal-details}">{xen:phrase personal_details}</a></li></xen:if>
-                                                <xen:if is="{$canEditSignature}"><li><a href="{xen:link account/signature}">{xen:phrase signature}</a></li></xen:if>
-                                                <xen:if is="{$canEditProfile}"><li><a href="{xen:link account/contact-details}">{xen:phrase contact_details}</a></li></xen:if>
-                                                <li><a href="{xen:link account/alert-preferences}">{xen:phrase alert_preferences}</a></li>
-                                                <xen:if is="{$xenOptions.facebookAppId}"><li><a href="{xen:link account/facebook}">{xen:phrase facebook_integration}</a></li></xen:if>
+                                                <xen:if is="{$canEditSignature}">
+                                                    <li>
+                                                        <a href="{xen:link account/signature}" class="OverlayTrigger">{xen:phrase signature}</a>
+                                                    </li>
+                                                </xen:if>
+                                                <xen:if is="{$canEditProfile}">
+                                                    <li>
+                                                        <a href="{xen:link account/personal-details}" class="OverlayTrigger">{xen:phrase personal_details}</a>
+                                                    </li>
+                                                </xen:if>
+                                                <xen:if is="{$canEditProfile}">
+                                                    <li>
+                                                        <a href="{xen:link account/contact-details}" class="OverlayTrigger">{xen:phrase contact_details}</a>
+                                                    </li>
+                                                </xen:if>
+                                                <li>
+                                                    <a href="{xen:link account/alert-preferences}" class="OverlayTrigger">{xen:phrase alert_preferences}</a>
+                                                </li>
                                             </ul>
                                             <ul class="col2 blockLinksList">
                                                 <xen:if is="{$xenCache.userUpgradeCount}">
                                                     <li>
                                                         <a href="{xen:link account/upgrades}">{xen:phrase account_upgrades}</a>
+                                                    </li>
+                                                </xen:if>
+                                                <xen:if is="{$xenOptions.facebookAppId}">
+                                                    <li>
+                                                        <a href="{xen:link account/facebook}" class="OverlayTrigger">Connect Your Facebook</a>
                                                     </li>
                                                 </xen:if>
                                                 <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
