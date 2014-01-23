@@ -7,7 +7,7 @@
 		<xen:map from="$message" to="$user" />
 	</xen:include>
 
-	<div class="messageInfo primaryContent">
+	<div class="messageInfo">
 		<xen:if is="{$message.isNew}"><strong class="newIndicator"><span></span>{xen:phrase new}</strong></xen:if>
 		
 		<xen:if hascontent="true">
@@ -33,7 +33,7 @@
 		<xen:hook name="message_content" params="{xen:array 'message={$message}'}">
 		<div class="messageContent">		
 			<article>
-				<blockquote class="messageText ugc baseHtml{xen:if $message.isIgnored, ' ignored'}">
+				<blockquote class="messageText ugc baseHtml{xen:if $message.isIgnored, ' ignored'}" style="background-color: rgba(255, 255, 255, 0.5);border-top: 1px solid rgb(139, 0, 0);border-right: 1px solid rgb(139, 0, 0);border-bottom: 1px solid rgb(139, 0, 0);border-radius: 5px;">
 					<xen:include template="ad_message_body" />
 					{xen:raw $message.messageHtml}
 				</blockquote>
