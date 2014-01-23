@@ -120,11 +120,6 @@
                                                 <xen:if is="{$canEditProfile}"><li><a href="{xen:link account/contact-details}">{xen:phrase contact_details}</a></li></xen:if>
                                                 <li><a href="{xen:link account/alert-preferences}">{xen:phrase alert_preferences}</a></li>
                                                 <xen:if is="{$xenOptions.facebookAppId}"><li><a href="{xen:link account/facebook}">{xen:phrase facebook_integration}</a></li></xen:if>
-                                                <xen:if is="{$xenOptions.enableNewsFeed}"><li><a href="{xen:link account/news-feed}">{xen:phrase your_news_feed}</a></li></xen:if>
-                                                <li><a href="{xen:link account/likes}">{xen:phrase likes_youve_received}</a></li>
-                                                <li><a href="{xen:link search/member, '', 'user_id={$visitor.user_id}'}">{xen:phrase your_content}</a></li>
-                                                <li><a href="{xen:link account/following}">{xen:phrase people_you_follow}</a></li>
-                                                <li><a href="{xen:link account/ignored}">{xen:phrase people_you_ignore}</a></li>
                                             </ul>
                                             <ul class="col2 blockLinksList">
                                                 <xen:if is="{$xenCache.userUpgradeCount}">
