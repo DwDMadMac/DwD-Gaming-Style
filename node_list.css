@@ -186,7 +186,6 @@
 	word-wrap: normal;
 	overflow: hidden;
 	width: 210px;
-	height: 28px;
 	@property "/nodeLastPost";
 }
 
