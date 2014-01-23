@@ -4656,3 +4656,6 @@ td.visible-print {
     display: none !important;
   }
 }
+.contact .titleBar, .contact .xenForm {
+    color: white;
+}
