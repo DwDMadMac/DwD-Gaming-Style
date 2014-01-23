@@ -4656,6 +4656,15 @@ td.visible-print {
     display: none !important;
   }
 }
-.contact .titleBar, .contact .xenForm {
+.contact .titleBar,
+.contact .xenForm,
+.forum_view .titleBar,
+.thread_view .titleBar,
+.thread_view .pageNavLinkGroup,
+.thread_view .SelectionCountContainer a,
+.thread_view .privateControls a,
+.thread_view .publicControls a,
+.thread_view label,
+.thread_view .Dc_SmileyManager_SmilieLoader {
     color: white;
 }
