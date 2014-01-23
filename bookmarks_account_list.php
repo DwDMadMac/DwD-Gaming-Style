@@ -5,7 +5,7 @@
 <xen:require css="bookmarks.css" />
 <xen:require js="js/bookmarks/bookmarks.js" />
 
-<div class="event">
+<div class="event formOverlay NoFixedOverlay">
 <xen:if is="{$postBookmarks} OR {$profilePostBookmarks} OR {$resourceBookmarks} OR {$showcaseItemBookmarks}">
 <form action="{xen:link bookmarks/flipStatus}" method="post" class="BookmarksList formOverlay AutoValidator" id="BookmarksFlipForm">
 <div class="bookmarksPage">
