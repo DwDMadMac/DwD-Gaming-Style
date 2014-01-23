@@ -2,7 +2,7 @@
 
 <xen:require css="account.css" />
 
-<form method="post" class="xenForm AutoValidator ContactDetailsForm"
+<form method="post" class="xenForm formOverlay AutoValidator ContactDetailsForm"
 	action="{xen:link 'account/security-save'}"
 	data-fieldValidatorUrl="{xen:link 'account/validate-field.json'}"
 	data-optInOut="OptIn">
