@@ -95,31 +95,23 @@
                                                         </strong>
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a href="{xen:link account/preferences}" class="OverlayTrigger">{xen:phrase preferences}</a>
-                                                </li>
                                                 <xen:if is="{$canUploadAvatar}">
                                                     <li>
                                                         <a href="{xen:link account/avatar}" class="OverlayTrigger" data-cacheOverlay="true">{xen:phrase avatar}</a>
                                                     </li>
                                                 </xen:if>
                                                 <li>
-                                                    <a href="{xen:link account/bookmarks}">Your Bookmarks</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{xen:link friend-inviter}" class="OverlayTrigger">Send Invite</a>
-                                                </li>
-                                                <li>
                                                     <a href="{xen:link account/privacy}" class="OverlayTrigger">{xen:phrase privacy}</a>
                                                 </li>
                                                 <li>
                                                     <a href="{xen:link account/security}" class="OverlayTrigger">{xen:phrase password}</a>
                                                 </li>
-                                                <xen:if is="{$canEditSignature}">
-                                                    <li>
-                                                        <a href="{xen:link account/signature}" class="OverlayTrigger">{xen:phrase signature}</a>
-                                                    </li>
-                                                </xen:if>
+                                                <li>
+                                                    <a href="{xen:link account/preferences}" class="OverlayTrigger">{xen:phrase preferences}</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{xen:link account/alert-preferences}" class="OverlayTrigger">{xen:phrase alert_preferences}</a>
+                                                </li>
                                                 <xen:if is="{$canEditProfile}">
                                                     <li>
                                                         <a href="{xen:link account/personal-details}" class="OverlayTrigger">{xen:phrase personal_details}</a>
@@ -130,8 +122,19 @@
                                                         <a href="{xen:link account/contact-details}" class="OverlayTrigger">{xen:phrase contact_details}</a>
                                                     </li>
                                                 </xen:if>
+                                                <xen:if is="{$canEditSignature}">
+                                                    <li>
+                                                        <a href="{xen:link account/signature}" class="OverlayTrigger">{xen:phrase signature}</a>
+                                                    </li>
+                                                </xen:if>
                                                 <li>
-                                                    <a href="{xen:link account/alert-preferences}" class="OverlayTrigger">{xen:phrase alert_preferences}</a>
+                                                    <a href="{xen:link friend-inviter}" class="OverlayTrigger">Send Invite</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{xen:link account/bookmarks}">Your Bookmarks</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{xen:link account}">More...</a>
                                                 </li>
                                             </ul>
                                             <ul class="col2 blockLinksList">
