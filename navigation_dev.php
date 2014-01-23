@@ -95,25 +95,43 @@
                                                         </strong>
                                                     </a>
                                                 </li>
-                                            <xen:hook name="navigation_visitor_tab_links1" />
-                                            <xen:hook name="navigation_visitor_tab_links2" />
+                                                <li>
+                                                    <a href="{xen:link account/preferences}" class="OverlayTrigger">{xen:phrase preferences}</a>
+                                                </li>
+                                                <xen:if is="{$canUploadAvatar}">
+                                                    <li>
+                                                        <a href="{xen:link account/avatar}" class="OverlayTrigger" data-cacheOverlay="true">{xen:phrase avatar}</a>
+                                                    </li>
+                                                </xen:if>
+                                                <li>
+                                                    <a href="{xen:link account/bookmarks}" class="OverlayTrigger">Your Bookmarks</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{xen:link friend-inviter}" class="OverlayTrigger">Send Invite</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{xen:link account/privacy}" class="OverlayTrigger">{xen:phrase privacy}</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{xen:link account/security}" class="OverlayTrigger">{xen:phrase password}</a>
+                                                </li>
                                                 <xen:if is="{$canEditProfile}"><li><a href="{xen:link account/personal-details}">{xen:phrase personal_details}</a></li></xen:if>
                                                 <xen:if is="{$canEditSignature}"><li><a href="{xen:link account/signature}">{xen:phrase signature}</a></li></xen:if>
                                                 <xen:if is="{$canEditProfile}"><li><a href="{xen:link account/contact-details}">{xen:phrase contact_details}</a></li></xen:if>
-                                                <li><a href="{xen:link account/privacy}">{xen:phrase privacy}</a></li>
-                                                <li><a href="{xen:link account/preferences}" class="OverlayTrigger">{xen:phrase preferences}</a></li>
                                                 <li><a href="{xen:link account/alert-preferences}">{xen:phrase alert_preferences}</a></li>
-                                                <xen:if is="{$canUploadAvatar}"><li><a href="{xen:link account/avatar}" class="OverlayTrigger" data-cacheOverlay="true">{xen:phrase avatar}</a></li></xen:if>
                                                 <xen:if is="{$xenOptions.facebookAppId}"><li><a href="{xen:link account/facebook}">{xen:phrase facebook_integration}</a></li></xen:if>
-                                                <li><a href="{xen:link account/security}">{xen:phrase password}</a></li>
                                                 <xen:if is="{$xenOptions.enableNewsFeed}"><li><a href="{xen:link account/news-feed}">{xen:phrase your_news_feed}</a></li></xen:if>
                                                 <li><a href="{xen:link account/likes}">{xen:phrase likes_youve_received}</a></li>
                                                 <li><a href="{xen:link search/member, '', 'user_id={$visitor.user_id}'}">{xen:phrase your_content}</a></li>
                                                 <li><a href="{xen:link account/following}">{xen:phrase people_you_follow}</a></li>
                                                 <li><a href="{xen:link account/ignored}">{xen:phrase people_you_ignore}</a></li>
-                                                <xen:if is="{$xenCache.userUpgradeCount}"><li><a href="{xen:link account/upgrades}">{xen:phrase account_upgrades}</a></li></xen:if>
                                             </ul>
                                             <ul class="col2 blockLinksList">
+                                                <xen:if is="{$xenCache.userUpgradeCount}">
+                                                    <li>
+                                                        <a href="{xen:link account/upgrades}">{xen:phrase account_upgrades}</a>
+                                                    </li>
+                                                </xen:if>
                                                 <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
                                             </ul>
                                         </div>
