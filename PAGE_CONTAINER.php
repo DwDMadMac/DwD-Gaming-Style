@@ -81,7 +81,7 @@
 						<![endif]-->
 
 						<xen:hook name="page_container_notices">
-						<xen:include template="notices" />						
+                                                        <xen:include template="notices" />
 						</xen:hook>
 						
 						<xen:hook name="page_container_content_title_bar">

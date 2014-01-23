@@ -53,7 +53,7 @@
                     </li>
                     <!-- account -->
                     <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
-                        <a href="{xen:link account}" class="dropdown-toggle" data-toggle="dropdown" rel="Menu">
+                        <a class="dropdown-toggle" data-toggle="dropdown" rel="Menu">
                             <span class="l">Account</span>
                         </a>
                             <div class="forumsTabLinks">
