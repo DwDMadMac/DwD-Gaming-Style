@@ -74,6 +74,23 @@
                                         </xen:comment>
                                         <div class="menuColumns secondaryContent">
                                             <ul class="col1 blockLinksList">
+                                                <li>				
+                                                    <form action="{xen:link account/toggle-visibility}" method="post" class="AutoValidator visibilityForm">
+                                                        <label><input type="checkbox" name="visible" value="1" class="SubmitOnChange" {xen:checked $visitor.visible} />
+                                                            {xen:phrase show_online_status}</label>
+                                                        <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+                                                    </form>
+                                                </li>
+                                                <li><a href="{xen:link conversations}">{xen:phrase conversations}
+                                                    <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}"
+                                                        id="VisitorExtraMenu_ConversationsCounter">
+                                                        <span class="Total">{xen:number $visitor.conversations_unread}</span>
+                                                    </strong></a></li>
+                                                <li><a href="{xen:link account/alerts}">{xen:phrase alerts}
+                                                    <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}"
+                                                        id="VisitorExtraMenu_AlertsCounter">
+                                                        <span class="Total">{xen:number $visitor.alerts_unread}</span>
+                                                    </strong></a></li>
                                             <xen:hook name="navigation_visitor_tab_links1">
                                                 <xen:if is="{$canEditProfile}"><li><a href="{xen:link account/personal-details}">{xen:phrase personal_details}</a></li></xen:if>
                                                 <xen:if is="{$canEditSignature}"><li><a href="{xen:link account/signature}">{xen:phrase signature}</a></li></xen:if>
@@ -89,33 +106,12 @@
                                             <ul class="col2 blockLinksList">
                                             <xen:hook name="navigation_visitor_tab_links2">
                                                 <xen:if is="{$xenOptions.enableNewsFeed}"><li><a href="{xen:link account/news-feed}">{xen:phrase your_news_feed}</a></li></xen:if>
-                                                <li><a href="{xen:link conversations}">{xen:phrase conversations}
-                                                    <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}"
-                                                        id="VisitorExtraMenu_ConversationsCounter">
-                                                        <span class="Total">{xen:number $visitor.conversations_unread}</span>
-                                                    </strong></a></li>
-                                                <li><a href="{xen:link account/alerts}">{xen:phrase alerts}
-                                                    <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}"
-                                                        id="VisitorExtraMenu_AlertsCounter">
-                                                        <span class="Total">{xen:number $visitor.alerts_unread}</span>
-                                                    </strong></a></li>
                                                 <li><a href="{xen:link account/likes}">{xen:phrase likes_youve_received}</a></li>
                                                 <li><a href="{xen:link search/member, '', 'user_id={$visitor.user_id}'}">{xen:phrase your_content}</a></li>
                                                 <li><a href="{xen:link account/following}">{xen:phrase people_you_follow}</a></li>
                                                 <li><a href="{xen:link account/ignored}">{xen:phrase people_you_ignore}</a></li>
                                                 <xen:if is="{$xenCache.userUpgradeCount}"><li><a href="{xen:link account/upgrades}">{xen:phrase account_upgrades}</a></li></xen:if>
                                             </xen:hook>
-                                            </ul>
-                                        </div>
-                                        <div class="menuColumns secondaryContent">
-                                            <ul class="col1 blockLinksList">
-                                                <li>				
-                                                    <form action="{xen:link account/toggle-visibility}" method="post" class="AutoValidator visibilityForm">
-                                                        <label><input type="checkbox" name="visible" value="1" class="SubmitOnChange" {xen:checked $visitor.visible} />
-                                                            {xen:phrase show_online_status}</label>
-                                                        <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
-                                                    </form>
-                                                </li>
                                             </ul>
                                             <ul class="col2 blockLinksList">
                                                 <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
