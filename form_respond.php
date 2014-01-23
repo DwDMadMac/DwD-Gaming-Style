@@ -9,11 +9,12 @@
 <xen:container var="$head.description">
 	<meta name="description" content="{xen:helper snippet, $form.description, 155}" /></xen:container>
 
-<div class="baseHtml"><p id="pageDescription" class="muted">{xen:raw $form.description}</p></div>
 
-<form method="post" class="xenForm AutoValidator"
+<form method="post" class="xenForm formOverlay NoFixedOverlay AutoValidator"
 	action="{xen:link 'forms/save'}"
 	data-fieldValidatorUrl="{xen:link 'forms/validate-field'}" data-redirect="on">
+    
+        <div class="baseHtml"><p id="pageDescription" class="muted">{xen:raw $form.description}</p></div>
 	
 	<xen:foreach loop="$fields" value="$field">
 		<xen:if is="{$field}">
