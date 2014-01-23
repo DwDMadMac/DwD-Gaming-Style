@@ -18,7 +18,7 @@
                         <h4>Help & Support</h4>
                         <ul>
                             <li><a href="{xen:link wiki}">Wiki</a></li>
-                            <li><a href="http:dwdg.net/staff">Staff</a></li>
+                            <li><a href="http://dwdg.net/staff">Staff</a></li>
                             <li><a href="#">Forum Issues</a></li>
                             <li><a href="#">Game Server Issues</a></li>
                             <li><a href="{xen:link forms/file-a-report.5/respond}" class="OverlayTrigger">Report a member</a></li>
