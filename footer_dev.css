@@ -87,3 +87,6 @@
 .tile li:hover {
     opacity: .4;
 }
+.footer a:hover {
+    text-decoration: none;
+}
