@@ -4665,6 +4665,13 @@ td.visible-print {
 .thread_view .privateControls a,
 .thread_view .publicControls a,
 .thread_view label,
-.thread_view .Dc_SmileyManager_SmilieLoader {
+.thread_view .Dc_SmileyManager_SmilieLoader,
+.thread_view .dark_postrating_inputlist_undo a,
+.thread_view .dark_postrating_outputlist,
+.thread_view .dark_postrating_outputlist li strong,
+.thread_view .dark_postrating_list,
+.thread_reply titleBar,
+.thread_reply fieldset,
+.thread_reply label {
     color: white;
 }
