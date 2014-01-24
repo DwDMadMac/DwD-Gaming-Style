@@ -7,7 +7,8 @@
 <xen:container var="$formId">{$form.form_id}</xen:container>
 
 <xen:container var="$head.description">
-	<meta name="description" content="{xen:helper snippet, $form.description, 155}" /></xen:container>
+        <meta name="description" content="{xen:helper snippet, $form.description, 155}" />
+</xen:container>
 
 
 <form method="post" class="xenForm formOverlay NoFixedOverlay AutoValidator"
