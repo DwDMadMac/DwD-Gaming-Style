@@ -4694,3 +4694,6 @@ td.visible-print {
     margin-right: 15px;
     padding-left: 15px;
 }
+.thread_view .messageMeta {
+    padding-left: 15px;
+}
