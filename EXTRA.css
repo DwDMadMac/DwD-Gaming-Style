@@ -4649,3 +4649,6 @@ td.visible-print {
 #headerProxy {
     margin-bottom: 90px;
 }
+.category_view ol {
+    margin: 0 !important;
+}
