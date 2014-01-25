@@ -476,5 +476,5 @@
 }
 </xen:if>
 .category_view .titleBar {
-    color: white;
+    display: none;
 }
