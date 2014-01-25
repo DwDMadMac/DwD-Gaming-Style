@@ -4641,4 +4641,11 @@ td.visible-print {
 }
 #content .pageContent {
     background: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}#content {
+    margin-top: 20px;
+}
+#headerProxy {
+    margin-bottom: 90px;
 }
