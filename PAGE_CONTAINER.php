@@ -53,6 +53,11 @@
 
 <div id="headerMover">
 	<div id="headerProxy"></div>
+            <div class="pageWidth">
+                <xen:hook name="page_container_notices">
+                        <xen:include template="notices" />
+                </xen:hook>
+            </div>
 
 <div id="content" class="{$contentTemplate}">
 	<div class="pageWidth">
@@ -79,10 +84,6 @@
 						<!--[if lt IE 8]>
 							<p class="importantMessage">{xen:phrase you_are_using_out_of_date_browser_upgrade}</p>
 						<![endif]-->
-
-						<xen:hook name="page_container_notices">
-                                                        <xen:include template="notices" />
-						</xen:hook>
 						
 						<xen:hook name="page_container_content_title_bar">
 						<xen:if is="!{$noH1}">						
