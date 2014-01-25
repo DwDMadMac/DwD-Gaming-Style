@@ -4652,3 +4652,10 @@ td.visible-print {
 .category_view ol {
     margin: 0 !important;
 }
+.nodeText .forumDescFloat {
+    float: left;
+    width: 50%;
+}
+.nodeText .nodeStats {
+    float: right;
+}
