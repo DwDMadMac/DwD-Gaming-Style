@@ -419,6 +419,8 @@ abbr[data-original-title] {
 blockquote {
   padding: 5px 10px;
   border-left: 5px solid rgb(223, 213, 213);
+}
+.thread_view blockquote {
   border-top: 1px solid rgb(223, 213, 213);
   border-right: 1px solid rgb(223, 213, 213);
   border-bottom: 1px solid rgb(223, 213, 213);
