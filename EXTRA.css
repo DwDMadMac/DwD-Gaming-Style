@@ -4650,7 +4650,7 @@ td.visible-print {
 }
 .nodeText .forumDescFloat {
     float: left;
-    width: 50%;
+    width: 90%;
 }
 .nodeText .nodeStats {
     float: right;
