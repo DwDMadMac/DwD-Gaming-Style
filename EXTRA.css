@@ -4633,7 +4633,7 @@ td.visible-print {
 .thread_reply fieldset,
 .thread_reply label,
 .account_personal_details .titleBar {
-    color: white;
+    color: black;
 }
 #content .pageContent {
     background: white;
