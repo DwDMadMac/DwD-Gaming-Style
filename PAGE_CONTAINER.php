@@ -124,10 +124,6 @@
 					</div>
 				</aside>
 			</xen:if>
-			
-			<xen:hook name="page_container_breadcrumb_bottom">			
-			<div class="breadBoxBottom"><xen:include template="breadcrumb" /></div>
-			</xen:hook>
 						
 			<xen:include template="ad_below_bottom_breadcrumb" />
 						
