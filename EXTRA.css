@@ -4655,3 +4655,8 @@ td.visible-print {
 .nodeText .nodeStats {
     float: right;
 }
+.node .nodeStats {
+    float: right;
+    padding-top: 38px;
+    padding-bottom: 4px;
+}
