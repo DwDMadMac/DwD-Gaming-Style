@@ -37,10 +37,6 @@
 
 <xen:if is="{$renderedNodes}">
 	<xen:include template="ad_forum_view_above_node_list" />
-	<xen:include template="node_list" />
-	<xen:if is="{$newDiscussionButton}">
-		<div class="nodeListNewDiscussionButton">{xen:raw $newDiscussionButton}</div>
-	</xen:if>
 </xen:if>
 
 <xen:hook name="forum_view_pagenav_before" params="{xen:array 'forum={$forum}'}" />
@@ -61,10 +57,6 @@
 
 <xen:hook name="forum_view_threads_before" params="{xen:array 'forum={$forum}'}" />
 
-<div class="discussionList section sectionMain">
-	<xen:include template="thread_list" />
-</div>
-	
 <div class="pageNavLinkGroup afterDiscussionListHandle">
 	<div class="linkGroup">
 		<xen:if is="{$canPostThread}">
@@ -79,3 +71,11 @@
 	
 	<xen:pagenav link="forums" linkdata="{$forum}" linkparams="{$pageNavParams}" page="{$page}" perpage="{$threadsPerPage}" total="{$totalThreads}" />
 </div>
+<div class="discussionList section sectionMain" style="margin-bottom: 20px;">
+	<xen:include template="thread_list" />
+</div>
+	
+<xen:if is="{$renderedNodes}">
+	<xen:include template="ad_forum_view_above_node_list" />
+	<xen:include template="node_list" />
+</xen:if>
