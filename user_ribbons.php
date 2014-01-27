@@ -25,105 +25,105 @@
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 3}">
-    <li class="ribbon">
+    <li class="ribbonCommunityOperator">
         <div class="left"></div>
         <div class="right"></div>
             Community Operator
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 12}">
-    <li class="ribbon">
+    <li class="ribbonCommunityAdmin">
         <div class="left"></div>
         <div class="right"></div>
             Community Admin
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 4}">
-    <li class="ribbon">
+    <li class="ribbonCommunityModerator">
         <div class="left"></div>
         <div class="right"></div>
             Community Moderator
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 15}">
-    <li class="ribbon">
+    <li class="ribbonWikiDeveloper">
         <div class="left"></div>
         <div class="right"></div>
             Wiki Developer
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 14}">
-    <li class="ribbon">
+    <li class="ribbonRetiredStaff">
         <div class="left"></div>
         <div class="right"></div>
             Retired Staff
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 11}">
-    <li class="ribbon">
+    <li class="ribbonMCNetworkOperator">
         <div class="left"></div>
         <div class="right"></div>
             MC Network Operator
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 17}">
-    <li class="ribbon">
+    <li class="ribbonMCNetworkDeveloper">
         <div class="left"></div>
         <div class="right"></div>
             MC Network Developer
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 10}">
-    <li class="ribbon">
+    <li class="ribbonMCNetworkAdmin">
         <div class="left"></div>
         <div class="right"></div>
             MC Network Admin
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 9}">
-    <li class="ribbon">
+    <li class="ribbonMCNetworkModerator">
         <div class="left"></div>
         <div class="right"></div>
             Mc Network Moderator
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 5}">
-    <li class="ribbon">
+    <li class="ribbonRPGNetworkOwner">
         <div class="left"></div>
         <div class="right"></div>
             RPG Kingdom Owner
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 8}">
-    <li class="ribbon">
+    <li class="ribbonMCNetworkVet">
         <div class="left"></div>
         <div class="right"></div>
             MC Network Vet
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 7}">
-    <li class="ribbon">
+    <li class="ribbonMCNetworkElite">
         <div class="left"></div>
         <div class="right"></div>
             MC Network Elite
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 6}">
-    <li class="ribbon">
+    <li class="ribbonMCNetworkTrustie">
         <div class="left"></div>
         <div class="right"></div>
             MC Network Trustie
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 2}">
-    <li class="ribbon">
+    <li class="ribbonCommunityMember">
         <div class="left"></div>
         <div class="right"></div>
             Community Member
     </li>
 </xen:if>
 <xen:if is="{xen:helper ismemberof, $user, 1}">
-    <li class="ribbon">
+    <li class="ribbonGuest">
         <div class="left"></div>
         <div class="right"></div>
             Guest
