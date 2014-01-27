@@ -18,7 +18,7 @@
     Guest = 1
 </xen:comment>
 <xen:if hascontent="true">
-    <ul class="ribbon">
+    <ul class="ribbonFounder">
         <xen:contentcheck>
             <xen:if is="{xen:helper ismemberof, $user, 13}">
                 <li class="ribbonFounder">
