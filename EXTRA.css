@@ -4726,6 +4726,8 @@ td.visible-print {
     width: 126px;
 }
 .thread_view .messageList .messageUserBlock .avatarHolder .userMood {
-    bottom: 195px;
-    position: relative;
+    bottom: 215px;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
