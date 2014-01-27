@@ -5,7 +5,9 @@
 	<xen:hook name="message_user_info_avatar" params="{xen:array 'user={$user}', 'isQuickReply={$isQuickReply}'}">
 		<div class="avatarHolder">
 			<span class="helper"></span>
-			<xen:avatar user="$user" size="m" img="true" />
+			<xen:avatar user="$user" size="l" img="true">
+                            <xen:username user="$user" itemprop="name" rich="true" />
+                        </xen:avatar>
 			<!-- slot: message_user_info_avatar -->
 		</div>
 	</xen:hook>
@@ -13,7 +15,6 @@
 <xen:if is="!{$isQuickReply}">
 	<xen:hook name="message_user_info_text" params="{xen:array 'user={$user}', 'isQuickReply={$isQuickReply}'}">
 		<h3 class="userText">
-			<xen:username user="$user" itemprop="name" rich="true" />
 			<xen:if hascontent="true"><em class="userTitle" itemprop="title"><xen:contentcheck>{xen:helper userTitle, $user, 1, 1}</xen:contentcheck></em></xen:if>
 			{xen:helper userBanner, $user, 'wrapped'}
 			<!-- slot: message_user_info_text -->
