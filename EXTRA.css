@@ -4725,3 +4725,7 @@ td.visible-print {
 .quickReply .messageUserInfo {
     width: 126px;
 }
+.thread_view .messageList .messageUserBlock .avatarHolder .userMood {
+    bottom: 195px;
+    position: relative;
+}
