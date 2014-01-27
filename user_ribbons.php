@@ -91,7 +91,7 @@
                 </li>
             </xen:if>
             <xen:if is="{xen:helper ismemberof, $user, 5}">
-                <li class="ribbonRPGNetworkOwner">
+                <li class="ribbonRPGKingdomOwner">
                     <div class="left"></div>
                     <div class="right"></div>
                         RPG Kingdom Owner
