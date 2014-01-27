@@ -17,13 +17,12 @@
                         </xen:if>
 		</div>
 	</xen:hook>
-
+<xen:include template="user_ribbons" />
 <xen:if is="!{$isQuickReply}">
 	<xen:hook name="message_user_info_text" params="{xen:array 'user={$user}', 'isQuickReply={$isQuickReply}'}">
 		<h3 class="userText">
-                                <xen:include template="user_ribbons" />
 			<xen:if hascontent="true"><em class="userTitle" itemprop="title"><xen:contentcheck>{xen:helper userTitle, $user, 1, 1}</xen:contentcheck></em></xen:if>
-			{xen:helper userBanner, $user, 'wrapped'}
+                        <xen:comment>{xen:helper userBanner, $user, 'wrapped'}</xen:comment>
 			<!-- slot: message_user_info_text -->
 		</h3>
 	</xen:hook>
