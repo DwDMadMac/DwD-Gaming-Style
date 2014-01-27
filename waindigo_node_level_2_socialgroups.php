@@ -15,8 +15,25 @@
 			<xen:if is="{$forum.description} AND @nodeListDescriptions">
 				<blockquote class="nodeDescription {xen:if @nodeListDescriptionTooltips, nodeDescriptionTooltip} baseHtml" id="nodeDescription-{$forum.node_id}">{xen:raw $forum.description}</blockquote>
 			</xen:if>
+		</div>
+		
+		<xen:hook name="node_forum_level_2_before_lastpost" />
 
-			<div class="nodeStats pairsInline">
+		<div class="nodeLastPost secondaryContent">
+			<xen:if is="{$forum.privateInfo}">
+				<span class="noMessages muted">({xen:phrase private})</span>
+			<xen:elseif is="{$forum.lastPost.date}" />
+				{xen:phrase latest}: <a href="{xen:link posts, $forum.lastPost}" title="{$forum.lastPost.title}">{xen:helper wordTrim, $forum.lastPost.title, 30}</a>
+				<span class="lastThreadMeta"><xen:if is="{xen:helper isIgnored, $forum.last_post_user_id}">{xen:phrase ignored_member}<xen:else /><xen:username user="$forum.lastPost" /></xen:if>, <xen:datetime time="$forum.lastPost.date" class="muted" /></span>
+			<xen:else />
+				<span class="noMessages muted">({xen:phrase contains_no_messages})</span>
+			</xen:if>
+		</div>
+
+		<div class="nodeControls">
+			<a href="{xen:link social-categories/index.rss, $forum}" class="tinyIcon feedIcon" title="{xen:phrase rss}">{xen:phrase rss}</a>
+		</div>
+			<div class="nodeStats pairsInline" style="padding-top: 8px !important;">
 				<dl>
 					<dt>{xen:phrase discussions}:</dt> <dd>{xen:if $forum.privateInfo, '&ndash;', {xen:number $forum.discussion_count}}</dd>
 					<dt>{xen:phrase messages}:</dt> <dd>{xen:if $forum.privateInfo, '&ndash;', {xen:number $forum.message_count}}</dd>
@@ -39,24 +56,6 @@
 					</div>
 				</xen:if>
 			</div>
-		</div>
-		
-		<xen:hook name="node_forum_level_2_before_lastpost" />
-
-		<div class="nodeLastPost secondaryContent">
-			<xen:if is="{$forum.privateInfo}">
-				<span class="noMessages muted">({xen:phrase private})</span>
-			<xen:elseif is="{$forum.lastPost.date}" />
-				{xen:phrase latest}: <a href="{xen:link posts, $forum.lastPost}" title="{$forum.lastPost.title}">{xen:helper wordTrim, $forum.lastPost.title, 30}</a>
-				<span class="lastThreadMeta"><xen:if is="{xen:helper isIgnored, $forum.last_post_user_id}">{xen:phrase ignored_member}<xen:else /><xen:username user="$forum.lastPost" /></xen:if>, <xen:datetime time="$forum.lastPost.date" class="muted" /></span>
-			<xen:else />
-				<span class="noMessages muted">({xen:phrase contains_no_messages})</span>
-			</xen:if>
-		</div>
-
-		<div class="nodeControls">
-			<a href="{xen:link social-categories/index.rss, $forum}" class="tinyIcon feedIcon" title="{xen:phrase rss}">{xen:phrase rss}</a>
-		</div>
 		
 	</div>
 
