@@ -4674,18 +4674,21 @@ td.visible-print {
 }
 .thread_view .secondaryContent,
 .thread_view .threadAlerts,
-.thread_view .sharePage {
+.thread_view .sharePage,
+.forum_view .titleBar {
     margin: 0 15px !important;
 }
 .thread_view .pageNavLinkGroup {
     margin-left: 15px;
     margin-right: 15px;
 }
-.thread_view .message .messageUserInfo {
+.thread_view .message .messageUserInfo,
+.forum_view .pageNavLinkGroup {
     margin-left: 15px;
     margin-right: 15px;
 }
-.thread_view .messageInfo {
+.thread_view .messageInfo,
+.forum_view .pageNavLinkGroup {
     margin-right: 15px !important;
 }
 .thread_view .Tinhte_XenTag_TagsInlineEditor {
