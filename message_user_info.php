@@ -5,16 +5,12 @@
 	<xen:hook name="message_user_info_avatar" params="{xen:array 'user={$user}', 'isQuickReply={$isQuickReply}'}">
 		<div class="avatarHolder">
 			<span class="helper"></span>
-                        <xen:if is="{$isQuickReply}">
-                            <xen:avatar user="$user" size="m" img="true" />
-                        <xen:else />
-                            <xen:avatar user="$user" size="l" img="true">
+                            <xen:avatar user="$user" size="m" img="true">
                                 <div class="MUBholdUsername">
                                     <xen:username user="$user" itemprop="name" rich="true" />
                                 </div>
                             </xen:avatar>
                             <!-- slot: message_user_info_avatar -->
-                        </xen:if>
 		</div>
 	</xen:hook>
 <xen:include template="user_ribbons" />
