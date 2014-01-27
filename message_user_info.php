@@ -6,7 +6,9 @@
 		<div class="avatarHolder">
 			<span class="helper"></span>
 			<xen:avatar user="$user" size="l" img="true">
-                            <xen:username user="$user" itemprop="name" rich="true" />
+                            <div class="MUBholdUsername">
+                                <xen:username user="$user" itemprop="name" rich="true" />
+                            </div>
                         </xen:avatar>
 			<!-- slot: message_user_info_avatar -->
 		</div>
