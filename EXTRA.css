@@ -4719,3 +4719,9 @@ td.visible-print {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+.messageList .messageUserInfo {
+    width: 215px;
+}
+.quickReply .messageUserInfo {
+    width: 126px;
+}
