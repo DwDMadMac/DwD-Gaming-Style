@@ -4704,3 +4704,18 @@ td.visible-print {
 .thread_view .messageMeta {
     padding-left: 15px;
 }
+.thread_view .messageUserBlock .avatarHolder .username {
+    top: 183px;
+    display: inline-block;
+    position: absolute;
+    left: 14px;
+    color: white;
+    background: black;
+}
+.thread_view .messageUserBlock .avatarHolder .MUBholdUsername .username {
+    background: black;
+    width: 87%;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
