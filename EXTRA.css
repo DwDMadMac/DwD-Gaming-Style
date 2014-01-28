@@ -4726,49 +4726,49 @@ td.visible-print {
 .ribbon li .right {border-top-right-radius: 3px;right: -1px;}
 .ribbon li .left {border-top-left-radius: 3px;left: -1px;}
 /* Founder */
-.ribbonFounder {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonFounder {background: @primaryLight url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonFounder div {background-color: @primaryLight;}
 /* Community Operator */
-.ribbonCommunityOperator {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonCommunityOperator {background: rgb(0, 31, 77) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonCommunityOperator div {background-color: @primaryLight;}
 /* Community Admin */
-.ribbonCommunityAdmin {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonCommunityAdmin {background: rgb(0, 31, 77) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonCommunityAdmin div {background-color: @primaryLight;}
 /* Community Moderator */
-.ribbonCommunityModerator {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonCommunityModerator {background: rgb(0, 31, 77) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonCommunityModerator div {background-color: @primaryLight;}
 /* Wiki Developer */
-.ribbonWikiDeveloper {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonWikiDeveloper {background: rgb(0, 167, 250) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: rgb(0,0,0);}
 .ribbonWikiDeveloper div {background-color: @primaryLight;}
 /* Retired Staff */
-.ribbonRetiredStaff {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonRetiredStaff {background: rgb(255, 143, 0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: rgb(0,0,0);}
 .ribbonRetiredStaff div {background-color: @primaryLight;}
 /* MC Network Operator */
-.ribbonMCNetworkOperator {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonMCNetworkOperator {background: rgb(255,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonMCNetworkOperator div {background-color: @primaryLight;}
 /* MC Network Developer */
-.ribbonMCNetworkDeveloper {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonMCNetworkDeveloper {background: rgb(237,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonMCNetworkDeveloper div {background-color: @primaryLight;}
 /* MC Network Admin */
-.ribbonMCNetworkAdmin {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonMCNetworkAdmin {background: rgb(220,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonMCNetworkAdmin div {background-color: @primaryLight;}
 /* MC Network Moderator */
-.ribbonMCNetworkModerator {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonMCNetworkModerator {background: rgb(200,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonMCNetworkModerator div {background-color: @primaryLight;}
 /* RPG Kingdom Owner */
-.ribbonRPGKingdomOwner {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonRPGKingdomOwner {background: rgb(170,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonRPGKingdomOwner div {background-color: @primaryLight;}
 /* MC Network Vet */
-.ribbonMCNetworkVet {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonMCNetworkVet {background: rgb(130,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonMCNetworkVet div {background-color: @primaryLight;}
 /* MC Network Elite */
-.ribbonMCNetworkElite {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonMCNetworkElite {background: rgb(80,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonMCNetworkElite div {background-color: @primaryLight;}
 /* MC Network Trustie */
-.ribbonMCNetworkTrustie {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonMCNetworkTrustie {background: rgb(40,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
 .ribbonMCNetworkTrustie div {background-color: @primaryLight;}
 /* Community Member */
 .ribbonCommunityMember,
-.ribbonGuest {background: @primaryLight url('@imagePath/xenforo/gradients/category-23px-light.png') repeat-x top;border: 1px solid @primaryLight;color: @contentBackground;}
+.ribbonGuest {background: @primaryLight url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top;border: 1px solid @primaryLight;color: @contentBackground;}
 .ribbonCommunityMember div,
 .ribbonGuest div {background-color: @primaryLight;}
