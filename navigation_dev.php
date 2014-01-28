@@ -62,6 +62,30 @@
                     <xen:if is="!{$visitor.user_id}">
                         <xen:comment>Do Nothing Here</xen:comment>
                     <xen:else />
+                        <!-- Alerts -->
+                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
+                            <a href="{xen:link account}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
+                                <span id="alertsIcon"></span>
+                                <span class="l>"
+                                        <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}" id="VisitorExtraMenu_AlertsCounter">
+                                            <span class="Total">{xen:number $visitor.alerts_unread}</span>
+                                        </strong>
+                                </span>
+                            </a>
+                            
+                        </li>
+                        <!-- Conversations -->
+                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
+                            <a href="{xen:link account}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
+                                <span id="convoIcon"></span>
+                                <span class="l">
+                                        <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
+                                            <span class="Total">{xen:number $visitor.conversations_unread}</span>
+                                        </strong>
+                                </span>
+                            </a>
+                            
+                        </li>
                         <!-- account -->
                         <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
                             <a href="{xen:link account}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
@@ -91,20 +115,6 @@
                                                                 {xen:phrase show_online_status}</label>
                                                             <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
                                                         </form>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{xen:link account/alerts}">{xen:phrase alerts}
-                                                            <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}" id="VisitorExtraMenu_AlertsCounter">
-                                                                <span class="Total">{xen:number $visitor.alerts_unread}</span>
-                                                            </strong>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{xen:link conversations}">{xen:phrase conversations}
-                                                            <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
-                                                                <span class="Total">{xen:number $visitor.conversations_unread}</span>
-                                                            </strong>
-                                                        </a>
                                                     </li>
                                                     <xen:if is="{$canUploadAvatar}">
                                                         <li>

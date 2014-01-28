@@ -123,3 +123,11 @@
     padding: 20px;
     color: #55595b;
 }
+#alertsIcon {
+    background: url('http://downwithdestruction.net/img/glyphicons-halflings.png') 0px -120px;
+    padding: 0 8px;
+}
+#convoIcon {
+    background: url('http://downwithdestruction.net/img/glyphicons-halflings.png') -73px 0px;
+    padding: 0 8px;    
+}
