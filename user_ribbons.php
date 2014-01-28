@@ -17,6 +17,7 @@
     Community Member = 2
     Guest = 1
 </xen:comment>
+<xen:require css="user_ribbons.css" />
 <xen:if hascontent="true">
     <ul class="ribbon">
         <xen:contentcheck>
