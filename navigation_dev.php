@@ -63,7 +63,7 @@
                         <xen:comment>Do Nothing Here</xen:comment>
                     <xen:else />
                         <!-- Alerts -->
-                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
+                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="9d46b2">
                             <a href="{xen:link account}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
                                 <span id="alertsIcon"></span>
                                 <span class="l>"
@@ -73,10 +73,29 @@
                                 </span>
                             </a>
                             
+                            <div class="Menu JsOnly navPopup" id="AlertsMenu"
+                                    data-contentSrc="{xen:link 'account/alerts-popup'}"
+                                    data-contentDest="#AlertsMenu .listPlaceholder"
+                                    data-removeCounter="#AlertsMenu_Counter">
+
+                                    <div class="menuHeader primaryContent">
+                                            <h3>
+                                                    <span class="Progress InProgress"></span>
+                                                    <a href="{xen:link account/alerts}" class="concealed">{xen:phrase alerts}</a>
+                                            </h3>
+                                    </div>
+
+                                    <div class="listPlaceholder"></div>
+
+                                    <div class="sectionFooter">
+                                            <a href="{xen:link account/alert-preferences}" class="floatLink">{xen:phrase alert_preferences}</a>
+                                            <a href="{xen:link account/alerts}">{xen:phrase show_all}...</a>
+                                    </div>
+                            </div>
                         </li>
                         <!-- Conversations -->
-                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
-                            <a href="{xen:link account}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
+                        <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="4d46b2">
+                            <a href="{xen:link conversations}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle disableAccountNavi" data-toggle="dropdown" rel="Menu">
                                 <span id="convoIcon"></span>
                                 <span class="l">
                                         <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
@@ -84,7 +103,25 @@
                                         </strong>
                                 </span>
                             </a>
-                            
+
+                            <div class="Menu JsOnly navPopup" id="ConversationsMenu"
+                                    data-contentSrc="{xen:link 'conversations/popup'}"
+                                    data-contentDest="#ConversationsMenu .listPlaceholder">
+
+                                    <div class="menuHeader primaryContent">
+                                            <h3>
+                                                    <span class="Progress InProgress"></span>
+                                                    <a href="{xen:link conversations}" class="concealed">{xen:phrase conversations}</a>
+                                            </h3>						
+                                    </div>
+
+                                    <div class="listPlaceholder"></div>
+
+                                    <div class="sectionFooter">
+                                            <xen:if is="{$canStartConversation}"><a href="{xen:link conversations/add}" class="floatLink">{xen:phrase start_new_conversation}</a></xen:if>
+                                            <a href="{xen:link conversations}">{xen:phrase show_all}...</a>
+                                    </div>
+                            </div>
                         </li>
                         <!-- account -->
                         <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="2d46b2">
