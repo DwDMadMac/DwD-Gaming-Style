@@ -48,6 +48,6 @@
 .ribbonMCNetworkTrustie div {background-color: @primaryLight;}
 /* Community Member */
 .ribbonCommunityMember,
-.ribbonGuest {background: @primaryLight url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top;border: 1px solid @primaryLight;color: @contentBackground;}
+.ribbonGuest {background: @primaryLight url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top;border: 1px solid @primaryLight;color: rgb(95,0,0);}
 .ribbonCommunityMember div,
 .ribbonGuest div {background-color: @primaryLight;}
