@@ -5,7 +5,7 @@
 .ribbon li .right {border-top-right-radius: 3px;right: -1px;}
 .ribbon li .left {border-top-left-radius: 3px;left: -1px;}
 /* Founder */
-.ribbonFounder {background: @primaryLight url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.ribbonFounder {background: rgb(253, 43, 169) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: rgb(0,0,0); text-shadow: 0px 0px 6px black;}
 .ribbonFounder div {background-color: @primaryLight;}
 /* Community Operator */
 .ribbonCommunityOperator {background: rgb(0, 31, 77) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
