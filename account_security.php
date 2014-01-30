@@ -40,5 +40,5 @@
 	</xen:if>
 
 	<input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+        <xen:include template="secret_question" />
 </form>
-		<xen:include template="secret_question" />
