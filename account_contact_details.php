@@ -4,7 +4,7 @@
 
 <form method="post" class="xenForm formOverlay NoFixedOverlay AutoValidator"
 	action="{xen:link 'account/contact-details-save'}"
-	data-fieldValidatorUrl="{xen:link 'account/validate-field.json'}">
+	data-fieldValidatorUrl="{xen:link 'account/validate-field.json'}" data-redirect="yes">
 	
 	<xen:hook name="account_contact_details_email_password">
 
@@ -71,14 +71,16 @@
 		</dd>
 	</dl>
 	
+        <xen:if is="{$canEditProfile}">
 	<xen:hook name="account_contact_details_identities">
-
+		<h3 class="sectionHeader">{xen:phrase identities}</h3>
+		<xen:include template="custom_fields_edit" />
 	<h3 class="sectionHeader">{xen:phrase identities}</h3>
 	
 	<xen:include template="custom_fields_edit" />
 	
 	</xen:hook>
-
+	</xen:if>
 	<dl class="ctrlUnit submitUnit">
 		<dt></dt>
 		<dd><input type="submit" name="save" value="{xen:phrase save_changes}" accesskey="s" class="button primary" /></dd>
