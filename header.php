@@ -1,3 +1,4 @@
+<xen:edithint template="header.css" />
 <xen:hook name="header">
 <div id="header">
         <xen:comment><xen:include template="logo_block" /></xen:comment>
