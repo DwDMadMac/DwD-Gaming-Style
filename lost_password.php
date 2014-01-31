@@ -1,8 +1,10 @@
 <xen:title>{xen:phrase lost_password}</xen:title>
 
 <form action="{xen:link 'lost-password/lost'}" method="post" class="xenForm formOverlay">
-	{xen:phrase if_forgotten_your_password_use_form_to_reset}
-        {xen:phrase reset_your_password_with_secret_question, 'link={xen:link 'lost-password/secret-question'}'}
+        <p>
+            {xen:phrase if_forgotten_your_password_use_form_to_reset}
+            {xen:phrase reset_your_password_with_secret_question, 'link={xen:link 'lost-password/secret-question'}'}
+        </p>
 	
 	<dl class="ctrlUnit">
 		<dt><label for="ctrl_username_email">{xen:phrase name_or_email}:</label></dt>
