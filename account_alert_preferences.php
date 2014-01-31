@@ -65,6 +65,10 @@
 					<label><input type="checkbox" value="1" name="alert[profile_post_comment_other_commenter]" {xen:checked "!{$alertOptOuts.profile_post_comment_other_commenter}"} /> {xen:phrase also_comments_on_profile_post}</label>
 					<p class="hint">{xen:phrase someone_comments_on_profile_post_that_you_have_commented_on}</p>
 				</li>
+				<li><input type="hidden" name="alertSet[profile_post_tag]" value="1" />
+					<label><input type="checkbox" value="1" name="alert[profile_post_tag]" {xen:checked "!{$alertOptOuts.profile_post_tag}"} /> {xen:phrase tags_you_in_profile_post_or_comment}</label>
+					<p class="hint">{xen:phrase someone_tags_you_post_or_comment_on_a_profile}</p>
+				</li>
 				<li><input type="hidden" name="alertSet[profile_post_like]" value="1" />
 					<label><input type="checkbox" value="1" name="alert[profile_post_like]" {xen:checked "!{$alertOptOuts.profile_post_like}"} /> {xen:phrase likes_your_profile_post}</label>
 					<p class="hint">{xen:phrase someone_likes_message_you_left_on_member_profile_page}</p>
