@@ -79,7 +79,7 @@
 			</div>
 			<xen:if is="{$canUpdateStatus}">
 				<form action="{xen:link members/post, $visitor}" method="post" class="sectionFooter statusPoster AutoValidator" data-optInOut="OptIn">
-					<textarea name="message" class="textCtrl StatusEditor Elastic" placeholder="{xen:phrase update_your_status}..." rows="1" cols="40" style="height:18px" data-statusEditorCounter="#visMenuSEdCount" data-nofocus="true"></textarea>
+					<textarea name="message" class="textCtrl StatusEditor UserTagger Elastic" placeholder="{xen:phrase update_your_status}..." rows="1" cols="40" style="height:18px" data-statusEditorCounter="#visMenuSEdCount" data-nofocus="true"></textarea>
 					<div class="submitUnit">
 						<span id="visMenuSEdCount" title="{xen:phrase characters_remaining}"></span>
 						<input type="submit" class="button primary MenuCloser" value="{xen:phrase post_verb}" />
