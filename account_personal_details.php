@@ -15,9 +15,9 @@
 		<dl class="ctrlUnit">
 			<dt><label for="ctrl_status">{xen:phrase status_message}:</label></dt>
 			<dd>
-				<textarea name="status" rows="2" cols="60" id="ctrl_status" autofocus="autofocus" class="textCtrl StatusEditor Elastic OptOut" data-statusEditorCounter="#statusEditorCounter"></textarea>
+				<textarea name="status" rows="2" cols="60" id="ctrl_status" autofocus="autofocus" class="textCtrl StatusEditor UserTagger Elastic OptOut" data-statusEditorCounter="#statusEditorCounter"></textarea>
 				<span id="statusEditorCounter" title="{xen:phrase characters_remaining}"></span>
-				<div class="explain"><h3 class="statusHeader">{xen:phrase current_status}:</h3> <span class="CurrentStatus"><xen:if is="{$visitor.status}">{xen:string censor, $visitor.status}<xen:else />({xen:phrase none})</xen:if></span><!--TODO: clearing--></div>
+				<div class="explain"><h3 class="statusHeader">{xen:phrase current_status}:</h3> <span class="CurrentStatus"><xen:if is="{$visitor.status}">{xen:helper bodytext, $visitor.status}<xen:else />({xen:phrase none})</xen:if></span><!--TODO: clearing--></div>
 			</dd>
 		</dl>
 	</xen:if>
