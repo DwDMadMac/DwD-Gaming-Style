@@ -6,7 +6,7 @@
 	<xen:if is="{$level} == 1"><div class="categoryStrip"></div></xen:if>
 
 	<div class="nodeInfo pageNodeInfo">
-            <xen:comment><span class="nodeIcon"></span></xen:comment>
+            <span class="nodeIcon"></span>
 
 		<div class="nodeText">
 			<h3 class="nodeTitle"><a href="{xen:link pages, $page}">{$page.title}</a></h3>

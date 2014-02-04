@@ -7,7 +7,7 @@
 
 	<div class="nodeInfo forumNodeInfo primaryContent {xen:if $forum.hasNew, 'unread'}">
 
-            <xen:comment><span class="nodeIcon" title="{xen:if $forum.hasNew, '{xen:phrase unread_messages}', ''}"></span></xen:comment>
+            <span class="nodeIcon" title="{xen:if $forum.hasNew, '{xen:phrase unread_messages}', ''}"></span>
 
 		<div class="nodeText">
                         <div class="forumDescFloat">
