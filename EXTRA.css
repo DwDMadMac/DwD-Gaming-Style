@@ -4719,3 +4719,36 @@ td.visible-print {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
+
+/* Give breathing effect to "NEW" icon" */
+<xen:if is="@enableResponsive">
+    .LoggedIn .discussionListItems .unread .title a:after,
+    .LoggedIn .nodeInfo.unread .nodeTitle a:after,
+    .LoggedIn .unread .nodeTitle a:after {
+        content: "NEW";
+        color: white;
+        border-radius: 2px;
+        margin-left: 5px;
+        padding: 1px 5px;
+        font-size: 9px;
+        border: none !important;
+        background: transparent !important;
+        -webkit-animation-name: redPulse;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-name: redPulse;
+        -moz-animation-duration: 2s;
+        -moz-animation-iteration-count: infinite;
+        -o-animation-name: redPulse;
+        -o-animation-duration: 2s;
+        -o-animation-iteration-count: infinite;
+        animation-name: redPulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        background: none repeat scroll 0% 0% #750606 !important;
+    }
+</xen:if>
+.node .nodeIcon {
+    margin: 10px;
+}

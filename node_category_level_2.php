@@ -5,7 +5,7 @@
 
 	<div class="nodeInfo categoryForumNodeInfo {xen:if $category.hasNew, 'unread'}">
 
-            <xen:comment><span class="nodeIcon" title="{xen:if $category.hasNew, '{xen:phrase unread_messages}', ''}"></span></xen:comment>
+            <span class="nodeIcon" title="{xen:if $category.hasNew, '{xen:phrase unread_messages}', ''}"></span>
 
 		<div class="nodeText">
 			<h3 class="nodeTitle"><a href="{xen:link categories, $category}" data-description="{xen:if @nodeListDescriptionTooltips, '#nodeDescription-{$category.node_id}'}">{$category.title}</a></h3>
