@@ -1,0 +1,415 @@
+.profilePage
+{
+	@property "profilePage";
+
+	@property "/profilePage";
+}
+
+{xen:helper clearfix, '.profilePage'}
+
+.profilePage .mast
+{
+	float: left;
+	width: @profilePageSidebarWidth;
+	padding-right: 10px;
+	border-right: 1px solid @primaryLighterStill;
+}
+
+.profilePage .mainProfileColumn
+{
+	margin-left: {xen:calc '@profilePageSidebarWidth + 10'}px;
+	border-left: 1px solid @primaryLighterStill;
+	zoom: 1;
+}
+
+/** ************************ **/
+
+.profilePage .mast .section
+{
+}
+	
+	.profilePage .mast .sectionFooter
+	{
+		border-left: 1px solid @primaryLighterStill;
+		border-right: 1px solid @primaryLighterStill;
+		text-align: right;
+	}
+
+/** ************************ **/
+
+.profilePage .mast .followBlocks .section
+{
+	margin-bottom: 20px;
+}
+
+.profilePage .mast .followBlocks .primaryContent.avatarHeap
+{
+	border: 1px solid @primaryLighterStill;
+	border-top: none;
+}
+
+/** ************************ **/
+
+.profilePage .mast .section.infoBlock
+{
+	@property "profilePageSidebarInfoBlock";
+	padding: 2px;
+	margin-bottom: 20px;
+	border: 1px solid @primaryLighterStill;
+	border-radius: 4px;
+	@property "/profilePageSidebarInfoBlock";
+}
+
+	.profilePage .mast .section.infoBlock .primaryContent,
+	.profilePage .mast .section.infoBlock .secondaryContent
+	{
+		overflow: hidden;
+	}
+
+	.profilePage .mast .section.infoBlock .primaryContent:last-child,
+	.profilePage .mast .section.infoBlock .secondaryContent:last-child
+	{
+		border: none;
+	}
+
+	.profilePage .infoBlock dt
+	{
+		@property "profilePageSidebarInfoBlockDt";
+		font-size: 11px;
+		@property "/profilePageSidebarInfoBlockDt";
+	}
+
+	.profilePage .infoBlock dd
+	{
+		@property "profilePageSidebarInfoBlockDd";
+		font-size: 11px;
+		@property "/profilePageSidebarInfoBlockDd";
+	}
+
+	.profilePage .infoBlock .dob,
+	.profilePage .infoBlock .age
+	{
+		white-space: nowrap;
+	}
+	
+	.profilePage .mast .shareControl
+	{
+		margin-top: 10px;
+	}
+
+/* ***************************** */
+/** [ Items...........(count) ] **/
+
+.textWithCount
+{
+	overflow: hidden; zoom: 1;
+}
+
+	.textWithCount .text
+	{
+		float: left;
+	}
+
+	.textWithCount .count
+	{
+		float: right;
+	}
+	
+		.textWithCount.subHeading .text
+		{		
+			color: @secondaryDarker;
+		}
+		
+		.textWithCount.subHeading .count
+		{
+			margin: -3px 0;
+			padding: 2px 6px;
+			border-radius: 5px;
+			border: 1px solid @secondaryLighter;
+			background-color: @secondaryLightest;
+			color: @secondaryDarker;
+		}
+
+/** ************************ **/
+
+.profilePage .primaryUserBlock
+{
+	border-top: 1px solid @primaryLighterStill;
+}
+
+.profilePage .primaryUserBlock .mainText
+{
+	padding-bottom: {xen:calc '@profilePageTabHeight + 14'}px;
+}
+
+	.profilePage .primaryUserBlock .followBlock
+	{
+		float: right;
+		font-size: 11px;
+		text-align: right;
+		overflow: hidden; zoom: 1;
+	}
+	
+		.profilePage .primaryUserBlock .followBlock li
+		{
+			float: right;
+			margin-left: 10px;
+		}
+	
+		.profilePage .primaryUserBlock .followBlock .muted
+		{
+			font-size: 10px;
+			clear: both;
+		}
+
+	.profilePage .primaryUserBlock h1
+	{
+		@property "profilePageUsername";
+		font-size: 18pt;
+		@property "/profilePageUsername";
+	}
+
+	.profilePage .primaryUserBlock .userBlurb
+	{
+		margin-bottom: 5px;
+	}
+	
+	.profilePage .primaryUserBlock .userBanners .userBanner
+	{
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+	
+	.profilePage .primaryUserBlock .userStatus
+	{
+		@property "messageText";
+		font-size: 11pt;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		line-height: 1.4;
+		@property "/messageText";
+		
+		@property "profilePageUserStatus";
+		font-style: italic;
+		font-size: 9pt;
+		padding-top: 5px;
+		@property "/profilePageUserStatus";
+	}
+	
+	.profilePage .primaryUserBlock .lastActivity
+	{
+		@property "profilePageLastActivityText";
+		font-size: 11px;
+		padding-top: 5px;
+		margin-top: 5px;
+		border-top: 1px solid @primaryLighterStill;
+		@property "/profilePageLastActivityText";
+	}
+	
+		.profilePage .primaryUserBlock .userStatus .DateTime
+		{
+			color: @mutedTextColor;
+			font-size: 10px;
+		}
+	
+	.profilePage .primaryUserBlock .primaryContent,
+	.profilePage .primaryUserBlock .secondaryContent
+	{
+		padding-left: @profilePageTabInset;
+		border: none;
+	}
+
+.profilePage .tabs.mainTabs
+{
+	padding: 0 @profilePageTabInset;	
+	margin-top: -{xen:calc '@profilePageTabHeight + 1'}px;
+	min-height: {xen:calc '@profilePageTabHeight + 1'}px;
+	height: auto;
+	position: relative; /* ensure separate stacking context from .mainText */
+	background: @secondaryContent.background-color;
+}
+
+	.profilePage .tabs.mainTabs li a
+	{
+		padding-left: @profilePageTabHeight;
+		padding-right: @profilePageTabHeight;		
+		line-height: @profilePageTabHeight;
+		height: @profilePageTabHeight;
+		
+		@property "profilePageTab";
+		font-weight: bold;
+		@property "/profilePageTab";	
+	}
+	
+		.profilePage .tabs.mainTabs li a:hover
+		{
+			@property "profilePageTabHover";
+			background-color: @primaryLighter;
+			@property "/profilePageTabHover";
+		}
+	
+	.profilePage .tabs.mainTabs li.active a
+	{
+		@property "profilePageTabSelected";
+		background-color: @contentBackground;
+		@property "/profilePageTabSelected";
+	}
+
+.profilePage .profileContent
+{
+	margin-left: @profilePageTabInset;
+}
+
+	.profilePage .profilePoster
+	{
+		padding-bottom: 10px;
+		position: relative;
+	}
+	
+		.profilePage .profilePoster textarea
+		{
+			height: 54px;
+			width: 100%;
+			box-sizing: border-box;
+			*width: 98%;
+			resize: vertical;
+		}
+		
+		.profilePage .profilePoster .submitUnit
+		{
+			margin-top: 5px;
+			text-align: right;
+		}
+
+.profilePage .profileContent .InlineMod
+{
+	overflow: hidden; zoom: 1;
+	
+}
+
+.contactInfo,
+.aboutPairs
+{
+	max-width: 500px;
+}
+
+	.contactInfo dl,
+	.aboutPairs dl
+	{
+		margin-bottom: 5px;
+	}
+	
+	.contactInfo dt,
+	.aboutPairs dt
+	{
+		width: 30%;
+	}
+	
+	.contactInfo dd,
+	.aboutPairs dd
+	{
+		width: 68%;
+	}
+
+.aboutPairs
+{
+	margin-bottom: 1em;
+}
+
+.signature
+{
+	@property "messageText";
+	font-size: 11pt;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 1.4;
+	@property "/messageText";
+	
+	/*border: 1px solid @primaryLighterStill;
+	padding: 10px;*/
+}
+
+.profilePage .eventList li
+{
+	padding-left: 0;
+}
+
+.profilePage .eventList:first-of-type li:first-child
+{
+	padding-top: 0;
+}
+
+.profilePage .searchResult:first-child
+{
+	margin-top: -5px;
+}
+
+<xen:if is="@enableResponsive">
+@media (max-width:@maxResponsiveMediumWidth)
+{
+	.Responsive .profilePage
+	{
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.Responsive .profilePage .mast
+	{
+		display: table-footer-group;
+		
+		float: none;
+		padding-right: 0;
+		border-right: none;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+
+	.Responsive .profilePage .avatarScaler
+	{
+		text-align: center;
+	}
+
+	.Responsive .profilePage .mast .sharePage
+	{
+		display: none;
+	}
+
+	.Responsive .profilePage .profileContent
+	{
+		margin-left: 0;
+	}
+
+	.Responsive .profilePage .mainProfileColumn
+	{
+		display: table-header-group;
+
+		margin-left: 0;
+		border-left: none;
+		border-bottom: 1px solid @primaryLighter;
+		padding-bottom: 10px;
+	}
+
+	.Responsive .profilePage .mast > *
+	{
+		max-width: 192px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width:@maxResponsiveNarrowWidth)
+{
+	.Responsive .warningList .warningExpiry
+	{
+		display: none;
+	}
+}
+
+@media (max-width:340px)
+{
+	.Responsive .profilePage .mast > *
+	{
+		max-width: none;
+	}
+}
+</xen:if>
