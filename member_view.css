@@ -225,7 +225,9 @@
 	min-height: {xen:calc '@profilePageTabHeight + 1'}px;
 	height: auto;
 	position: relative; /* ensure separate stacking context from .mainText */
-	background: @secondaryContent.background-color;
+        margin-left: -177px;
+        text-align: center;
+        width: 0;
 }
 
 	.profilePage .tabs.mainTabs li a
@@ -413,3 +415,13 @@
 	}
 }
 </xen:if>
+.overviewSideBlock {
+    float: right;
+}
+.profileCoverPhoto {
+    max-width: 100%;
+    min-width: 77%;
+    max-height: 100%;
+    min-height: 100%;
+    margin-left: 203px;
+}

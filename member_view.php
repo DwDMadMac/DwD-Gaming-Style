@@ -50,114 +50,13 @@
 
 				<xen:hook name="member_view_info_block">
 				
-				<xen:if is="{$canViewOnlineStatus}">
-					<dl><dt>{xen:phrase last_activity}:</dt>
-						<dd><xen:datetime time="$user.effective_last_activity" /></dd></dl>
-				</xen:if>
-
-				<dl><dt>{xen:phrase joined}:</dt>
-					<dd>{xen:date $user.register_date}</dd></dl>
-
-				<dl><dt>{xen:phrase messages}:</dt>
-					<dd>{xen:number $user.message_count}</dd></dl>
-
-				<dl><dt>{xen:phrase likes_received}:</dt>
-					<dd>{xen:number $user.like_count}</dd></dl>
-
-				<dl><dt>{xen:phrase trophy_points}:</dt>
-					<dd><a href="{xen:link 'members/trophies', $user}" class="OverlayTrigger">{xen:number $user.trophy_points}</a></dd></dl>
-					
-				<xen:if is="{$canViewWarnings}">
-					<dl><dt>{xen:phrase warning_points}:</dt><dd>{xen:number $user.warning_points}</dd></dl>
-				</xen:if>
 					
 				</xen:hook>
 
 			</div>
 		</div>
 
-		<xen:hook name="member_view_sidebar_middle1" params="{xen:array 'user={$user}'}" />
-
-		<xen:if is="{$following} OR {$followers}">
-		<div class="followBlocks">
-			<xen:if is="{$following}">
-				<div class="section">
-					<h3 class="subHeading textWithCount" title="{xen:phrase x_is_following_y_members, 'name={$user.username}', 'count={xen:number $followingCount}'}">
-						<span class="text">{xen:phrase following}</span>
-						<a href="{xen:link 'members/following', $user}" class="count OverlayTrigger">{xen:number $followingCount}</a>
-					</h3>
-					<div class="primaryContent avatarHeap">
-						<ol>
-						<xen:foreach loop="$following" key="$followUserId" value="$followUser">
-							<li>
-								<xen:avatar user="$followUser" size="s" text="{$followUser.username}" class="Tooltip" title="{$followUser.username}" itemprop="contact" />
-							</li>
-						</xen:foreach>
-						</ol>
-					</div>
-					<xen:if is="{$followingCount} > {xen:count $following, false}">
-						<div class="sectionFooter"><a href="{xen:link 'members/following', $user}" class="OverlayTrigger">{xen:phrase show_all}</a></div>
-					</xen:if>
-				</div>
-			</xen:if>
-
-			<xen:if is="{$followers}">
-				<div class="section">
-					<h3 class="subHeading textWithCount" title="{xen:phrase x_is_being_followed_by_y_members, 'name={$user.username}', 'count={xen:number $followersCount}'}">
-						<span class="text">{xen:phrase followers}</span>
-						<a href="{xen:link 'members/followers', $user}" class="count OverlayTrigger">{xen:number $followersCount}</a>
-					</h3>
-					<div class="primaryContent avatarHeap">
-						<ol>
-						<xen:foreach loop="$followers" key="$followUserId" value="$followUser">
-							<li>
-								<xen:avatar user="$followUser" size="s" text="{$followUser.username}" class="Tooltip" title="{$followUser.username}" itemprop="contact" />
-							</li>
-						</xen:foreach>
-						</ol>
-					</div>
-					<xen:if is="{$followersCount} > {xen:count $followers, false}">
-						<div class="sectionFooter"><a href="{xen:link 'members/followers', $user}" class="OverlayTrigger">{xen:phrase show_all}</a></div>
-					</xen:if>
-				</div>
-			</xen:if>
-		</div>
-		</xen:if>
-
 		<xen:hook name="member_view_sidebar_middle2" params="{xen:array 'user={$user}'}" />
-
-		<xen:if hascontent="true">
-		<div class="section infoBlock">
-			<dl class="secondaryContent pairsJustified">
-			<xen:contentcheck>
-				<xen:if is="{$user.gender}">
-					<dl><dt>{xen:phrase gender}:</dt>
-						<dd itemprop="gender"><xen:if is="{$user.gender} == 'male'">{xen:phrase male}<xen:else />{xen:phrase female}</xen:if></dd></dl>
-				</xen:if>
-
-				<xen:if is="{$birthday}">
-					<dl><dt>{xen:phrase birthday}:</dt>
-						<dd><span class="dob" itemprop="dob">{xen:date $birthday.timeStamp, $birthday.format}</span> <xen:if is="{$birthday.age}"><span class="age">({xen:phrase age}: {xen:number $birthday.age})</span></xen:if></dd></dl>
-				</xen:if>
-
-				<xen:if is="{$user.homepage}">
-					<dl><dt>{xen:phrase home_page}:</dt>
-						<dd><a href="{xen:string censor, $user.homepage, 'x'}" rel="nofollow" target="_blank" itemprop="url">{xen:string censor, $user.homepage}</a></dd></dl>
-				</xen:if>
-
-				<xen:if is="{$user.location}">
-					<dl><dt>{xen:phrase location}:</dt>
-						<dd><a href="{xen:link misc/location-info, '', 'location={xen:string censor, $user.location, 'x'}'}" rel="nofollow" target="_blank" itemprop="address">{xen:string censor, $user.location}</a></dd></dl>
-				</xen:if>
-
-				<xen:if is="{$user.occupation}">
-					<dl><dt>{xen:phrase occupation}:</dt>
-						<dd itemprop="role">{xen:string censor, $user.occupation}</dd></dl>
-				</xen:if>
-			</xen:contentcheck>
-			</dl>
-		</div>
-		</xen:if>
 		
 		<xen:if is="{$user.allow_view_profile} == 'everyone'">
 			<xen:include template="sidebar_share_page">
@@ -170,102 +69,15 @@
 		<xen:include template="ad_member_view_sidebar_bottom" />
 
 	</div>
-
+        <div class="profileCoverPhoto">
+            <xen:if is="{$user.customFields.profileCoverImage}">
+                <img src="{$user.customFields.profileCoverImage}" style="max-width: 100%;max-height: 50%;min-height: 50%;min-width: 100%;" />
+            <xen:else />
+                <img src="http://downwithdestruction.net/theme/img/ConceptBackgroundA.jpg" style="max-width: 100%;max-height: 50%;min-height: 50%;min-width: 100%;" />
+            </xen:if>
+        </div>
 	<div class="mainProfileColumn">
-
 		<div class="section primaryUserBlock">
-			<div class="mainText secondaryContent">
-				<div class="followBlock">
-					<xen:if hascontent="true">
-					<ul>
-						<xen:contentcheck>
-						<xen:if hascontent="true">
-							<li><div class="Popup">
-								<a rel="Menu">{xen:phrase moderator_tools}</a>
-								<div class="Menu">
-									<div class="primaryContent menuHeader"><h3>{xen:phrase moderator_tools}</h3></div>
-									<ul class="secondaryContent blockLinksList">
-									<xen:contentcheck>
-										<xen:if is="{$canWarn}">
-											<li><a href="{xen:link members/warn, $user}">{xen:phrase warn}</a></li>
-										</xen:if>
-										<xen:if is="{$canCleanSpam}">
-											<li><a href="{xen:link spam-cleaner, $user, 'noredirect=1'}" class="deleteSpam OverlayTrigger">{xen:phrase spam}</a></li>
-										</xen:if>
-										<xen:if is="{$canViewIps}">
-											<li><a href="{xen:link members/shared-ips, $user}" class="OverlayTrigger">{xen:phrase shared_ips}</a></li>
-										</xen:if>
-										<xen:if is="{$canBanUsers}">
-											<xen:if is="{$user.is_banned}">
-												<li><a href="{xen:adminlink banning/users/lift, $user}">{xen:phrase lift_ban}</a></li>
-											<xen:else />
-												<li><a href="{xen:adminlink banning/users/add, $user}">{xen:phrase ban}</a></li>
-											</xen:if>
-										</xen:if>
-										<xen:if is="{$canEditUser}">
-											<li><a href="{xen:link members/edit, $user}">{xen:phrase edit}</a></li>
-										</xen:if>
-									</xen:contentcheck>
-									</ul>
-								</div>
-							</div></li>
-						</xen:if>
-
-						<xen:follow user="$user" title="" tag="li" />
-						<xen:if is="{xen:helper isIgnored, $user.user_id}">
-							<li><a href="{xen:link members/unignore, $user}" class="FollowLink">{xen:phrase unignore}</a></li>
-						<xen:elseif is="{$canIgnore}" />
-							<li><a href="{xen:link members/ignore, $user}" class="FollowLink">{xen:phrase ignore}</a></li>
-						</xen:if>
-						<xen:if is="{$canReport}">
-							<li><a href="{xen:link members/report, $user}" class="OverlayTrigger">{xen:phrase report}</a></li>
-						</xen:if>
-						</xen:contentcheck>
-					</ul>
-					</xen:if>
-					<xen:if is="{$visitor.user_id} AND {$user.user_id} != {$visitor.user_id}">
-						<div class="muted">
-							<xen:if is="{$user.isFollowingVisitor}">
-								{xen:phrase user_is_following_you, 'user={$user.username}'}
-							<xen:else />
-								{xen:phrase user_is_not_following_you, 'user={$user.username}'}
-							</xen:if>
-						</div>
-					</xen:if>
-				</div>
-
-				<h1 itemprop="name" class="username">{xen:helper richUserName, $user}</h1>
-
-				<p class="userBlurb">
-					{xen:helper userBlurb, $user}
-				</p>
-				<xen:if hascontent="true">
-					<div class="userBanners">
-						<xen:contentcheck>{xen:helper userBanner, $user}</xen:contentcheck>
-					</div>
-				</xen:if>
-
-				<xen:if is="{$user.status}"><p class="userStatus" id="UserStatus">{xen:helper bodyText, $user.status} <xen:datetime time="$user.status_date" /></p></xen:if>
-
-				<xen:if is="{$canViewOnlineStatus}">
-					<dl class="pairsInline lastActivity">
-						<dt>{xen:phrase x_was_last_seen, 'username={$user.username}'}:</dt>
-						<dd>
-							<xen:if is="{$user.activity}">
-								<xen:if is="{$user.activity.description}">
-									{$user.activity.description}<xen:if is="{$user.activity.itemTitle}"> <em><a href="{$user.activity.itemUrl}">{$user.activity.itemTitle}</a></em></xen:if>,
-								<xen:else />
-									{xen:phrase viewing_unknown_page},
-								</xen:if>
-								<xen:datetime time="{$user.effective_last_activity}" class="muted" />
-							<xen:else />
-								<xen:datetime time="{$user.effective_last_activity}" />
-							</xen:if>
-						</dd>
-					</dl>
-				</xen:if>
-			</div>
-			
 			<ul class="tabs mainTabs Tabs" data-panes="#ProfilePanes > li" data-history="on">
 				<li><a href="{$requestPaths.requestUri}#profilePosts">{xen:phrase profile_posts}</a></li>
 				<xen:if is="{$showRecentActivity}"><li><a href="{$requestPaths.requestUri}#recentActivity">{xen:phrase recent_activity}</a></li></xen:if>
@@ -371,50 +183,110 @@
 			</li>
 
 			<li id="info" class="profileContent">
-
-				<xen:if hascontent="true">
-					<div class="section">
-						<h3 class="textHeading">{xen:phrase about}</h3>
-
-						<div class="primaryContent">
-							<xen:contentcheck>
-								<xen:if hascontent="true">
-									<div class="pairsColumns aboutPairs">
-									<xen:contentcheck>
-										<xen:if is="{$user.gender}">
-											<dl><dt>{xen:phrase gender}:</dt> <dd><xen:if is="{$user.gender} == 'male'">{xen:phrase male}<xen:else />{xen:phrase female}</xen:if></dd></dl>
-										</xen:if>
-
-										<xen:if is="{$birthday}">
-											<dl><dt>{xen:phrase birthday}:</dt> <dd>{xen:date $birthday.timeStamp, $birthday.format} <xen:if is="{$birthday.age}">({xen:phrase age}: {xen:number $birthday.age})</xen:if></dd></dl>
-										</xen:if>
-
-										<xen:if is="{$user.homepage}">
-											<dl><dt>{xen:phrase home_page}:</dt> <dd><a href="{xen:string censor, $user.homepage, 'x'}" rel="nofollow" target="_blank">{xen:string censor, $user.homepage}</a></dd></dl>
-										</xen:if>
-
-										<xen:if is="{$user.location}">
-											<dl><dt>{xen:phrase location}:</dt> <dd>{xen:string censor, $user.location}</dd></dl>
-										</xen:if>
-
-										<xen:if is="{$user.occupation}">
-											<dl><dt>{xen:phrase occupation}:</dt> <dd>{xen:string censor, $user.occupation}</dd></dl>
-										</xen:if>
-										
-										<xen:if is="{$customFieldsGrouped.personal}">
-											<xen:foreach loop="$customFieldsGrouped.personal" value="$field">
-												<xen:include template="custom_field_view" />
-											</xen:foreach>
-										</xen:if>
-									</xen:contentcheck>
-									</div>
-								</xen:if>
-
-								<xen:if is="{$user.about}"><div class="baseHtml ugc">{xen:raw $user.aboutHtml}</div></xen:if>
-							</xen:contentcheck>
-						</div>
+                            <div class="overviewSideBlock">
+                                <xen:hook name="member_view_sidebar_middle1" params="{xen:array 'user={$user}'}" />
+		<xen:if is="{$following} OR {$followers}">
+			<xen:if is="{$following}">
+				<div class="section">
+					<h3 class="subHeading textWithCount" title="{xen:phrase x_is_following_y_members, 'name={$user.username}', 'count={xen:number $followingCount}'}">
+						<span class="text">{xen:phrase following}</span>
+						<a href="{xen:link 'members/following', $user}" class="count OverlayTrigger">{xen:number $followingCount}</a>
+					</h3>
+					<div class="primaryContent avatarHeap">
+						<ol>
+						<xen:foreach loop="$following" key="$followUserId" value="$followUser">
+							<li>
+								<xen:avatar user="$followUser" size="s" text="{$followUser.username}" class="Tooltip" title="{$followUser.username}" itemprop="contact" />
+							</li>
+						</xen:foreach>
+						</ol>
 					</div>
-				</xen:if>
+					<xen:if is="{$followingCount} > {xen:count $following, false}">
+						<div class="sectionFooter"><a href="{xen:link 'members/following', $user}" class="OverlayTrigger">{xen:phrase show_all}</a></div>
+					</xen:if>
+				</div>
+			</xen:if>
+
+			<xen:if is="{$followers}">
+				<div class="section">
+					<h3 class="subHeading textWithCount" title="{xen:phrase x_is_being_followed_by_y_members, 'name={$user.username}', 'count={xen:number $followersCount}'}">
+						<span class="text">{xen:phrase followers}</span>
+						<a href="{xen:link 'members/followers', $user}" class="count OverlayTrigger">{xen:number $followersCount}</a>
+					</h3>
+					<div class="primaryContent avatarHeap">
+						<ol>
+						<xen:foreach loop="$followers" key="$followUserId" value="$followUser">
+							<li>
+								<xen:avatar user="$followUser" size="s" text="{$followUser.username}" class="Tooltip" title="{$followUser.username}" itemprop="contact" />
+							</li>
+						</xen:foreach>
+						</ol>
+					</div>
+					<xen:if is="{$followersCount} > {xen:count $followers, false}">
+						<div class="sectionFooter"><a href="{xen:link 'members/followers', $user}" class="OverlayTrigger">{xen:phrase show_all}</a></div>
+					</xen:if>
+				</div>
+			</xen:if>
+		</xen:if>
+                            </div>
+                            <xen:if hascontent="true">
+                                <div class="section">
+                                    <h3 class="textHeading">{xen:phrase about}</h3>
+                                        <div class="primaryContent">
+                                            <xen:contentcheck>
+                                                <xen:if hascontent="true">
+                                                    <div class="pairsColumns aboutPairs">
+                                                    <xen:contentcheck>
+                                                        <xen:if is="{$customFieldsGrouped.personal}">
+                                                                <xen:foreach loop="$customFieldsGrouped.personal" value="$field">
+                                                                        <xen:include template="custom_field_view" />
+                                                                </xen:foreach>
+                                                        </xen:if>
+                                                        <xen:if is="{$user.gender}">
+                                                            <dl><dt>{xen:phrase gender}:</dt>
+                                                                <dd itemprop="gender"><xen:if is="{$user.gender} == 'male'">{xen:phrase male}<xen:else />{xen:phrase female}</xen:if></dd></dl>
+                                                        </xen:if>
+                                                        <xen:if is="{$birthday}">
+                                                            <dl><dt>{xen:phrase birthday}:</dt>
+                                                                <dd><span class="dob" itemprop="dob">{xen:date $birthday.timeStamp, $birthday.format}</span> <xen:if is="{$birthday.age}"><span class="age">({xen:phrase age}: {xen:number $birthday.age})</span></xen:if></dd></dl>
+                                                        </xen:if>
+                                                        <xen:if is="{$user.homepage}">
+                                                            <dl><dt>{xen:phrase home_page}:</dt>
+                                                                <dd><a href="{xen:string censor, $user.homepage, 'x'}" rel="nofollow" target="_blank" itemprop="url">{xen:string censor, $user.homepage}</a></dd></dl>
+                                                        </xen:if>
+                                                        <xen:if is="{$user.location}">
+                                                            <dl><dt>{xen:phrase location}:</dt>
+                                                                <dd><a href="{xen:link misc/location-info, '', 'location={xen:string censor, $user.location, 'x'}'}" rel="nofollow" target="_blank" itemprop="address">{xen:string censor, $user.location}</a></dd></dl>
+                                                        </xen:if>
+                                                        <xen:if is="{$user.occupation}">
+                                                            <dl><dt>{xen:phrase occupation}:</dt>
+                                                                <dd itemprop="role">{xen:string censor, $user.occupation}</dd></dl>
+                                                        </xen:if>
+                                                        <dl><dt>{xen:phrase joined}:</dt>
+                                                                <dd>{xen:date $user.register_date}</dd></dl>
+
+                                                        <dl><dt>{xen:phrase messages}:</dt>
+                                                                <dd>{xen:number $user.message_count}</dd></dl>
+
+                                                        <dl><dt>{xen:phrase trophy_points}:</dt>
+                                                                <dd><a href="{xen:link 'members/trophies', $user}" class="OverlayTrigger">{xen:number $user.trophy_points}</a></dd></dl>
+
+                                                        <xen:if is="{$canViewWarnings}">
+                                                                <dl><dt>{xen:phrase warning_points}:</dt><dd>{xen:number $user.warning_points}</dd></dl>
+                                                        </xen:if>
+                                                        
+                                                        <xen:if is="{$canViewOnlineStatus}">
+                                                                <dl><dt>{xen:phrase last_activity}:</dt>
+                                                                        <dd><xen:datetime time="$user.effective_last_activity" /></dd></dl>
+                                                        </xen:if>
+                                                    </xen:contentcheck>
+                                                    </div>
+                                                </xen:if>
+                                                <xen:if is="{$user.about}"><div class="baseHtml ugc">{xen:raw $user.aboutHtml}</div></xen:if>
+                                            </xen:contentcheck>
+                                        </div>
+                                </div>
+                            </xen:if>
 
 				<div class="section">
 					<h3 class="textHeading">{xen:phrase interact}</h3>
