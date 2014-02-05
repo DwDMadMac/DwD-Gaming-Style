@@ -4725,7 +4725,8 @@ td.visible-print {
 <xen:if is="@enableResponsive">
     .LoggedIn .discussionListItems .unread .title a:after,
     .LoggedIn .nodeInfo.unread .nodeTitle a:after,
-    .LoggedIn .unread .nodeTitle a:after {
+    .LoggedIn .unread .nodeTitle a:after,
+    .conversation_list .discussionListItem.unread .title:after {
         content: "NEW";
         color: white;
         border-radius: 2px;
@@ -4750,5 +4751,72 @@ td.visible-print {
     }
 </xen:if>
 .node .nodeIcon {
-    margin: 10px;
+    margin: 10px !important;
+}
+/* Highlight sticky threads */
+.discussionListItem.visible.sticky,
+.discussionListItem.visible.sticky .posterAvatar,
+.discussionListItem.visible.sticky .stats {
+background: @inlineMod;
+font-style: italic;
+}
+/* Hover effect logo and avatars */
+#logo:hover {
+opacity: 0.5;
+transition-duration: 0.5s;
+}
+
+.avatar img:hover{
+opacity: 0.5;
+transition-duration: 0.5s;
+}
+/* mood Responsive */
+@media (max-width:@maxResponsiveNarrowWidth)
+{
+.userMood {display:none;}
+}
+/* center login bar */
+#loginBar #loginBarHandle
+{
+  margin-right: 0 !important;
+  right: 45% !important;
+}
+/* Removes avatar quick reply */
+.thread_view #QuickReply, .conversation_view #QuickReply {margin-left: 0;}
+.thread_view .quickReply .messageUserInfo, .conversation_view .quickReply .messageUserInfo  {display: none;}
+
+.xenForoSkin .taigachat_bbcode_bold {
+    background: url(styles/default/xenforo/editor/icons.png) no-repeat center;
+    background-position: 2px -31px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.xenForoSkin .taigachat_bbcode_italic {
+    background: url(styles/default/xenforo/editor/icons.png) no-repeat center;
+    background-position: 2px -63px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.xenForoSkin .taigachat_bbcode_strikethrough {
+    background: url(styles/default/xenforo/editor/icons.png) no-repeat center;
+    background-position: 2px -95px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.xenForoSkin .taigachat_bbcode_image {
+    background: url(styles/default/xenforo/editor/icons.png) no-repeat center;
+    background-position: 2px -1247px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.xenForoSkin .taigachat_bbcode_link {
+    background: url(styles/default/xenforo/editor/icons.png) no-repeat center;
+    background-position: 2px -1598px;
+    display: block;
+    width: 20px;
+    height: 20px;
 }
