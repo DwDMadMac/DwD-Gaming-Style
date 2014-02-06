@@ -13,13 +13,15 @@
 	
 		<xen:if is="{$taigachat.sidebar}">
 			<xen:if is="{$taigachat.alt}">
-				<div class="nodeInfo categoryNodeInfo categoryStrip">		
+                            <a href="{xen:link '{$taigachat.route}'}">
+				<div class="chatBoxTitleBar">		
 					<div class="categoryText">
-						<h3 class="nodeTitle"><a href="{xen:link '{$taigachat.route}'}">{xen:phrase dark_shoutbox}</a></h3>				
+						<h3 class="chatBoxTitleBarTitle">DwD Gaming Community Chatbox</h3>				
 					</div>			
 				</div>
+                            </a>
 			<xen:else />
-				<h3><a href='{xen:link '{$taigachat.route}'}'>{xen:phrase dark_shoutbox}</a></h3>
+				<h3><a href='{xen:link '{$taigachat.route}'}'>DwD Gaming Community Chatbox</a></h3>
 			</xen:if>
 		
 		</xen:if>

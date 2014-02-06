@@ -10,7 +10,7 @@
 				</xen:if>
 				<xen:if is="{$taigachat.toolbar_smilies}">
 					<div class="taigachat_Popup" id='taigachat_smilies' style='display: inline; top: 3px'>
-						<a rel="Menu"><img src='@imagePath/xenforo/editor/smilie.png' alt='Smilies' title='Smilies' style='vertical-align: top' /></a>
+						<a rel="Menu"><span class="taigachat_bbcode_smilies"></span></a>
 						<div class="Menu">
 							<div class="primaryContent menuHeader"><h3>{xen:phrase smilies}</h3></div>
 							<ul class="secondaryContent blockLinksList taigachat_smilies_list">
@@ -27,6 +27,6 @@
 				</xen:if>
 			</div>
 		</xen:if>
-		<input id='taigachat_message' class='textCtrl' type='text' maxlength='{xen:raw $taigachat.maxlength}' placeholder='{xen:phrase dark_enter_message}' /> <input type='submit' id='taigachat_send' value='&gt;' class='button primary' />
+		<input id='taigachat_message' class='textCtrl' type='text' maxlength='{xen:raw $taigachat.maxlength}' placeholder='{xen:phrase dark_enter_message}' /> <input type='submit' id='taigachat_send' value='Send' class='button primary' />
 	</div>
 </xen:if>

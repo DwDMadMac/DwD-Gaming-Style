@@ -4820,3 +4820,55 @@ transition-duration: 0.5s;
     width: 20px;
     height: 20px;
 }
+#taigachat_smilies .taigachat_bbcode_smilies {
+    background: url(styles/default/xenforo/editor/icons.png) no-repeat center;
+    background-position: 2px -2398px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+}
+#taigachat_smilies .arrowWidget {
+    display: none !important;
+}
+/* Taiga Chat Balloon Chat Bubble */
+.chatbox_bubble .taigachat_messagetext.ugc {
+    background-image: -webkit-linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0));
+    line-height: 16px;
+    background-color: @primaryLighter;
+    padding: 5px;
+    margin: 3px 50px 0 50px;
+    border: 1px solid @primaryLightish;
+    border-radius: 3px;
+    display: inline-block !important;
+}
+.chatbox_bubble .taigachat_messagetext.ugc hr {margin:0!important;}
+.forum_list #taigachat_full {
+    margin-bottom: 15px;
+}
+.chatBoxTitleBar {
+    font-size: 45px;
+    color: #740000;
+    background: #F9B0B0 url('styles/default/xenforo/gradients/category-23px-light.png') repeat-x top;
+    padding: 5px 10px;
+    margin: 3px auto 0;
+    border-top: 1px solid #F9B0B0;
+    border-bottom: 1px solid #F96D6D;
+    padding: 5px 10px;
+    margin: 0 6px;
+    border-bottom-color: #F96D6D;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 6px;
+    text-align: center;
+}
+.chatBoxTitleBar .chatBoxTitleBarnodeTitle {
+    font-size: 15pt;
+    color: #6D0303;
+}
+#taigachat_full a:hover {
+    text-decoration: none;
+}
