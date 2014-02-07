@@ -36,23 +36,39 @@
 <xen:hook name="body">
 
 <xen:comment>
-    Staff Only = 16
-    Founder = 13
-    Community Operator = 3
-    Community Admin = 12
-    Community Moderator = 4
-    Wiki Developer = 15
-    Retired Staff = 14
-    MC Network Operator = 11
-    MC Network Developer = 17
-    MC Network Admin = 10
-    Mc Network Moderator = 9
-    RPG Kingdom Owner = 5
-    MC Network Vet = 8
-    MC Network Elite = 7
-    MC Network Trustie = 6
-    Community Member = 2
-    Guest = 1
+    Founder = 13                    Priority = 9000
+    
+    /* Global */
+    Staff Only = 16                 Priority = 50000
+    Community Operator = 3          Priority = 1000
+    Community Admin = 12            Priority = 950
+    Community Moderator = 4         Priority = 900
+    Wiki Developer = 15             Priority = 700
+    Retired Staff = 14              Priority = 300
+    Community Member = 2            Priority = 0
+    Guest = 1                       Priority = 0
+    
+    /* Minecraft */
+    MC Network Operator = 11        Priority = 70
+    MC Network Developer = 17       Priority = 99
+    MC Network Admin = 10           Priority = 60
+    MC Network Moderator = 9        Priority = 50
+    RPG Kingdom Owner = 5           Priority = 45
+    MC Network Vet = 8              Priority = 40
+    MC Network Elite = 7            Priority = 30
+    MC Network Trustie = 6          Priority = 20
+    
+    /* Grand Theft Auto */
+    GTA Admin = 18                  Priority = 59
+    GTA Moderator = 19              Priority = 49
+    
+    /* League of Legends */
+    LoL Admin = 20                  Priority = 58
+    LoL Moderator = 21              Priority = 48
+    
+    /* Call of Duty */
+    COD Admin = 22                  Priority = 57
+    COD Moderator = 23              Priority = 47
 </xen:comment>
 <xen:if is="{xen:helper ismemberof, $visitor, 16}">
 	<xen:include template="moderator_bar" />

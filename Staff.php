@@ -13,6 +13,11 @@
 
 <ul class="tabs">
     <li class="{xen:if '{$type} == "staff"', active}"><a href="{xen:link staff}">{xen:phrase staff_members}</a></li>
+    <li class="{xen:if '{$type} == "globalStaff"', active}"><a href="{xen:link staff, '', 'type=globalStaff'}">Global Staff</a></li>
+    <li class="{xen:if '{$type} == "mcStaff"', active}"><a href="{xen:link staff, '', 'type=mcStaff'}">Minecraft Staff</a></li>
+    <li class="{xen:if '{$type} == "lolStaff"', active}"><a href="{xen:link staff, '', 'type=lolStaff'}">League of Legend Staff</a></li>
+    <li class="{xen:if '{$type} == "gtaStaff"', active}"><a href="{xen:link staff, '', 'type=gtaStaff'}">Grand Theft Auto Staff</a></li>
+    <li class="{xen:if '{$type} == "codStaff"', active}"><a href="{xen:link staff, '', 'type=codStaff'}">Call of Duty Staff</a></li>
 </ul>
 
 <div class="section">
