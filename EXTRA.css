@@ -4872,3 +4872,31 @@ transition-duration: 0.5s;
 #taigachat_full a:hover {
     text-decoration: none;
 }
+/* Text Link Image */
+.message .messageText a, .bbCodeQuote a, .Notice a {
+    padding-right: 20px;
+    margin-right: 0px;
+    background: url("styles/default/xenforo/gradients/link-icon.png") no-repeat scroll left transparent;
+    background-position: right;
+    -moz-transition: all 0.7s ease-out 0s;
+    -o-transition: all 0.7s ease-out 0s;
+    -webkit-transition: all 0.7s ease-out 0s;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-out;
+    transition-delay: 0;
+}
+.message .messageText a:hover, .bbCodeQuote a:hover, .Notice a:hover {
+    padding-left: 23px;
+    padding-right: 5px;
+    margin-left: 0;
+    color: red;
+    background: url("@imagePath/xenforo/gradients/link-icon.png") no-repeat scroll left transparent;
+    box-shadow: none !important;
+    -moz-transition: all 0.7s ease-in-out 0s;
+    -o-transition: all 0.7s ease-in-out 0s;
+    -webkit-transition: all 0.7s ease-in-out 0s;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+    opacity: 0.5;
+}
