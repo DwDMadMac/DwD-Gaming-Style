@@ -4982,3 +4982,15 @@ position: relative;
     border-radius: 2em;
     transition: all .3s ease-out;
 }
+/* adds a Staff ribbon */
+.message.staff .messageUserInfo .helper  {
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  content: "";
+  background: url("@imagePath/xenforo/icons/staff-ribbon-posted-cyan.png") no-repeat  transparent;
+  height: 107px;
+  width: 107px;
+
+}
