@@ -33,9 +33,9 @@
                                             <li><a href="{xen:link 'categories/gta-online.95/'}">GTA Online</a></li>
                                             <li><a href="{xen:link 'categories/call-of-duty.97/'} ">Call of Duty</a></li>
                                             <xen:comment><li><a href="{xen:link ''}">Counter Strike</a></li></xen:comment>
-                                            <li><a href="{xen:link 'forums/miscellaneous.98/'} ">Miscellaneous</a></li>
+                                            <li><a href="{xen:link 'categories/miscellaneous.98/'} ">Miscellaneous</a></li>
                                             <xen:if is="{xen:helper ismemberof, $visitor, 16}">
-                                                <li><a href="{xen:link 'forums/staff-headquarters.99/'} ">Staff Headquarters</a></li>
+                                                <li><a href="{xen:link 'categories/staff-headquarters.99/'} ">Staff Headquarters</a></li>
                                             </xen:if>
                                         </div>
                                     </div>
