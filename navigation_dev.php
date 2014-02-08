@@ -232,6 +232,11 @@
                     </xen:if>
                 </ul>
             </div>
+            <div class="nav">
+                <ul id="nav" class="visitorTabs">
+                    
+                </ul>
+            </div>
         </div>
     </div>
 </div>
