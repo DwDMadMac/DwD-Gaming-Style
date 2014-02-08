@@ -44,7 +44,7 @@
     Community Admin = 12            Priority = 950
     Community Moderator = 4         Priority = 900
     Wiki Developer = 15             Priority = 700
-    Retired Staff = 14              Priority = 300
+    Retired Staff = 14              Priority = 1
     Community Member = 2            Priority = 0
     Guest = 1                       Priority = 0
     
