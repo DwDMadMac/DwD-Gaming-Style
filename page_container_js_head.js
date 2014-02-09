@@ -7,46 +7,50 @@
         </xen:if>	
 	<script src="{xen:helper javaScriptUrl, '{$javaScriptSource}/xenforo/xenforo.js?_v={$xenOptions.jsVersion}'}"></script>
         <!-- Profile Page image reload -->
-        <script type="text/javascript" src="jquery-source"></script>
-        <script>$(document).load( ... )</script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>
-            (function($){
-                $.randomImage = {
-                    defaults: {
-                        path: 'http://dwdg.net/img/forums/profile/',
-                        myImages: ['profileOne.jpg', 'profileTwo.jpg', 'profileThree.jpg' ]
-                    }
-                };
+        <xen:if is="{$contentTemplate} == 'member_view'">
+            <script type="text/javascript" src="jquery-source"></script>
+            <script>$(document).load( ... )</script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script>
+                (function($){
+                    $.randomImage = {
+                        defaults: {
+                            path: 'http://dwdg.net/img/forums/profile/',
+                            myImages: ['profileOne.jpg', 'profileTwo.jpg', 'profileThree.jpg' ]
+                        }
+                    };
 
-                $.fn.extend({
-                    randomImage:function(config) {
-                        var config = $.extend({}, $.randomImage.defaults, config);
+                    $.fn.extend({
+                        randomImage:function(config) {
+                            var config = $.extend({}, $.randomImage.defaults, config);
 
-                        return this.each(function() {
-                            var imageNames = config.myImages,
-                            //get size of array, randomize a number from this
-                            // use this number as the array index
-                            imageNamesSize = imageNames.length,
-                            lotteryNumber = Math.floor(Math.random()*imageNamesSize),
-                            winnerImage = imageNames[lotteryNumber],
-                            fullPath = config.path + winnerImage;
+                            return this.each(function() {
+                                var imageNames = config.myImages,
+                                //get size of array, randomize a number from this
+                                // use this number as the array index
+                                imageNamesSize = imageNames.length,
+                                lotteryNumber = Math.floor(Math.random()*imageNamesSize),
+                                winnerImage = imageNames[lotteryNumber],
+                                fullPath = config.path + winnerImage;
 
-                            //put this image into DOM at class of randomImage
-                            // alt tag will be image filename.
-                            $(this).attr({
-                                src: fullPath,
-                                alt: winnerImage
+                                //put this image into DOM at class of randomImage
+                                // alt tag will be image filename.
+                                $(this).attr({
+                                    src: fullPath,
+                                    alt: winnerImage
+                                });
                             });
-                        });
-                    }
-                });
-            }(jQuery));
+                        }
+                    });
+                }(jQuery));
 
-            $(document).ready(function(){
-                $('img.JSimgRendering:first').randomImage();
-            });
-        </script>
+                $(document).ready(function(){
+                    $('img.JSimgRendering:first').randomImage();
+                });
+            </script>
+        <xen:else/>
+            <xen:comment> Do Nothing </xen:comment>
+        </xen:if>
         <!-- Custom Navi JS -->
         <script type="text/javascript">
             function reInit() {

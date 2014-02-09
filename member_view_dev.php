@@ -55,8 +55,14 @@
             </div>
             <div class="profileCoverPhoto">
                 <xen:if is="{$user.customFields.profileCoverImage}">
+                    <div class="changeCoverPhoto button">
+                        
+                    </div>
                     <img src="{$user.customFields.profileCoverImage}" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
                 <xen:else />
+                    <div class="changeCoverPhoto button">
+
+                    </div>
                     <img class="JSimgRendering" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
                 </xen:if>
             </div>
