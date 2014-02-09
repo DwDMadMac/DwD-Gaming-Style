@@ -225,7 +225,9 @@
 	min-height: {xen:calc '@profilePageTabHeight + 1'}px;
 	height: auto;
 	position: relative; /* ensure separate stacking context from .mainText */
-	background: @secondaryContent.background-color;
+        margin-left: -177px;
+        text-align: center;
+        width: 0;
 }
 
 	.profilePage .tabs.mainTabs li a
@@ -413,3 +415,84 @@
 	}
 }
 </xen:if>
+.overviewSideBlock {
+    float: right;
+}
+.profileCoverPhoto {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+.profilePageTopBlock {
+    position: relative;
+}
+    .profilePageTopBlock .profileInfoWrapper {
+        background: rgba(0, 0, 0, 0.6);
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        margin: 35px 0;
+        bottom: 0;
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 1px 3px rgba(0,0,0, 0.25);
+        -khtml-box-shadow: 0px 1px 3px rgba(0,0,0, 0.25);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    }
+    .profilePageTopBlock .avatarBlockWrapper {
+        position: relative;
+        margin: 5px 15px;
+        float: left;
+    }
+    .profilePageTopBlock .avatarScaler {
+    }
+.profileInfoBlockwrapper .username {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    bottom: 0;
+    position: absolute;
+    left: 220px;
+}
+#UserStatus {
+    padding: 10px;
+}
+.bubble {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    padding: 0px;
+    background: #FFFFFF;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: #3C0000 solid 1px;
+    display: inline-block;
+}
+    .bubble:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 10px 20px 0;
+        border-color: transparent #FFFFFF;
+        display: block;
+        width: 0;
+        z-index: 1;
+        margin-top: -48px;
+        left: -4px;
+        top: 100%;
+    }
+    .bubble:before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 10px 20px 0;
+        border-color: transparent #3C0000;
+        display: block;
+        width: 0;
+        z-index: 0;
+        margin-top: -48px;
+        left: -4px;
+        top: 100%;
+    }
