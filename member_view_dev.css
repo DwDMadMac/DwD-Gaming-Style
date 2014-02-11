@@ -502,3 +502,116 @@
         left: -4px;
         top: 100%;
     }
+.rank-container {font-size: 10px; font-weight: bold; margin: 0 5px; text-align: center;}
+.rank-container strong {border-radius: 3px;border-top-right-radius: 0px;border-top-left-radius: 0px;box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.3);padding: 1px;position: relative;margin-bottom: 5px;}
+/* Founder */
+.founder strong {padding: 2px 4px;background: rgb(253, 43, 169) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: rgb(0,0,0); text-shadow: 0px 0px 6px black;}
+.founder div {background-color: @primaryLight;}
+/* Community Operator */
+.community-operator strong {padding: 2px 4px;background: rgb(0, 31, 77) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.community-operator div {background-color: @primaryLight;}
+/* Community Admin */
+.community-admin strong {padding: 2px 4px;background: rgb(0, 31, 77) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.community-admin div {background-color: @primaryLight;}
+/* Community Moderator */
+.community-moderator strong {padding: 2px 4px;background: rgb(0, 31, 77) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.community-moderator div {background-color: @primaryLight;}
+/* Wiki Developer */
+.wiki-developer strong {padding: 2px 4px;background: rgb(0, 167, 250) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: rgb(0,0,0);}
+.wiki-developer div {background-color: @primaryLight;}
+/* Retired Staff */
+.retired-staff strong {padding: 2px 4px;background: rgb(255, 143, 0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: rgb(0,0,0);}
+.retired-staff div {background-color: @primaryLight;}
+/* MC Network Operator */
+.mc-network-operator strong {padding: 2px 4px;background: rgb(255,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.mc-network-operator div {background-color: @primaryLight;}
+/* MC Network Developer */
+.mc-network-developer strong {padding: 2px 4px;background: rgb(237,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.mc-network-developer div {background-color: @primaryLight;}
+/* MC Network Admin */
+.mc-network-admin strong {padding: 2px 4px;background: rgb(220,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.mc-network-admin div {background-color: @primaryLight;}
+/* MC Network Moderator */
+.mc-network-moderator strong {padding: 2px 4px;background: rgb(200,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.mc-network-moderator div {background-color: @primaryLight;}
+/* RPG Kingdom Owner */
+.kingdom-owner strong {padding: 2px 4px;background: rgb(170,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.kingdom-owner div {background-color: @primaryLight;}
+/* MC Network Vet */
+.mc-network-vet strong {padding: 2px 4px;background: rgb(130,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.mc-network-vet div {background-color: @primaryLight;}
+/* MC Network Elite */
+.mc-network-elite strong {padding: 2px 4px;background: rgb(80,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.mc-network-elite div {background-color: @primaryLight;}
+/* MC Network Trustie */
+.mc-network-trustie strong {padding: 2px 4px;background: rgb(40,0,0) url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top; border: 1px solid @primaryLight; color: @contentBackground;}
+.mc-network-trustie div {background-color: @primaryLight;}
+/* Community Member */
+.community-member,
+.guest strong {padding: 2px 4px;background: @primaryLight url('@imagePath/xenforo/gradients/form-button-white-25px.png') repeat-x top;border: 1px solid @primaryLight;color: rgb(95,0,0);}
+.community-member div,
+.guest div {background-color: @primaryLight;}
+/* Avatar Title */
+.profileInfoWrapper .avatarScaler .username {
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+/* User Links */
+.profileInfoWrapper .userLinks {
+    bottom: 0px;
+    position: absolute;
+    display: inline-block;
+    padding: 5px 0 25px 0;
+    font-style: normal;
+}
+<xen:if is="{$visitor.user_id} AND {$user.user_id} != {$visitor.user_id}">
+    .profileInfoWrapper .userLinks a {
+        font-size: 12px;
+        font-family: Calibri, 'Trebuchet MS', Verdana, Geneva, Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        background: rgb(220,220,235) url('styles/default/xenforo/gradients/form-button-white-25px.png') repeat-x top;
+        padding: 0px 6px;
+        border: 1px solid rgb(221, 221, 235);
+        border-top-color: rgb(255, 255, 255);
+        border-bottom-color: rgb(179, 179, 189);
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -khtml-border-radius: 7px;
+        border-radius: 7px;
+        text-align: center;
+        -webkit-box-shadow: 0px 1px 4px 0px rgb(200,200,210);
+        -moz-box-shadow: 0px 1px 4px 0px rgb(200,200,210);
+        -khtml-box-shadow: 0px 1px 4px 0px rgb(200,200,210);
+        box-shadow: 0px 1px 4px 0px rgb(200,200,210);
+        text-shadow: 0 0 0 transparent, 0px -1px 2px white;
+        outline: none;
+        line-height: 21px;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 23px;
+    }
+<xen:else />
+    <xen:comment> /* Do nothing */ </xen:comment>
+</xen:if>
+/* lastest activity */
+.profileInfoWrapper .lastActivity {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    padding: 0px 0px 6px 0;
+}

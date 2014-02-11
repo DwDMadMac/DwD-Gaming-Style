@@ -34,11 +34,15 @@
                     <div class="avatarScaler">
                         <xen:if is="{$visitor.user_id} == {$user.user_id}">
                             <a class="Av{$user.user_id}l OverlayTrigger" href="{xen:link account/avatar}">
-                                <img src="{xen:helper avatar, $user, l, '', true}" alt="{$user.username}" style="{xen:helper avatarCropCss, $user}" itemprop="photo" />
+                                <img src="{xen:helper avatar, $user, l, '', true}" alt="{$user.username}" style="{xen:helper avatarCropCss, $user}" itemprop="photo" >
+                                    <h1 itemprop="name" class="username">{xen:helper richUserName, $user}</h1>
+                                </img>
                             </a>
                         <xen:else />
                             <span class="Av{$user.user_id}l">
-                                <img src="{xen:helper avatar, $user, l, '', true}" alt="{$user.username}" style="{xen:helper avatarCropCss, $user}" itemprop="photo" />
+                                <img src="{xen:helper avatar, $user, l, '', true}" alt="{$user.username}" style="{xen:helper avatarCropCss, $user}" itemprop="photo" >
+                                    <h1 itemprop="name" class="username">{xen:helper richUserName, $user}</h1>
+                                </img>
                             </span>
                         </xen:if>
                     </div>
@@ -49,19 +53,55 @@
                             {xen:helper bodyText, $user.status} <xen:datetime time="$user.status_date" />
                         </p>
                     </xen:if>
-                    <h1 itemprop="name" class="username">{xen:helper richUserName, $user}</h1>
+                    <xen:if hascontent="true">
+                        <div class="userBanners">
+                            <xen:contentcheck>{xen:helper userBanner, $user}</xen:contentcheck>
+                        </div>
+                    </xen:if>
+                    <div class="userLinks">
+                        <xen:hook name="member_card_links">
+                            <xen:if is="{$visitor.user_id} AND {$user.user_id} != {$visitor.user_id}">
+                                <xen:if is="{$canStartConversation}">
+                                    <a href="{xen:link conversations/add, '', 'to={$user.username}'}">{xen:phrase start_conversation}</a>
+                                </xen:if>
+                                <xen:follow user="$user" class="Tooltip" />
+                                <xen:if is="{xen:helper isIgnored, $user.user_id}">
+                                    <a href="{xen:link members/unignore, $user}" class="FollowLink">{xen:phrase unignore}</a>
+                                <xen:elseif is="{$canIgnore}" />
+                                    <a href="{xen:link members/ignore, $user}" class="FollowLink">{xen:phrase ignore}</a>
+                                </xen:if>
+                            </xen:if>
+                        </xen:hook>
+                    </div>
+                    <xen:if is="{$canViewOnlineStatus}">
+                        <dl class="pairsInline lastActivity">
+                            <dt>{xen:phrase x_was_last_seen, 'username={$user.username}'}:</dt>
+                            <dd>
+                                <xen:if is="{$user.activity}">
+                                    <xen:if is="{$user.activity.description}">
+                                        {$user.activity.description}<xen:if is="{$user.activity.itemTitle}"> <em><a href="{$user.activity.itemUrl}">{$user.activity.itemTitle}</a></em></xen:if>,
+                                    <xen:else />
+                                        {xen:phrase viewing_unknown_page},
+                                    </xen:if>
+                                    <xen:datetime time="{$user.effective_last_activity}" class="muted" />
+                                <xen:else />
+                                    <xen:datetime time="{$user.effective_last_activity}" />
+                                </xen:if>
+                            </dd>
+                        </dl>
+                    </xen:if>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="profileCoverPhoto">
                 <xen:if is="{$user.customFields.profileCoverImage}">
                     <div class="changeCoverPhoto button">
-                        <a href="#" class="button">Change Cover Photo</a>
+                        <a href="{xen:link account/alert-preferences}" class="button">Change Cover Photo</a>
                     </div>
                     <img src="{$user.customFields.profileCoverImage}" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
                 <xen:else />
                     <div class="changeCoverPhoto button">
-                        <a href="#">Change Cover Photo</a>
+                        <a href="{xen:link account/preferences}">Change Cover Photo</a>
                     </div>
                     <script type="text/javascript">getRandomImage(random_images_array)</script>
                 </xen:if>
