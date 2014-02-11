@@ -56,14 +56,14 @@
             <div class="profileCoverPhoto">
                 <xen:if is="{$user.customFields.profileCoverImage}">
                     <div class="changeCoverPhoto button">
-                        
+                        <a href="#" class="button">Change Cover Photo</a>
                     </div>
                     <img src="{$user.customFields.profileCoverImage}" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
                 <xen:else />
                     <div class="changeCoverPhoto button">
-
+                        <a href="#">Change Cover Photo</a>
                     </div>
-                    <img class="JSimgRendering" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
+                    <script type="text/javascript">getRandomImage(random_images_array)</script>
                 </xen:if>
             </div>
         </div>
@@ -77,7 +77,6 @@
 			<div class="secondaryContent pairsJustified">
 
 				<xen:hook name="member_view_info_block">
-				
 					
 				</xen:hook>
 
@@ -99,12 +98,16 @@
 	</div>
 	<div class="mainProfileColumn">
 		<div class="section primaryUserBlock">
-			<ul class="tabs mainTabs Tabs" data-panes="#ProfilePanes > li" data-history="on">
+			<ul class="tabs Tabs" data-panes="#ProfilePanes > li" data-history="on">
 				<li><a href="{$requestPaths.requestUri}#profilePosts">{xen:phrase profile_posts}</a></li>
-				<xen:if is="{$showRecentActivity}"><li><a href="{$requestPaths.requestUri}#recentActivity">{xen:phrase recent_activity}</a></li></xen:if>
+				<xen:if is="{$showRecentActivity}">
+                                    <li><a href="{$requestPaths.requestUri}#recentActivity">{xen:phrase recent_activity}</a></li>
+                                </xen:if>
 				<li><a href="{$requestPaths.requestUri}#postings">{xen:phrase postings}</a></li>
 				<li><a href="{$requestPaths.requestUri}#info">{xen:phrase information}</a></li>
-				<xen:if is="{$warningCount}"><li><a href="{$requestPaths.requestUri}#warnings">{xen:phrase warnings} ({xen:number $warningCount})</a></li></xen:if>
+				<xen:if is="{$warningCount}">
+                                    <li><a href="{$requestPaths.requestUri}#warnings">{xen:phrase warnings} ({xen:number $warningCount})</a></li>
+                                </xen:if>
 				<xen:hook name="member_view_tabs_heading" params="{xen:array 'user={$user}'}" />
 			</ul>
 		</div>
