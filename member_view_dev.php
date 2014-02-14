@@ -141,7 +141,7 @@
                 <div class="profileInfoBlockwrapper">
                     <xen:if is="{$user.status}">
                         <p class="userStatus bubble" id="UserStatus">
-                            {xen:helper bodyText, $user.status} <xen:datetime time="$user.status_date" />
+                            {xen:helper bodyText, $user.status} <br /> <xen:datetime time="$user.status_date" />
                         </p>
                     </xen:if>
                     <xen:if hascontent="true">

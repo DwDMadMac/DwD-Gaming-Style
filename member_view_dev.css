@@ -469,6 +469,7 @@
     border-radius: 15px;
     border: #3C0000 solid 1px;
     display: inline-block;
+    min-height: 55px;
 }
     .bubble:after {
         content: '';
