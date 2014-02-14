@@ -185,16 +185,24 @@
                 <div class="clearfix"></div>
             </div>
             <div class="profileCoverPhoto">
-                <xen:if is="{$user.customFields.profileCoverImage}">
-                    <div class="changeCoverPhoto button">
-                        <a href="{xen:link account/alert-preferences}" class="button">Change Cover Photo</a>
-                    </div>
-                    <img src="{$user.customFields.profileCoverImage}" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
+                <xen:if is="{$visitor.user_id} == {$user.user_id}">
+                    <xen:if is="{$user.customFields.profileCoverImage}">
+                        <div class="changeCoverPhoto button">
+                            <a href="{xen:link account/alert-preferences}" class="button">Change Cover Photo</a>
+                        </div>
+                        <img src="{$user.customFields.profileCoverImage}" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
+                    <xen:else />
+                        <div class="changeCoverPhoto button">
+                            <a href="{xen:link account/preferences}">Change Cover Photo</a>
+                        </div>
+                        <script type="text/javascript">getRandomImage(random_images_array);</script>
+                    </xen:if>
                 <xen:else />
-                    <div class="changeCoverPhoto button">
-                        <a href="{xen:link account/preferences}">Change Cover Photo</a>
-                    </div>
-                    <script type="text/javascript">getRandomImage(random_images_array);</script>
+                    <xen:if is="{$user.customFields.profileCoverImage}">
+                        <img src="{$user.customFields.profileCoverImage}" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" />
+                    <xen:else />
+                        <script type="text/javascript">getRandomImage(random_images_array);</script>
+                    </xen:if>
                 </xen:if>
             </div>
         </div>
