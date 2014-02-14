@@ -17,7 +17,6 @@
 
 .profilePage .mainProfileColumn
 {
-	margin-left: {xen:calc '@profilePageSidebarWidth + 10'}px;
 	border-left: 1px solid @primaryLighterStill;
 	zoom: 1;
 }
@@ -255,11 +254,6 @@
 		background-color: @contentBackground;
 		@property "/profilePageTabSelected";
 	}
-
-.profilePage .profileContent
-{
-	margin-left: @profilePageTabInset;
-}
 
 	.profilePage .profilePoster
 	{
@@ -614,4 +608,52 @@
     bottom: 0px;
     display: inline-block;
     padding: 0px 0px 6px 0;
+    color: rgb(150,150,150);
+}
+.member_view .breadBoxTop {
+    display: none;
+}
+.CoverPhotoBelowBlock {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.profilePage .CoverPhotoBelowBlock .leftblock {
+    float: left;
+    width: 50%;
+    border-right: 1px solid rgb(223, 213, 213);
+}
+.profilePage .CoverPhotoBelowBlock .rightblock {
+    float: right;
+    width: 50%;
+    border-right: 1px solid rgb(223, 213, 213);
+}
+.CoverPhotoBelowBlock .avatarHeap {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+.profilePage .tabs li {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+.profilePage .profileAboutContent {
+    float: left;
+    width: 50%;
+    border-right: 1px solid rgb(223, 213, 213);
+}
+.profilePage .profileInteractContent {
+    float: right;
+    width: 50%;
+    border-left: 1px solid rgb(223, 213, 213);
+}
+.profilePage .overviewTopBlocks {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid rgb(223, 213, 213);
+}
+.profilePage .overviewTopBlocks .primaryContent {
+    border-bottom: none !important;
 }

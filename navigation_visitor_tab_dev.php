@@ -1,4 +1,4 @@
-<xen:edithint template="navigation.css" />
+    <xen:edithint template="navigation.css" />
 
 <ul class="visitorTabs pull-right">
 

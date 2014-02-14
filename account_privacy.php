@@ -64,7 +64,7 @@
 				</ul>
 			</dd>
 		</dl>
-
+    <xen:if is="{$xenOptions.enableNewsFeed}">
 		<dl class="ctrlUnit surplusLabel">
 			<dt><label for="ctrl_allow_receive_news_feed">{xen:phrase news_feed}:</label></dt>
 			<dd>
@@ -86,6 +86,9 @@
 			</dd>
 		</dl>
 	</fieldset>
+    <xen:else />
+        <input type="hidden" name="allow_receive_news_feed" value="{$visitor.allow_receive_news_feed}" />
+    </xen:if>
 
 	<fieldset>
 		<dl class="ctrlUnit sectionLink" id="contact_details">

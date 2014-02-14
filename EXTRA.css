@@ -4988,3 +4988,64 @@ position: relative;
   width: 107px;
 
 }
+/******** NATURE THEMED FLUID 2 NOTIFICATION *********/
+
+.gamerfluidgreen2 .gritter-top {
+  background: url("@imagePath/xenforo/icons/gamefluidgreen2_notifications_top.png") no-repeat scroll transparent;
+  width: 250px;
+  height: 137px; }
+
+.gamerfluidgreen2 .gritter-item {
+  background: url("@imagePath/xenforo/icons/gamefluidgreen2_notifications_center.png") repeat-y scroll transparent;
+  border-radius: 0;
+  margin: 0 0 0;
+  padding-top: 0;}
+
+.gamerfluidgreen2 .gritter-bottom {
+  background: url("@imagePath/xenforo/icons/gamefluidgreen2_notifications_bottom.png") no-repeat scroll transparent;
+  width: 250px;
+  height: 43px; }
+
+.gamerfluidgreen2 .gritter-image {
+  margin-left: 65px;
+  width: 96px;
+  height: 96px;
+  border: 0px solid #242424;
+  background-color: transparent;
+  border-radius: 3px;
+  position: absolute;
+  top: -117px; }
+
+.gamerfluidgreen2 .gritter-with-image {
+  width: 220px;
+  margin-right: 55px;
+  padding-top: 10px; }
+
+.gamerfluidgreen2 .gritter-dismiss {
+  padding-right: 100px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  bottom: -30px;
+  text-shadow: 0 0 0 transparent, 0 1px 3px #1a2a05; }
+ 
+.gamerfluidgreen2 .gritter-dismiss a { color: #f7e5cf; text-decoration: none; }
+ 
+.gamerfluidgreen2 .gritter-dismiss:hover {opacity: 0.6;}
+
+.gamerfluidgreen2 .gritter-title {
+  color: #e8f7d2;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 0 0 transparent, 0 1px 2px #1a2a05; }
+ 
+.gamerfluidgreen2 .gritter-item p { color: #d0e4b5; }
+
+.gamerfluidgreen2 .gritter-close {
+  background: url("@imagePath/xenforo/icons/gamerfluidgreen2close.png") no-repeat scroll left top transparent;
+  width: 99px;
+  height: 25px;
+  right: 128px;
+  top: -161px;}
+   
+/******* NATURE THEMED FLUID 2 NOTIFICATION *******/

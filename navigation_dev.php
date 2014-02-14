@@ -196,21 +196,14 @@
                                                             <a href="{xen:link account/upgrades}">{xen:phrase account_upgrades}</a>
                                                         </li>
                                                     </xen:if>
-                                                    <xen:if is="{$visitor.facebook_auth_id}">
-                                                        <xen:if is="{$xenOptions.facebookAppId}">
-                                                            <li>
-                                                                <a href="{xen:link account/facebook}" class="OverlayTrigger">Unlink Your Facebook</a>
-                                                            </li>
-                                                        </xen:if>
-                                                            <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
-                                                    <xen:else />
-                                                        <xen:if is="{$xenOptions.facebookAppId}">
-                                                            <li>
-                                                                <a href="{xen:link account/facebook}" class="OverlayTrigger">Link Your Facebook</a>
-                                                            </li>
-                                                        </xen:if>
-                                                            <li><a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a></li>
+                                                    <xen:if is="{$xenOptions.facebookAppId} OR {$xenOptions.twitterAppKey} OR {$xenOptions.googleClientId}">
+                                                        <li>
+                                                            <a href="{xen:link account/external-accounts}" class="OverlayTrigger">Social Integration</a>
+                                                        </li>
                                                     </xen:if>
+                                                        <li>
+                                                            <a href="{xen:link logout, '', '_xfToken={$visitor.csrf_token_page}'}" class="LogOut">{xen:phrase log_out}</a>
+                                                        </li>
                                                 </ul>
                                             </div>
                                             <xen:comment>
