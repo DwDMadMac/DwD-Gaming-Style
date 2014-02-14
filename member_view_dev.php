@@ -141,7 +141,10 @@
                 <div class="profileInfoBlockwrapper">
                     <xen:if is="{$user.status}">
                         <p class="userStatus bubble" id="UserStatus">
-                            {xen:helper bodyText, $user.status} <br /> <xen:datetime time="$user.status_date" />
+                            {xen:helper bodyText, $user.status} <br /> 
+                            <b class="suerStatusPostDate">
+                                Status posted <xen:datetime time="$user.status_date" />
+                            </b>
                         </p>
                     </xen:if>
                     <xen:if hascontent="true">
@@ -229,7 +232,7 @@
     </xen:comment>
 	<div class="mainProfileColumn">
 		<div class="section primaryUserBlock">
-			<ul class="tabs Tabs" data-panes="#ProfilePanes > li" data-history="on">
+			<ul class="tabs mainTabs Tabs" data-panes="#ProfilePanes > li" data-history="on">
 				<li><a href="{$requestPaths.requestUri}#profilePosts">Overview</a></li>
 				<xen:if is="{$showRecentActivity}">
                                     <li><a href="{$requestPaths.requestUri}#recentActivity">{xen:phrase recent_activity}</a></li>

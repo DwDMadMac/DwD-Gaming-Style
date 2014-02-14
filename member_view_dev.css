@@ -217,18 +217,6 @@
 		border: none;
 	}
 
-.profilePage .tabs.mainTabs
-{
-	padding: 0 @profilePageTabInset;	
-	margin-top: -{xen:calc '@profilePageTabHeight + 1'}px;
-	min-height: {xen:calc '@profilePageTabHeight + 1'}px;
-	height: auto;
-	position: relative; /* ensure separate stacking context from .mainText */
-        margin-left: -177px;
-        text-align: center;
-        width: 0;
-}
-
 	.profilePage .tabs.mainTabs li a
 	{
 		padding-left: @profilePageTabHeight;
@@ -611,6 +599,10 @@
     padding: 0px 0px 6px 0;
     color: rgb(150,150,150);
 }
+.profileInfoWrapper .lastActivity a {
+    color: rgb(150,150,150);
+    font-style: italic;
+}
 .member_view .breadBoxTop {
     display: none;
 }
@@ -657,4 +649,18 @@
 }
 .profilePage .overviewTopBlocks .primaryContent {
     border-bottom: none !important;
+}
+.suerStatusPostDate {
+    color: grey;
+    font-style: italic;
+    font-size: 10px;
+}
+.profileInfoWrapper .userLinks a {
+    color: white;
+    border-left: 3px solid white;
+    padding: 0 2px;
+    margin: 0 5px 0 2px;
+}
+.profileInfoWrapper .userLinks .userMood {
+    margin-bottom: 6px;
 }
