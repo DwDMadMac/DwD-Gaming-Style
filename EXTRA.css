@@ -342,11 +342,6 @@ cite {
   margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
 ul ul,
 ol ul,
 ul ol,
@@ -4645,7 +4640,7 @@ td.visible-print {
     margin-top: 20px;
 }
 #headerProxy {
-    margin-bottom: 90px;
+    margin-bottom: 115px;
 }
 .category_view ol {
     margin: 0 !important;

@@ -1,3 +1,5 @@
+<xen:edithint template="navigation.css" />
+
 <div id="navigation" class="pageWidth {xen:if $canSearch, withSearch}">
     <div class="pageContent">
         <div class="header styled">
@@ -225,8 +227,23 @@
                     </xen:if>
                 </ul>
             </div>
-            <div class="nav">
-                <ul id="nav" class="visitorTabs">
+            <div class="nav-subNavi">
+                <ul class="subNavi">
+                    <xen:if is="{$contentTemplate} == 'category_view' OR {$contentTemplate} == 'forum_view' OR {$contentTemplate} == 'thread_view' OR {$contentTemplate} == 'waindigo_social_category_view_socialgroups'">
+                        <xen:if is="{$visitor.user_id}">
+                            <a href="{xen:link 'forums/-/mark-read', $forum, 'date={$serverTime}'}" class="OverlayTrigger"><li>{xen:phrase mark_forums_read}</li></a>
+                        </xen:if>
+                        <xen:if is="{$canSearch}">
+                            <a href="{xen:link search, '', 'type=post'}"><li>{xen:phrase search_forums}</li></a>
+                        </xen:if>
+                        <xen:if is="{$visitor.user_id}">
+                                <a href="{xen:link 'watched/forums'}"><li>{xen:phrase watched_forums}</li></a>
+                                <a href="{xen:link 'watched/threads'}"><li>{xen:phrase watched_threads}</li></a>
+                        </xen:if>
+                        <a href="{xen:link 'find-new/posts'}" rel="nofollow"><li>{xen:if $visitor.user_id, {xen:phrase new_posts}, {xen:phrase recent_posts}}</li></a>
+                    </xen:if>
+                </ul>
+                <ul class="subNavi pull-right">
                     
                 </ul>
             </div>

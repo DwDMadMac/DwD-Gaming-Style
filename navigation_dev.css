@@ -131,3 +131,28 @@
     background: url('http://downwithdestruction.net/img/glyphicons-halflings.png') -73px 0px;
     padding: 0 8px;    
 }
+.nav-subNavi {
+    background: #f3f3f3;
+    border-top: 1px solid #DDD;
+}
+.subNavi li {
+    padding: 5px 5px;
+    text-align: center;
+}
+.subNavi li {
+    position: relative;
+    display: inline-block;
+}
+.header>div.nav-subNavi>ul>a>li {
+    font-size: 10px;
+    font-weight: bolder;
+    color: #55595b;
+    transition-duration: 200ms;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+}
+.header>div.nav-subNavi>ul>a>li:hover {
+    color: white;
+    background-color: rgb(206, 206, 206);
+    text-decoration: none;
+}
