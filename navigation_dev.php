@@ -243,6 +243,11 @@
                         <a href="{xen:link 'watched/forums'}"><li>{xen:phrase watched_forums}</li></a>
                         <a href="{xen:link 'watched/threads'}"><li>{xen:phrase watched_threads}</li></a>
                         <a href="{xen:link 'find-new/posts'}" rel="nofollow"><li>{xen:if $visitor.user_id, {xen:phrase new_posts}, {xen:phrase recent_posts}}</li></a>
+                    <xen:elseif is="{$contentTemplate} == 'member_notable'" />
+                        <a href="{xen:link 'members'}"><li>Notable Members</li></a>
+                        <a href="{xen:link 'members/list'}"><li>Registered Members</li></a>
+                        <a href="{xen:link 'online'}"><li>Current Visitors</li></a>
+                        <a href="{xen:link 'recent-activity'}"><li>Recent Activity</li></a>
                     <xen:else />
                         <!-- Global Left Sub Navi -->
                     </xen:if>
