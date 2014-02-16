@@ -230,10 +230,13 @@
             <div class="nav-subNavi">
                 <ul class="subNavi pull-left">
                     <xen:if is="!{$visitor.user_id}">
-                        <!-- Do nothing for Guest -->
+                        <!-- Do nothing for Guest -->watch_threads
                     <xen:elseif is="{$contentTemplate} == 'category_view' OR 
                             {$contentTemplate} == 'forum_view' OR 
                             {$contentTemplate} == 'thread_view' OR 
+                            {$contentTemplate} == 'watch_threads' OR 
+                            {$contentTemplate} == 'watch_forums' OR 
+                            {$contentTemplate} == 'waindigo_watch_social_forums_socialgroups' OR 
                             {$contentTemplate} == 'waindigo_social_category_view_socialgroups' OR 
                             {$contentTemplate} == 'forum_list'" />
                         <a href="{xen:link 'forums/-/mark-read', $forum, 'date={$serverTime}'}" class="OverlayTrigger"><li>{xen:phrase mark_forums_read}</li></a>
@@ -241,6 +244,7 @@
                             <a href="{xen:link search, '', 'type=post'}"><li>{xen:phrase search_forums}</li></a>
                         </xen:if>
                         <a href="{xen:link 'watched/forums'}"><li>{xen:phrase watched_forums}</li></a>
+                        <a href="{xen:link 'watched/social-forums'}"><li>Watched Kingdom Forums</li></a>
                         <a href="{xen:link 'watched/threads'}"><li>{xen:phrase watched_threads}</li></a>
                         <a href="{xen:link 'find-new/posts'}" rel="nofollow"><li>{xen:if $visitor.user_id, {xen:phrase new_posts}, {xen:phrase recent_posts}}</li></a>
                     <xen:elseif is="{$contentTemplate} == 'member_notable'" />
@@ -248,6 +252,46 @@
                         <a href="{xen:link 'members/list'}"><li>Registered Members</li></a>
                         <a href="{xen:link 'online'}"><li>Current Visitors</li></a>
                         <a href="{xen:link 'recent-activity'}"><li>Recent Activity</li></a>
+                    <xen:elseif is="{$contentTemplate} == 'EWRcarta_PageView' OR
+                                {$contentTemplate} == 'EWRcarta_Pages' OR
+                                {$contentTemplate} == 'EWRcarta_PageView_NoSide' OR
+                                {$contentTemplate} == 'EWRcarta_Recent' OR
+                                {$contentTemplate} == 'EWRcarta_PageCreate' OR
+                                {$contentTemplate} == 'EWRcarta_Administrate' OR
+                                {$contentTemplate} == 'EWRcarta_TemplateCreate' OR
+                                {$contentTemplate} == 'EWRcarta_PageEdit'" />
+                        <a href="{xen:link 'wiki'}"><li>Wiki Home</li></a>
+                        <a href="{xen:link 'wiki/special/pages'}"><li>Page List</li></a>
+                        <a href="{xen:link 'wiki/special/recent'}"><li>Recent Activity</li></a>
+                        <xen:if is="{xen:helper ismemberof, $visitor, 15}">
+                            <a href="{xen:link 'wiki/special/create-page'}"><li>Create New Page</li></a>
+                            <a href="{xen:link 'wiki/special/administrate'}"><li>Administrate Wiki</li></a>
+                        </xen:if>
+                    <xen:elseif is="{$contentTemplate} == 'resource_index' OR
+                                {$contentTemplate} == 'resource_description' OR
+                                {$contentTemplate} == 'resource_field' OR
+                                {$contentTemplate} == 'resource_add' OR
+                                {$contentTemplate} == 'resource_version_add' OR
+                                {$contentTemplate} == 'resource_author_view' OR
+                                {$contentTemplate} == 'resource_author_list' OR
+                                {$contentTemplate} == 'resource_category' OR
+                                {$contentTemplate} == 'resource_featured'" />
+                        <a href="{xen:link 'resources/?type=resource_update'}"><li>Search Resources</li></a>
+                        <a href="{xen:link 'resources/authors'}"><li>Active Authors</li></a>
+                        <a href="{xen:link 'resources/authors/{$visitor.user_id}'}"><li>Your Resources</li></a>
+                        <a href="{xen:link 'resources/watched-categories'}"><li>Watched Categories</li></a>
+                        <a href="{xen:link 'resources/watched'}"><li>Watched Resources</li></a>
+                        <xen:if is="{xen:helper ismemberof, $visitor, 16}">
+                            <a href="{xen:link 'resources/add'}" class="OverlayTrigger"><li>Add Resource</li></a>
+                        </xen:if>
+                    <xen:elseif is="{$contentTemplate} == 'xfr_useralbums_albums_list_grid' OR
+                                {$contentTemplate} == 'xfr_useralbums_create_album' OR
+                                {$contentTemplate} == 'xfr_useralbums_member_albums_list_grig' OR
+                                {$contentTemplate} == 'xfr_useralbums_album_view' OR 
+                                {$contentTemplate} == 'xfr_useralbums_edit_album' OR 
+                                {$contentTemplate} == 'xfr_useralbums_image_view'" />
+                        <a href="{xen:link 'gallery/create'}"><li>Create a Album</li></a>
+                        <a href="{xen:link 'gallery/own'}"><li>View Your Albums</li></a>
                     <xen:else />
                         <!-- Global Left Sub Navi -->
                     </xen:if>
