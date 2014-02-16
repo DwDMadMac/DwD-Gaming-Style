@@ -11,7 +11,7 @@
 				<span class="item Tooltip comments" title="{xen:phrase xfr_useralbums_image_comments}">{$image.comment_count}</span>
 				<span class="item Tooltip views" title="{xen:phrase xfr_useralbums_image_views}">{$image.view_count}</span>
 				<span class="item Tooltip likes" title="{xen:phrase xfr_useralbums_image_likes}">{$image.likes}</span>
-			</div>
+			</div>  
 		</div>
 	</li>
 </xen:foreach>
