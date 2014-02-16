@@ -228,23 +228,42 @@
                 </ul>
             </div>
             <div class="nav-subNavi">
-                <ul class="subNavi">
-                    <xen:if is="{$contentTemplate} == 'category_view' OR {$contentTemplate} == 'forum_view' OR {$contentTemplate} == 'thread_view' OR {$contentTemplate} == 'waindigo_social_category_view_socialgroups'">
-                        <xen:if is="{$visitor.user_id}">
-                            <a href="{xen:link 'forums/-/mark-read', $forum, 'date={$serverTime}'}" class="OverlayTrigger"><li>{xen:phrase mark_forums_read}</li></a>
-                        </xen:if>
+                <ul class="subNavi pull-left">
+                    <xen:if is="!{$visitor.user_id}">
+                        <!-- Do nothing for Guest -->
+                    <xen:elseif is="{$contentTemplate} == 'category_view' OR 
+                            {$contentTemplate} == 'forum_view' OR 
+                            {$contentTemplate} == 'thread_view' OR 
+                            {$contentTemplate} == 'waindigo_social_category_view_socialgroups' OR 
+                            {$contentTemplate} == 'forum_list'" />
+                        <a href="{xen:link 'forums/-/mark-read', $forum, 'date={$serverTime}'}" class="OverlayTrigger"><li>{xen:phrase mark_forums_read}</li></a>
                         <xen:if is="{$canSearch}">
                             <a href="{xen:link search, '', 'type=post'}"><li>{xen:phrase search_forums}</li></a>
                         </xen:if>
-                        <xen:if is="{$visitor.user_id}">
-                                <a href="{xen:link 'watched/forums'}"><li>{xen:phrase watched_forums}</li></a>
-                                <a href="{xen:link 'watched/threads'}"><li>{xen:phrase watched_threads}</li></a>
-                        </xen:if>
+                        <a href="{xen:link 'watched/forums'}"><li>{xen:phrase watched_forums}</li></a>
+                        <a href="{xen:link 'watched/threads'}"><li>{xen:phrase watched_threads}</li></a>
                         <a href="{xen:link 'find-new/posts'}" rel="nofollow"><li>{xen:if $visitor.user_id, {xen:phrase new_posts}, {xen:phrase recent_posts}}</li></a>
+                    <xen:else />
+                        <!-- Global Left Sub Navi -->
                     </xen:if>
                 </ul>
                 <ul class="subNavi pull-right">
-                    
+                    <xen:if is="!{$visitor.user_id}">
+                        <!-- Show Nothing To Guest -->
+                    <xen:else />
+                        <a href="{xen:link 'arcade'}">
+                            <li>Arcade</li>
+                        </a>
+                        <a href="{xen:link 'gallery'}">
+                            <li>Gallery</li>
+                        </a>
+                        <a href="{xen:link 'resources'}">
+                            <li>Resources</li>
+                        </a>
+                        <a href="{xen:link 'members'}">
+                            <li>Members</li>
+                        </a>
+                    </xen:if>
                 </ul>
             </div>
         </div>

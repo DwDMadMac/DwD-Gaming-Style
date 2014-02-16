@@ -136,7 +136,7 @@
     border-top: 1px solid #DDD;
 }
 .subNavi li {
-    padding: 5px 5px;
+    padding: 6px 8px;
     text-align: center;
 }
 .subNavi li {
@@ -155,4 +155,11 @@
     color: white;
     background-color: rgb(206, 206, 206);
     text-decoration: none;
+}
+.nav-subNavi:after {
+    clear: both;
+}
+.nav-subNavi:before, .nav-subNavi:after {
+    content: " ";
+    display: table;
 }
