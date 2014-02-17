@@ -230,7 +230,7 @@
             <div class="nav-subNavi">
                 <ul class="subNavi pull-left">
                     <xen:if is="!{$visitor.user_id}">
-                        <!-- Do nothing for Guest -->watch_threads
+                        <!-- Do nothing for Guest -->
                     <xen:elseif is="{$contentTemplate} == 'category_view' OR 
                             {$contentTemplate} == 'forum_view' OR 
                             {$contentTemplate} == 'thread_view' OR 
@@ -238,6 +238,7 @@
                             {$contentTemplate} == 'watch_forums' OR 
                             {$contentTemplate} == 'waindigo_watch_social_forums_socialgroups' OR 
                             {$contentTemplate} == 'waindigo_social_category_view_socialgroups' OR 
+                            {$contentTemplate} == 'find_new_posts_none' OR
                             {$contentTemplate} == 'forum_list'" />
                         <a href="{xen:link 'forums/-/mark-read', $forum, 'date={$serverTime}'}" class="OverlayTrigger"><li>{xen:phrase mark_forums_read}</li></a>
                         <xen:if is="{$canSearch}">
@@ -247,7 +248,11 @@
                         <a href="{xen:link 'watched/social-forums'}"><li>Watched Kingdom Forums</li></a>
                         <a href="{xen:link 'watched/threads'}"><li>{xen:phrase watched_threads}</li></a>
                         <a href="{xen:link 'find-new/posts'}" rel="nofollow"><li>{xen:if $visitor.user_id, {xen:phrase new_posts}, {xen:phrase recent_posts}}</li></a>
-                    <xen:elseif is="{$contentTemplate} == 'member_notable'" />
+                    <xen:elseif is="{$contentTemplate} == 'member_notable' OR
+                                {$contentTemplate} == 'member_view' OR
+                                {$contentTemplate} == 'news_feed_page_global' OR
+                                {$contentTemplate} == 'online_list' OR
+                                {$contentTemplate} == 'member_list'" />
                         <a href="{xen:link 'members'}"><li>Notable Members</li></a>
                         <a href="{xen:link 'members/list'}"><li>Registered Members</li></a>
                         <a href="{xen:link 'online'}"><li>Current Visitors</li></a>
@@ -292,6 +297,38 @@
                                 {$contentTemplate} == 'xfr_useralbums_image_view'" />
                         <a href="{xen:link 'gallery/create'}"><li>Create a Album</li></a>
                         <a href="{xen:link 'gallery/own'}"><li>View Your Albums</li></a>
+                    <xen:elseif is="{$contentTemplate} == 'account_alerts' OR
+                                {$contentTemplate} == 'account_personal_details' OR
+                                {$contentTemplate} == 'news_feed_page' OR
+                                {$contentTemplate} == 'dark_postrating_account_ratings_received' OR
+                                {$contentTemplate} == 'dark_postrating_account_ratings_given' OR
+                                {$contentTemplate} == 'bookmarks_account_list' OR
+                                {$contentTemplate} == 'account_signature' OR
+                                {$contentTemplate} == 'account_contact_details' OR
+                                {$contentTemplate} == 'waindigo_account_trophies_trophies' OR
+                                {$contentTemplate} == 'account_privacy' OR
+                                {$contentTemplate} == 'account_preferences' OR
+                                {$contentTemplate} == 'account_alert_preferences' OR
+                                {$contentTemplate} == 'waindigo_account_email_preferences_emailalerts' OR
+                                {$contentTemplate} == 'account_following' OR
+                                {$contentTemplate} == 'account_ignored' OR
+                                {$contentTemplate} == 'account_external_accounts' OR
+                                {$contentTemplate} == 'account_security' OR
+                                {$contentTemplate} == 'account_teamspeak_index' OR
+                                {$contentTemplate} == 'account_twofactor'" />
+                        <a href="{xen:link 'account/personal-details'}"><li>Personal Details</li></a>
+                        <a href="{xen:link 'account/news-feed'}"><li>Your News Feed</li></a>
+                        <a href="{xen:link 'account/ratings-received'}"><li>Ratings Received</li></a>
+                        <a href="{xen:link 'account/ratings-given'}"><li>Ratings Given</li></a>
+                        <a href="{xen:link 'account/bookmarks'}"><li>Bookmarks</li></a>
+                    <xen:elseif is="{$contentTemplate} == 'conversation_list' OR
+                                {$contentTemplate} == 'conversation_list_yours' OR
+                                {$contentTemplate} == 'conversation_list_starred' OR
+                                {$contentTemplate} == 'conversation_add' OR
+                                {$contentTemplate} == 'conversation_view'" />
+                        <a href="{xen:link 'inbox'}"><li>Inbox</li></a>
+                        <a href="{xen:link 'inbox/starred'}"><li>Starred</li></a>
+                        <a href="{xen:link 'inbox/yours'}"><li>Sent</li></a>
                     <xen:else />
                         <!-- Global Left Sub Navi -->
                     </xen:if>
