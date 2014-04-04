@@ -105,8 +105,13 @@
 	<dl class="ctrlUnit OptOut">
 		<dt><label for="ctrl_about">{xen:phrase about_you}:</label> <dfn>{xen:phrase you_may_use_bb_code}</dfn></dt>
                 <dd>
-                    <textarea name="status" rows="10" cols="60" id="ctrl_status" autofocus="autofocus" class="textCtrl StatusEditor Elastic OptOut" data-statusEditorCounter="#statusEditorCounter"></textarea>
+                    {xen:raw $aboutEditor}
                 </dd>
+                <xen:comment>
+                    <dd>
+                        <textarea name="status" rows="10" cols="60" id="ctrl_status" autofocus="autofocus" class="textCtrl StatusEditor Elastic OptOut" data-statusEditorCounter="#statusEditorCounter"></textarea>
+                    </dd>
+                </xen:comment>
 	</dl>
 	</xen:hook>
 

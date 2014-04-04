@@ -394,7 +394,7 @@
 										</xen:if>
 
 										<xen:if is="{$user.location}">
-											<dl><dt>{xen:phrase location}:</dt> <dd>{xen:string censor, $user.location}</dd></dl>
+											<dl><dt>{xen:phrase location}:</dt> <dd><a href="{xen:link 'misc/location-info', '', 'location={xen:string censor, $user.location, '-'}'}" target="_blank" rel="nofollow" itemprop="address" class="concealed">{xen:string censor, $user.location}</a></dd></dl>
 										</xen:if>
 
 										<xen:if is="{$user.occupation}">
