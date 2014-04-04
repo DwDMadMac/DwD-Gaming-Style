@@ -328,7 +328,7 @@
                                     <li><a href="{$requestPaths.requestUri}#recentActivity">{xen:phrase recent_activity}</a></li>
                                 </xen:if>
 				<li><a href="{$requestPaths.requestUri}#postings">{xen:phrase postings}</a></li>
-				<li><a href="{$requestPaths.requestUri}#info">{xen:phrase information}</a></li>
+				<li><a href="{$requestPaths.requestUri}#info">Signature</a></li>
 				<xen:if is="{$warningCount}">
                                     <li><a href="{$requestPaths.requestUri}#warnings">{xen:phrase warnings} ({xen:number $warningCount})</a></li>
                                 </xen:if>
