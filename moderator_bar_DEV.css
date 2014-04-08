@@ -1,0 +1,98 @@
+#moderatorBar
+{
+	background-color: #000;
+	border-bottom: 1px solid #fff;	
+	font-size: 11px;
+}
+
+/*#moderatorBar
+{
+	box-shadow: 0 0 5px @primaryMedium;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+}
+
+body
+{
+	padding-top: 25px;
+}*/
+
+{xen:helper clearfix, '#moderatorBar'}
+
+#moderatorBar .pageContent
+{
+	padding: 2px 0;
+	overflow: auto;
+}
+
+#moderatorBar a
+{
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 3px;
+}
+
+#moderatorBar a,
+#moderatorBar .itemCount
+{
+	color: @primaryLighter;
+}
+
+	#moderatorBar a:hover
+	{
+		text-decoration: none;
+		background-color: @primaryDark;
+		color: @primaryLighterStill;
+	}
+
+/* TODO: maybe sort out the vertical alignment of the counters so they they are properly centered */
+
+#moderatorBar .itemLabel,
+#moderatorBar .itemCount
+{
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+}
+
+#moderatorBar .itemCount
+{	
+	background: @primaryDark;
+	padding-left: 6px;
+	padding-right: 6px;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	
+	border-radius: 2px;
+	text-shadow: none;
+}
+
+	#moderatorBar .itemCount.alert
+	{
+		background: #e03030;
+		color: white;
+		box-shadow: 2px 2px 5px rgba(0,0,0, 0.25);
+	}
+	
+
+#moderatorBar .permissionTest,
+#moderatorBar .permissionTest:hover
+{
+	background: #e03030;
+	color: white;
+	box-shadow: 2px 2px 5px rgba(0,0,0, 0.25);
+	font-weight: bold;
+}
+
+#alertsIconWhite {
+    background: url('http://downwithdestruction.net/img/glyphicons-halflings-white.png') 0px -120px;
+    padding: 0 8px;
+}
+#convoIconWhite {
+    background: url('http://downwithdestruction.net/img/glyphicons-halflings-white.png') -73px 0px;
+    padding: 0 8px;    
+}
