@@ -70,7 +70,7 @@
     COD Admin = 22                  Priority = 57
     COD Moderator = 23              Priority = 47
 </xen:comment>
-<xen:if is="{xen:helper ismemberof, $visitor, 16}">
+<xen:if is="{$visitor.user_id}">
 	<xen:include template="moderator_bar" />
 <xen:elseif is="!{$visitor.user_id} && !{$hideLoginBar}" />
 	<xen:include template="login_bar" />
