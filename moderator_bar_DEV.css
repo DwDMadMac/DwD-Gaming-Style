@@ -97,6 +97,6 @@ body
     padding: 0 8px;    
 }
 
-.usernameProfileLink .arrowWidget {
+.modBarRight .arrowWidget {
     display: none !important;
 }
