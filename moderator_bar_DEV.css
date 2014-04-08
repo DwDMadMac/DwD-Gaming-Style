@@ -96,3 +96,7 @@ body
     background: url('https://downwithdestruction.net/img/glyphicons-halflings-white.png') -73px 0px;
     padding: 0 8px;    
 }
+
+.usernameProfileLink .arrowWidget {
+    display: none !important;
+}
