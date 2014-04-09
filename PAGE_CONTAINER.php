@@ -23,7 +23,6 @@
 	{xen:helper ignoredCss, {$visitor.ignoredUsers}}
 
 	<xen:include template="google_analytics" />
-	<xen:include template="page_container_js_head" />
 	
 	<link rel="apple-touch-icon" href="{xen:helper fullurl, @ogLogoPath, 1}" />
 	<link rel="alternate" type="application/rss+xml" title="{xen:phrase rss_feed_for_x, 'title={$xenOptions.boardTitle}'}" href="{xen:link forums/-/index.rss}" />
@@ -34,6 +33,7 @@
 
 <body{xen:if {$bodyClasses}, ' class="{$bodyClasses}"'}>
 <xen:hook name="body">
+<xen:include template="page_container_js_head" />
 
 <xen:comment>
     Founder = 13                    Priority = 9000
@@ -170,6 +170,6 @@
 
 <xen:include template="page_container_js_body" />
 
-</xen:hook>
+</xen:hook>        
 </body>
 </html>
