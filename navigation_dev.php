@@ -45,13 +45,27 @@
                             </div>
                         </li>
                     <li class="navi" data-nav-colour="2d46b2"><a href="https://downwithdestruction.net/servers"><span class='l'>Servers</span></a></li>
-                    <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="c329be">
+                    <li class="navi {xen:if $tabs.selected, 'selected active'}" data-nav-colour="c329be">
                         <a href="{xen:link wiki}">
                             <span class='l'>Wiki</span>
                         </a>
                     </li>
                     <li class="navi" data-nav-colour="d39b38"><a href="{xen:link staff}"><span class='l'>Staff</span></a></li>
-                    <li class="navi {xen:if $tabs.selected, 'selected active', 'Popup PopupControl PopupClosed'}" data-nav-colour="15a3a5"><a href="{xen:link misc/contact}"><span class='l'>Support</span></a></li>
+                    <li class="navi {xen:if $tabs.selected, 'selected active'}" data-nav-colour="15a3a5"><a href="{xen:link misc/contact}"><span class='l'>Support</span></a></li>
+                </ul>
+                <ul id="nav" class="visitorTabs pull-right">
+                    <xen:if is="!{$visitor.user_id}">
+                        <!-- Show Nothing To Guest -->
+                    <xen:else />
+                        <li class="navi" data-nav-colour="9d46b2"><a href="{xen:link 'arcade'}" >Arcade</a></li>
+                        <li class="navi" data-nav-colour="4d46b2"><a href="{xen:link 'gallery'}">Gallery</a></li>
+                        <xen:if is="!{xen:helper ismemberof, $visitor, 16}">
+                            <!-- If not Founder Usergroup then show nothing -->
+                        <xen:else />
+                            <li class="navi" data-nav-colour="2d46b2"><a href="{xen:link 'resources'}">Resources</a></li>
+                        </xen:if>
+                        <li class="navi" data-nav-colour="2d46b2"><a href="{xen:link 'members'}">Members</a></li>
+                    </xen:if>
                 </ul>
             </div>
             <div class="nav-subNavi">
@@ -150,24 +164,6 @@
                         <a href="{xen:link 'account/bookmarks'}"><li>Bookmarks</li></a>
                     <xen:else />
                         <!-- Global Left Sub Navi -->
-                    </xen:if>
-                </ul>
-                <ul class="subNavi pull-right">
-                    <xen:if is="!{$visitor.user_id}">
-                        <!-- Show Nothing To Guest -->
-                    <xen:else />
-                        <a href="{xen:link 'arcade'}">
-                            <li>Arcade</li>
-                        </a>
-                        <a href="{xen:link 'gallery'}">
-                            <li>Gallery</li>
-                        </a>
-                        <a href="{xen:link 'resources'}">
-                            <li>Resources</li>
-                        </a>
-                        <a href="{xen:link 'members'}">
-                            <li>Members</li>
-                        </a>
                     </xen:if>
                 </ul>
             </div>
