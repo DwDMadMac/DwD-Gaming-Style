@@ -1,8 +1,10 @@
 #moderatorBar
 {
-	background-color: #000;
+	background-color: #7E0000;
 	border-bottom: 1px solid #fff;	
 	font-size: 11px;
+        z-index:99999;
+        box-shadow: 0 1px 0 rgba(60, 60, 60, 0.4);
 }
 
 /*#moderatorBar
@@ -25,6 +27,11 @@ body
 {
 	padding: 2px 0;
 	overflow: auto;
+}
+
+#moderatorBar .pageContent a
+{
+        padding: 10px 10px;
 }
 
 #moderatorBar a
@@ -109,4 +116,12 @@ body
 .menuFloatRight {
     float: left;
     padding: 3px;
+}
+
+.menuUserStatus textarea {
+    width: 100%;
+}
+
+#AccountMenu {
+    background: white;
 }

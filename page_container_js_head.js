@@ -4,6 +4,38 @@
 	</xen:if><xen:if is="{$xenOptions.uncompressedJs} == 1 OR {$xenOptions.uncompressedJs} == 3">
 	<script src="{$javaScriptSource}/jquery/jquery.xenforo.rollup.js?_v={$xenOptions.jsVersion}"></script></xen:if>	
 	<script src="{xen:helper javaScriptUrl, '{$javaScriptSource}/xenforo/xenforo.js?_v={$xenOptions.jsVersion}'}"></script>
+            <!-- Floating Navigation jQuery feature -->
+                <script>
+                    $(function() {
+
+                        // get initial top offset of navigation 
+                        var floating_navigation_offset_top = $('#moderatorBar').offset().top;
+
+                        // define the floating navigation function
+                        var floating_navigation = function(){
+                                    // current vertical position from the top
+                            var scroll_top = $(window).scrollTop(); 
+
+                            // if scrolled more than the navigation, change its 
+                                    // position to fixed to float to top, otherwise change 
+                                    // it back to relative
+                            if (scroll_top > floating_navigation_offset_top) { 
+                                $('#moderatorBar').css({ 'position': 'fixed', 'width': '100%', 'top':0});
+                            } else {
+                                $('#moderatorBar').css({ 'position': 'relative' }); 
+                            }   
+                        };
+
+                        // run function on load
+                        floating_navigation();
+
+                        // run function every time you scroll
+                        $(window).scroll(function() {
+                             floating_navigation();
+                        });
+
+                    });
+                </script>
             <!-- Profile Page image reload -->
             <xen:if is="{$contentTemplate} == 'member_view'">
                 <script>
