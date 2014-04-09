@@ -1,9 +1,9 @@
-	<script src="{$jQuerySource}"></script>	
+	<script async src="{$jQuerySource}"></script>	
 	<xen:if is="{$jQuerySource} != {$jQuerySourceLocal}">
 		<script>if (!window.jQuery) { document.write('<scr'+'ipt type="text/javascript" src="{$jQuerySourceLocal}"><\/scr'+'ipt>'); }</script>
 	</xen:if><xen:if is="{$xenOptions.uncompressedJs} == 1 OR {$xenOptions.uncompressedJs} == 3">
-	<script src="{$javaScriptSource}/jquery/jquery.xenforo.rollup.js?_v={$xenOptions.jsVersion}"></script></xen:if>	
-	<script src="{xen:helper javaScriptUrl, '{$javaScriptSource}/xenforo/xenforo.js?_v={$xenOptions.jsVersion}'}"></script>
+	<script async src="{$javaScriptSource}/jquery/jquery.xenforo.rollup.js?_v={$xenOptions.jsVersion}"></script></xen:if>	
+	<script async src="{xen:helper javaScriptUrl, '{$javaScriptSource}/xenforo/xenforo.js?_v={$xenOptions.jsVersion}'}"></script>
             <!-- Profile Page image reload -->
             <xen:if is="{$contentTemplate} == 'member_view'">
                 <script>
@@ -78,7 +78,7 @@
                     }
                 });
             </script>
-            <script type="text/javascript" src="https://downwithdestruction.net/theme/js/colour.jquery.min.js"></script>
+            <script async type="text/javascript" src="https://downwithdestruction.net/theme/js/colour.jquery.min.js"></script>
             <!-- Floating Navigation jQuery feature -->
             <script>
                 $(function() {
@@ -111,5 +111,5 @@
 
                 });
             </script>
-            <xen:comment><script type="text/javascript" src="https://static.downwithdestruction.net/theme/js/bootstrap.min.js"></script></xen:comment>
+            <xen:comment><script async type="text/javascript" src="https://static.downwithdestruction.net/theme/js/bootstrap.min.js"></script></xen:comment>
             <!--XenForo_Require:JS-->
