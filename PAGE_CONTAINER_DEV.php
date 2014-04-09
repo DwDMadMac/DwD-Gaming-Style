@@ -15,15 +15,14 @@
 		</script>
 	</xen:if>
 
-	<title><xen:if is="{$title}">{xen:raw $title} | {$xenOptions.boardTitle}<xen:else />{$xenOptions.boardTitle}</xen:if></title>
+	<title><xen:if is="{$title}">{xen:raw $title}<xen:else />{$xenOptions.boardTitle}</xen:if></title>
 	
 	<noscript><style>.JsOnly, .jsOnly { display: none !important; }</style></noscript>
-	<link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style={xen:urlencode $_styleId}&amp;dir={$visitorLanguage.text_direction}&amp;d={$visitorStyle.last_modified_date}" />
+        <link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style={xen:urlencode $_styleId}&amp;dir={$visitorLanguage.text_direction}&amp;d={$visitorStyle.last_modified_date}" />
 	<!--XenForo_Require:CSS-->	
 	{xen:helper ignoredCss, {$visitor.ignoredUsers}}
 
 	<xen:include template="google_analytics" />
-	<xen:include template="page_container_js_head" />
 	
 	<link rel="apple-touch-icon" href="{xen:helper fullurl, @ogLogoPath, 1}" />
 	<link rel="alternate" type="application/rss+xml" title="{xen:phrase rss_feed_for_x, 'title={$xenOptions.boardTitle}'}" href="{xen:link forums/-/index.rss}" />
@@ -34,8 +33,44 @@
 
 <body{xen:if {$bodyClasses}, ' class="{$bodyClasses}"'}>
 <xen:hook name="body">
+<xen:include template="page_container_js_head" />
 
-<xen:if is="{$visitor.is_moderator} || {$visitor.is_admin}">
+<xen:comment>
+    Founder = 13                    Priority = 9000
+    
+    /* Global */
+    Staff Only = 16                 Priority = 50000
+    Community Operator = 3          Priority = 1000
+    Community Admin = 12            Priority = 950
+    Community Moderator = 4         Priority = 900
+    Wiki Developer = 15             Priority = 700
+    Retired Staff = 14              Priority = 1
+    Community Member = 2            Priority = 0
+    Guest = 1                       Priority = 0
+    
+    /* Minecraft */
+    MC Network Operator = 11        Priority = 70
+    MC Network Developer = 17       Priority = 99
+    MC Network Admin = 10           Priority = 60
+    MC Network Moderator = 9        Priority = 50
+    RPG Kingdom Owner = 5           Priority = 45
+    MC Network Vet = 8              Priority = 40
+    MC Network Elite = 7            Priority = 30
+    MC Network Trustie = 6          Priority = 20
+    
+    /* Grand Theft Auto */
+    GTA Admin = 18                  Priority = 59
+    GTA Moderator = 19              Priority = 49
+    
+    /* League of Legends */
+    LoL Admin = 20                  Priority = 58
+    LoL Moderator = 21              Priority = 48
+    
+    /* Call of Duty */
+    COD Admin = 22                  Priority = 57
+    COD Moderator = 23              Priority = 47
+</xen:comment>
+<xen:if is="{$visitor.user_id}">
 	<xen:include template="moderator_bar" />
 <xen:elseif is="!{$visitor.user_id} && !{$hideLoginBar}" />
 	<xen:include template="login_bar" />
@@ -43,7 +78,12 @@
 
 <div id="headerMover">
 	<div id="headerProxy"></div>
-
+            <div class="pageWidth">
+                <xen:hook name="page_container_notices">
+                        <xen:include template="notices" />
+                </xen:hook>
+            </div>
+    <xen:include template="dark_taigachat" />
 <div id="content" class="{$contentTemplate}">
 	<div class="pageWidth">
 		<div class="pageContent">
@@ -69,20 +109,13 @@
 						<!--[if lt IE 8]>
 							<p class="importantMessage">{xen:phrase you_are_using_out_of_date_browser_upgrade}</p>
 						<![endif]-->
-
-						<xen:hook name="page_container_notices">
-						<xen:include template="notices" />						
-						</xen:hook>
 						
 						<xen:hook name="page_container_content_title_bar">
 						<xen:if is="!{$noH1}">						
 							<!-- h1 title, description -->
 							<div class="titleBar">
-								{xen:raw $beforeH1}
-								<h1><xen:if
-									is="{$h1}">{xen:raw $h1}<xen:elseif
-									is="{$title}" />{xen:raw $title}<xen:else
-									/>{$xenOptions.boardTitle}</xen:if></h1>
+                                                            <xen:comment>{xen:raw $beforeH1}</xen:comment>
+								<h1><xen:if is="{$title}">{xen:raw $title}</xen:if></h1>
 								
 								<xen:if is="{$pageDescription.content}"><p id="pageDescription" class="muted {$pageDescription.class}">{xen:raw $pageDescription.content}</p></xen:if>
 							</div>
@@ -116,10 +149,6 @@
 					</div>
 				</aside>
 			</xen:if>
-			
-			<xen:hook name="page_container_breadcrumb_bottom">			
-			<div class="breadBoxBottom"><xen:include template="breadcrumb" /></div>
-			</xen:hook>
 						
 			<xen:include template="ad_below_bottom_breadcrumb" />
 						
@@ -136,11 +165,11 @@
 </div>
 
 <footer>
-	<xen:include template="footer" />
+	<xen:include template="footer_dev" />
 </footer>
 
 <xen:include template="page_container_js_body" />
 
-</xen:hook>
+</xen:hook>        
 </body>
 </html>
