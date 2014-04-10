@@ -1,15 +1,15 @@
-	<script async src="{$jQuerySource}"></script>	
+	<script src="{$jQuerySource}"></script>	
 	<xen:if is="{$jQuerySource} != {$jQuerySourceLocal}">
 		<script>if (!window.jQuery) { document.write('<scr'+'ipt type="text/javascript" src="{$jQuerySourceLocal}"><\/scr'+'ipt>'); }</script>
 	</xen:if><xen:if is="{$xenOptions.uncompressedJs} == 1 OR {$xenOptions.uncompressedJs} == 3">
-	<script async src="{$javaScriptSource}/jquery/jquery.xenforo.rollup.js?_v={$xenOptions.jsVersion}"></script></xen:if>	
-	<script async src="{xen:helper javaScriptUrl, '{$javaScriptSource}/xenforo/xenforo.js?_v={$xenOptions.jsVersion}'}"></script>
+	<script src="{$javaScriptSource}/jquery/jquery.xenforo.rollup.js?_v={$xenOptions.jsVersion}"></script></xen:if>	
+	<script src="{xen:helper javaScriptUrl, '{$javaScriptSource}/xenforo/xenforo.js?_v={$xenOptions.jsVersion}'}"></script>
             <!-- Profile Page image reload -->
             <xen:if is="{$contentTemplate} == 'member_view'">
                 <script>
                 var random_images_array = ["profileOne.jpg", "profileTwo.jpg", "profileThree.jpg"];
                 function getRandomImage(imgAr, path) {
-                    path = 'https://dwdg.net/img/forums/profile/';
+                    path = 'https://downwithdestruction.net/img/forums/profile/';
                     var num = Math.floor( Math.random() * imgAr.length );
                     var img = imgAr[ num ];
                     var imgStr = '<img src="' + path + img + '" alt = "" style="max-width: 100%;min-width: 100%;max-height: 450px;min-height: 450px;" >';
