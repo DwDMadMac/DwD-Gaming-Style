@@ -478,3 +478,7 @@
 .category_view .titleBar {
     display: none;
 }
+.chatDivBlock {
+    margin: 5px;
+    padding: 5px;
+}

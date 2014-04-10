@@ -84,7 +84,6 @@
                         <xen:include template="notices" />
                 </xen:hook>
             </div>
-    <xen:include template="dark_taigachat" />
 <div id="content" class="{$contentTemplate}">
 	<div class="pageWidth">
 		<div class="pageContent">
