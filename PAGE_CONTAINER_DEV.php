@@ -2,7 +2,7 @@
 <html id="XenForo" lang="{$visitorLanguage.language_code}" dir="{$visitorLanguage.text_direction}" class="Public NoJs {xen:if {$visitor.user_id}, 'LoggedIn', 'LoggedOut'} {xen:if {$sidebar}, 'Sidebar', 'NoSidebar'} {xen:if $hasAutoDeferred, RunDeferred} {xen:if $isResponsive, Responsive, NoResponsive}" xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
 <xen:hook name="page_container_head">
-	<meta charset="utf-8" />
+        <meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 	<xen:if is="{$isResponsive}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,13 +14,12 @@
 			if (_b && _b.href != _bH) _b.href = _bH;
 		</script>
 	</xen:if>
+        <link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style={xen:urlencode $_styleId}&amp;dir={$visitorLanguage.text_direction}&amp;d={$visitorStyle.last_modified_date}" />
+	
 
 	<title><xen:if is="{$title}">{xen:raw $title}<xen:else />{$xenOptions.boardTitle}</xen:if></title>
 	
 	<noscript><style>.JsOnly, .jsOnly { display: none !important; }</style></noscript>
-        <link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style={xen:urlencode $_styleId}&amp;dir={$visitorLanguage.text_direction}&amp;d={$visitorStyle.last_modified_date}" />
-	<!--XenForo_Require:CSS-->	
-	{xen:helper ignoredCss, {$visitor.ignoredUsers}}
 
 	<xen:include template="google_analytics" />
 	
@@ -32,8 +31,10 @@
 </head>
 
 <body{xen:if {$bodyClasses}, ' class="{$bodyClasses}"'}>
+	{xen:helper ignoredCss, {$visitor.ignoredUsers}}
+        <!--XenForo_Require:CSS-->
 <xen:hook name="body">
-<xen:include template="page_container_js_head" />
+        <xen:include template="page_container_js_head" />
 
 <xen:comment>
     Founder = 13                    Priority = 9000
