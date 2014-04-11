@@ -1,13 +1,4 @@
-<div class="chatDivBlock">
-    <a href="chatbox/">
-        <div class="chatBoxTitleBar">		
-            <div class="categoryText">
-                <h3 class="chatBoxTitleBarTitle">Chatbox</h3>				
-            </div>			
-        </div>
-    </a>
-</div>
-<xen:comment><xen:include template="dark_taigachat"><xen:set var="$taigachat_alt">1</xen:set></xen:include></xen:comment>
+<xen:include template="dark_taigachat"><xen:set var="$taigachat_alt">1</xen:set></xen:include>
 <xen:container var="$head.canonical"><link rel="canonical" href="{xen:link 'canonical:forums'}" /></xen:container>
 <xen:if is="{$xenOptions.boardDescription}"><xen:container var="$head.description">
 	<meta name="description" content="{$xenOptions.boardDescription}" /></xen:container></xen:if>
