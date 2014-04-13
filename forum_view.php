@@ -48,9 +48,9 @@
 <xen:hook name="forum_view_threads_before" params="{xen:array 'forum={$forum}'}" />
 
 <div class="pageNavLinkGroup afterDiscussionListHandle">
-	<div class="linkGroup">
+	<div class="btn-group pull-right">
 		<xen:if is="{$canPostThread}">
-			<a href="{xen:link 'forums/create-thread', $forum}" class="callToAction"><span>{xen:phrase post_new_thread}</span></a>
+			<a href="{xen:link 'forums/create-thread', $forum}" class="btn btn-primary btn-sm"><span>{xen:phrase post_new_thread}</span></a>
 		<xen:elseif is="{$visitor.user_id}" />
 			<span class="element">({xen:phrase no_permission_to_post})</span>
 		<xen:else />

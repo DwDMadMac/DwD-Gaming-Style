@@ -1786,18 +1786,25 @@ fieldset[disabled] .btn-default.active {
   background-color: #fff;
 }
 .btn-primary {
-  color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+    color: #ffffff !important;
+    background-color: #428bca;
+    background-image:-webkit-linear-gradient(top,#428bca 0,#2d6ca2 100%);
+    background-image:linear-gradient(to bottom,#428bca 0,#2d6ca2 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff2d6ca2', GradientType=0);
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat:repeat-x;border-color:#2b669a;
 }
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-  color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
+    color: #ffffff !important;
+    background-color:#2d6ca2;
+    background-position:0 -15px;
+    border-color: #2b669a;
+    text-decoration: none !important;
 }
 .btn-primary:active,
 .btn-primary.active,
