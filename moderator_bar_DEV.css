@@ -13,6 +13,7 @@
         background: -ms-linear-gradient(top, #851313 0%,#5A0505 10%,#4D0505 60%,#2B0000 100%);
         background: linear-gradient(to bottom, #851313 0%,#5A0505 10%,#4D0505 60%,#2B0000 100%);
         border-color: #9f1919 #9f1919 #5f0c0c;
+        height: 41px;
 }
 
 /*#moderatorBar
