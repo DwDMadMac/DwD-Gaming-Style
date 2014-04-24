@@ -18,7 +18,7 @@
                         <h4>Help & Support</h4>
                         <ul>
                             <li><a href="{xen:link wiki}">Wiki</a></li>
-                            <li><a href="http://dwdg.net/staff">Staff</a></li>
+                            <li><a href="https://forums.downwithdestruction.net/staff/">Staff</a></li>
                             <li><a href="#">Forum Issues</a></li>
                             <li><a href="#">Game Server Issues</a></li>
                             <li><a href="{xen:link forms/file-a-report.5/respond}" class="OverlayTrigger">Report a member</a></li>
@@ -41,12 +41,12 @@
                     </div>
                     <div class="printnotes">
                         <xen:hook name="footer">
-                            Forums powered by XenForo™ v1.2.2 ©2010-2013 XenForo Ltd.<br />
+                            Forums powered by XenForo™ v1.3.0 ©2010-2014 XenForo Ltd.<br />
                             <xen:if is="{$debugMode}">
                                 <xen:if hascontent="true">
                                     <dl class="pairsInline debugInfo" title="{$controllerName}-&gt;{$controllerAction}{xen:if $viewName, ' ({$viewName})'}">
                                         <xen:contentcheck>
-                                            <xen:if is="{$page_time}"><dt>{xen:phrase timing}:</dt> <dd><a href="{$debug_url}" rel="nofollow">{xen:phrase x_seconds, 'time={xen:number $page_time, 4}'}</a></dd></xen:if>
+                                            <xen:if is="{$page_time}"><a href="{$debug_url}" rel="nofollow"><dt>{xen:phrase timing}:</dt> <dd>{xen:phrase x_seconds, 'time={xen:number $page_time, 4}'}</dd></a></xen:if>
                                             <xen:if is="{$memory_usage}"><dt>{xen:phrase memory}:</dt> <dd>{xen:phrase x_mb, 'size={xen:number {xen:calc "{$memory_usage} / 1024 / 1024"}, 3}'}</dd></xen:if>
                                             <xen:if is="{$db_queries}"><dt>{xen:phrase db_queries}:</dt> <dd>{xen:number {$db_queries}}</dd></xen:if>
                                         </xen:contentcheck>
