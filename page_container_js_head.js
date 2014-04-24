@@ -80,6 +80,37 @@
             </script>
             <script async type="text/javascript" src="https://downwithdestruction.net/theme/js/colour.jquery.min.js"></script>
             <!-- Floating Navigation jQuery feature -->
+            <!-- NEW FLOAT JS -->
+            <script>
+            $(function() {
+                // Stick the #nav to the top of the window
+                var nav = $('#moderatorBar');
+                var navHomeY = nav.offset().top;
+                var isFixed = false;
+                var $w = $(window);
+                $w.scroll(function() {
+                    var scrollTop = $w.scrollTop();
+                    var shouldBeFixed = scrollTop > navHomeY;
+                    if (shouldBeFixed && !isFixed) {
+                        nav.css({
+                            position: 'fixed',
+                            top: 0,
+                            left: nav.offset().left,
+                            width: nav.width()
+                        });
+                        isFixed = true;
+                    }
+                    else if (!shouldBeFixed && isFixed) {
+                        nav.css({
+                            position: 'static'
+                        });
+                        isFixed = false;
+                    }
+                });
+            });
+            </script>
+<xen:comment>
+            <!-- OLD FLOAT JS -->
             <script>
                 $(function() {
 
@@ -111,5 +142,6 @@
 
                 });
             </script>
+</xen:comment>
             <xen:comment><script async type="text/javascript" src="https://static.downwithdestruction.net/theme/js/bootstrap.min.js"></script></xen:comment>
             <!--XenForo_Require:JS-->
