@@ -315,6 +315,17 @@
                                                         <xen:include template="custom_field_view" />
                                                 </xen:foreach>
                                         </xen:if>
+                                <xen:comment>
+                                    <xen:if is="{$visitor.customFields.MCUUID}">
+                                        {$visitor.customFields.MCUUID}
+                                    </xen:if>
+                                    {xen:helper dump, $visitor.customFields.MCUUID}
+                                    {xen:helper dump, $visitor}
+                                </xen:comment>
+                                        </dl>
+                                                <dt>Minecraft Username:</dt>
+                                                <dd><xen:callback class="TruDan_DwDMCLink" method="render" params="{$user.customFields.MCUUID}"></xen:callback></dd>
+                                        </dl>
                                 </div>
                         </div>
                 </div>
