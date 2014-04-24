@@ -46,9 +46,9 @@
                                 <xen:if hascontent="true">
                                     <dl class="pairsInline debugInfo" title="{$controllerName}-&gt;{$controllerAction}{xen:if $viewName, ' ({$viewName})'}">
                                         <xen:contentcheck>
-                                            <xen:if is="{$page_time}"><a href="{$debug_url}" rel="nofollow"><dt>{xen:phrase timing}:</dt> <dd>{xen:phrase x_seconds, 'time={xen:number $page_time, 4}'}</dd></a></xen:if>
                                             <xen:if is="{$memory_usage}"><dt>{xen:phrase memory}:</dt> <dd>{xen:phrase x_mb, 'size={xen:number {xen:calc "{$memory_usage} / 1024 / 1024"}, 3}'}</dd></xen:if>
                                             <xen:if is="{$db_queries}"><dt>{xen:phrase db_queries}:</dt> <dd>{xen:number {$db_queries}}</dd></xen:if>
+                                            <xen:if is="{$page_time}"><a href="{$debug_url}" rel="nofollow"><dt>{xen:phrase timing}:</dt> <dd>{xen:phrase x_seconds, 'time={xen:number $page_time, 4}'}</dd></a></xen:if>
                                         </xen:contentcheck>
                                     </dl>
                                 </xen:if>
