@@ -7,11 +7,11 @@
                     <div class='col-md-4'>
                         <h4>Social</h4>
                         <ul class="tile">
-                            <li><a href="https://www.facebook.com/DwDGamingCommunity" target="_blank"><img src="https://dwdg.net/theme/img/facebook.png" /></a></li>
-                            <li><a href="https://twitter.com/dwdgaming" target="_blank"><img src="https://dwdg.net/theme/img/twitter.png" /></a></li>
-                            <li><a href="https://www.youtube.com/user/TheDwDCommunity" target="_blank"><img src="https://dwdg.net/theme/img/youtube.png" /></a></li>
-                            <li><a href="https://plus.google.com/117841516016676816685" target="_blank"><img src="https://dwdg.net/theme/img/google.png" /></a></li>
-                            <li><a href="{xen:link forums/-/index.rss}" rel="alternate" class="globalFeed" target="_blank" title="{xen:phrase rss_feed_for_x, 'title={$xenOptions.boardTitle}'}"><img src="http:s//dwdg.net/theme/img/rss.png" /></a></li>
+                            <li><a href="https://www.facebook.com/DwDGamingCommunity" target="_blank"><img src="https://downwithdestruction.net/theme/img/facebook.png" /></a></li>
+                            <li><a href="https://twitter.com/dwdgaming" target="_blank"><img src="https://downwithdestruction.net/theme/img/twitter.png" /></a></li>
+                            <li><a href="https://www.youtube.com/user/TheDwDCommunity" target="_blank"><img src="https://downwithdestruction.net/theme/img/youtube.png" /></a></li>
+                            <li><a href="https://plus.google.com/117841516016676816685" target="_blank"><img src="https://downwithdestruction.net/theme/img/google.png" /></a></li>
+                            <li><a href="{xen:link forums/-/index.rss}" rel="alternate" class="globalFeed" target="_blank" title="{xen:phrase rss_feed_for_x, 'title={$xenOptions.boardTitle}'}"><img src="https://downwithdestruction.net/theme/img/rss.png" /></a></li>
                         </ul>                    
                     </div>
                     <div class='col-md-4'>
