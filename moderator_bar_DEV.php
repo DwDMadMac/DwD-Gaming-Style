@@ -73,7 +73,7 @@
                             </a>
                         </xen:comment>
                             <!-- account -->
-                            <li class="{xen:if $tabs.selected, 'selected', 'Popup PopupControl PopupClosed'} pull-right">
+                            <li class="{xen:if $tabs.selected, 'selected', 'Popup PopupClosed'} pull-right">
                                 <a href="{xen:link members, $visitor}" onclick="this.removeAttribute('href');this.className='disableAccountNavi'" class="dropdown-toggle usernameProfileLink disableAccountNavi pull-right" title="{xen:phrase view_your_profile}" data-toggle="dropdown" rel="Menu">
                                     <span class="itemLabel">{$visitor.username}</span>
                                 </a>
