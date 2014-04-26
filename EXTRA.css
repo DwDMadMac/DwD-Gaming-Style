@@ -5049,3 +5049,26 @@ position: relative;
   top: -161px;}
    
 /******* NATURE THEMED FLUID 2 NOTIFICATION *******/
+
+
+.pageWidth {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .pageWidth {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .pageWidth {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .pageWidth {
+    width: 1170px;
+  }
+}
