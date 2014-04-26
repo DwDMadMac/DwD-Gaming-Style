@@ -11,7 +11,7 @@
 				return true;
 			}
 			$(this).addClass('setFavicon').css(
-				"background-image", "url(http://www.google.com/s2/favicons?domain=" + this.href + ")"
+				"background-image", "url(https://www.google.com/s2/favicons?domain=" + this.href + ")"
 			);
 		});
 	}
