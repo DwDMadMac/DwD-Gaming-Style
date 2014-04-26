@@ -84,7 +84,7 @@
             <script>
             $(function() {
                 // Stick the #nav to the top of the window
-                var nav = $('#moderatorBar');
+                var nav = $('#moderatorBar').length > 0 ? $('#moderatorBar') : $('#loginBar');
                 var navHomeY = nav.offset().top;
                 var isFixed = false;
                 var $w = $(window);
@@ -99,8 +99,7 @@
                             width: nav.width()
                         });
                         isFixed = true;
-                    }
-                    else if (!shouldBeFixed && isFixed) {
+                    } else if (!shouldBeFixed && isFixed) {
                         nav.css({
                             position: 'static'
                         });
