@@ -1,4 +1,5 @@
 <xen:require css="moderator_bar.css" />
+<xen:edithint template="waindigo_loginasuser.css" />
 
 
 <xen:if hascontent="true">
@@ -38,6 +39,8 @@
                                             <span class="itemCount {xen:if {$session.userModerationCounts.total}, 'alert'}">{$session.userModerationCounts.total}</span>
                                     </a>
                             </xen:if>
+                            
+                            <xen:include template="waindigo_you_are_using_as_user_loginasuser" />
 
                             <xen:hook name="moderator_bar" />
                         </xen:contentcheck>
