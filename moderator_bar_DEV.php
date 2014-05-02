@@ -39,8 +39,8 @@
                                     </a>
                             </xen:if>
 
-                        </xen:contentcheck>
                             <xen:hook name="moderator_bar" />
+                        </xen:contentcheck>
                     </div>
                         <ul class="modBarRight pull-right">
                         <xen:if is="!{$visitor.user_id}">
