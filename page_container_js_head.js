@@ -141,6 +141,27 @@
 
                 });
             </script>
+            <!-- Alerts Unread Fixed -->
+            <script>
+                function updateAlerts() {
+ 
+                    if($('#VisitorExtraMenu_ConversationsCounter').find('span:first').html() == '0') {
+                        $('#VisitorExtraMenu_ConversationsCounter').hide();
+                    }
+                    else {
+                        $('#VisitorExtraMenu_ConversationsCounter').show();
+                    }
+
+                    if($('#VisitorExtraMenu_AlertsCounter').find('span:first').html() == '0') {
+                        $('#VisitorExtraMenu_AlertsCounter').hide();
+                    }
+                    else {
+                        $('#VisitorExtraMenu_AlertsCounter').show();
+                    }
+                }
+
+                setInterval(updateAlerts(),1000);
+            </script>
 </xen:comment>
             <xen:comment><script async type="text/javascript" src="https://static.downwithdestruction.net/theme/js/bootstrap.min.js"></script></xen:comment>
             <!--XenForo_Require:JS-->
