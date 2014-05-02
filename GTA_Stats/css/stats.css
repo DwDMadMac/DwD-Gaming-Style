@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 2, 2014, 11:56:46 AM
+    Author     : madmac
+*/
+.toolButton {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+	background: orange;
+	padding-right: 5px;
+	padding-left: 5px;
+	cursor: pointer;
+	color: white;
+}
+
+.timTools {
+	color: black;
+	border-bottom-right-radius: 20px;
+	background: white;
+	min-height: 100px;
+	z-index: 10000;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.toolMargin {
+	margin: 5px;
+}
+
+#usingTool td {
+	padding: 0;
+	line-height: 18px;
+	border-left:solid 10px transparent;
+}
+
+#usingTool td:first-child {
+	border-left: 0;
+}
