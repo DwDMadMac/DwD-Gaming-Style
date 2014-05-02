@@ -49,36 +49,20 @@
                             <!-- Conversations -->
                                 <a href="{xen:link conversations}" class="OverlayTrigger pull-right">
                                     <span id="convoIconWhite"></span>
-                                    <xen:comment><xen:if is="{$visitor.conversations_unread} !== 0"></xen:comment>
                                         <span class="itemLabel">
                                             <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
                                                     <span class="Total">{xen:number $visitor.conversations_unread}</span>
                                             </strong>
                                         </span>
-                                    <xen:comment><xen:else />
-                                        <span class="itemLabel">
-                                            <strong class="itemCount {xen:if $visitor.conversations_unread, '', 'Zero'}" id="VisitorExtraMenu_ConversationsCounter">
-                                                <span class="Total"></span>
-                                            </strong>
-                                        </span>
-                                    </xen:if></xen:comment>
                                 </a>
                             <!-- Alerts -->
                                 <a href="{xen:link account/alerts}" class="OverlayTrigger pull-right">
                                     <span id="alertsIconWhite"></span>
-                                    <xen:comment><xen:if is="{$visitor.alerts_unread} !== 0"></xen:comment>
                                         <span class="itemLabel">
                                             <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}" id="VisitorExtraMenu_AlertsCounter">
                                                     <span class="Total">{xen:number $visitor.alerts_unread}</span>
                                             </strong>
                                         </span>
-                                   <xen:comment> <xen:else />
-                                        <span class="itemLabel">
-                                            <strong class="itemCount {xen:if $visitor.alerts_unread, '', 'Zero'}" id="VisitorExtraMenu_AlertsCounter">
-                                                <span class="Total"></span>
-                                            </strong>
-                                        </span>
-                                    </xen:if></xen:comment>
                                 </a>
                         </xen:if>
                         <xen:comment>

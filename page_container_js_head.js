@@ -143,7 +143,16 @@
             </script>
             <!-- Alerts Unread Fixed -->
             <script>
-                function updateAlerts() {
+                function updateAlerts() 
+                {
+                    if ($("#hidealertsjs").val() > 0)
+                        $("#hidealertsjs").show();
+                    else
+                        $("#hidealertsjs").hide();
+                }
+            </script>
+            <script>
+                $(function updateAlerts() {
  
                     if($('#VisitorExtraMenu_ConversationsCounter').find('span:first').html() == '0') {
                         $('#VisitorExtraMenu_ConversationsCounter').hide();
@@ -158,7 +167,7 @@
                     else {
                         $('#VisitorExtraMenu_AlertsCounter').show();
                     }
-                }
+                });
 
                 setInterval(updateAlerts(),1000);
             </script>
