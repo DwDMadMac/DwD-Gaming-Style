@@ -1,0 +1,67 @@
+{include="global_header"}
+
+<div class="body styled">
+    <ol class="breadcrumb1">
+        <li><a href="home">Home</a></li>
+        <li><a href="#">ACP Management</a></li>
+        <li><a href="#">Users</a></li>
+    </ol>
+
+    <div class="row">
+        <div class="content col-md-12">
+            <div class="page-header userMod"><h1>ACP User Management <small>Manage the users of the Admin CP</small></h1></div>
+            <div class="col-md-3 noPadd">
+                <div class="well sidebarNav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Users</li>
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Manage Users</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add User</a></li>
+
+                        <li class="nav-header">Groups</li>
+                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Manage Groups</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add Group</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="btn-group pull-right">
+                    <a href="acpusers/add" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add User</a>
+                </div>
+                <h4>Users</h4>
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th width="8%">User ID</th>
+                            <th>Username</th>
+                            <th>Group</th>
+                            <th>E-mail</th>
+                            <th>Admin</th>
+                            <th width="21%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {loop="userList"}
+                        <tr>
+                            <td>{$value.user_id}</td>
+                            <td>{$value.username}</td>
+                            <td>{$value.group_name}</td>
+                            <td><a href="mailto:{$value.email}">{$value.email}</a></td>
+                            <td>{$value.superAdmin|YorN}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="acpusers/modify/{$value.user_id}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                                    <a href="acpusers/permissions/{$value.user_id}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon glyphicon-list"></span> Perms</a>
+                                    <a href="acpusers/delete/{$value.user_id}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                            </td>
+                        </tr>
+                        {/loop}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include="global_footer"}

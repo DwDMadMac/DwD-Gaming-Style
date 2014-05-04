@@ -1,0 +1,40 @@
+{include="../global_header"}
+
+<div class="body styled">
+    <ol class="breadcrumb1">
+        <li><a href="home">Home</a></li>
+        <li><a href="logs">Logs & Statistics</a></li>
+        <li><a href="">{$curServer}</a></li>
+    </ol>
+
+    <div class="row">
+        <div class="content col-md-12">
+            <div class="inner">
+                <h3>Logs for {$curServer}</h3>
+
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Log File</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                        {loop="logFiles"}
+                        <tr>
+                            <td>{$value}</td>
+                            <td>
+                                <a href='/logs/read/{$curID}/{$value}' class='btn btn-xs btn-default'><span class="glyphicon glyphicon-list-alt"></span> View Log</a>
+                                <a href='/api/log.php?server={$curServer}&log={$value}&dl' class='btn btn-xs btn-info'><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+                            </td>
+                        </tr>
+                        {/loop}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include="../global_footer"}

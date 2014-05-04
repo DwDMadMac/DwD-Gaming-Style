@@ -1,0 +1,67 @@
+{include="../global_header"}
+
+<div class="body styled">
+    <ol class="breadcrumb1">
+        <li><a href="home">Home</a></li>
+        <li><a href="logs">Logs & Statistics</a></li>
+        <li><a href="logs/list/{$curID}">{$curServer}</a></li>
+        <li><a href="">{$curLog}</a></li>
+    </ol>
+
+    <div class="row">
+        <div class="content col-md-12">
+            <div class="inner">
+                <h3>Log Reader <small>{$curServer} - {$curLog}</small></h3>
+
+                <input type="hidden" id="curServer" value="{$curServer}" />
+                <input type="hidden" id="curLog" value="{$curLog}" />
+
+
+                Click to hide: 
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-default toggleButton" id="toggleJSONAPI">JSONAPI</button>
+                    <button type="button" class="btn btn-sm btn-default toggleButton" id="toggleRealMotd">RealMotd</button>
+                    <button type="button" class="btn btn-sm btn-default toggleButton" id="toggleCommunityBridge">CommunityBridge</button>
+                </div>
+
+                <a class="btn btn-sm btn-info pull-right" href="/api/log.php?server={$curServer}&log={$curLog}">Download Log</a>
+
+                <br />
+                <br />
+
+                <pre style="overflow-y:scroll;height:400px;" id="logReader">{$logData}</pre>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function updateLog() {
+        var server = $('#curServer').attr('value');
+        var log = $('#curLog').attr('value');
+        var hideParams = "";
+        if ($('#toggleJSONAPI').hasClass('active'))
+            hideParams += ",jsonapi";
+        if ($('#toggleRealMotd').hasClass('active'))
+            hideParams += ",realMotd";
+        if ($('#toggleCommunityBridge').hasClass('active'))
+            hideParams += ",communitybridge";
+
+        console.log('/api/log.php?server=' + server + '&log=' + log + '&hideParams=' + hideParams);
+
+        $('#logReader').load('/api/log.php?server=' + server + '&log=' + log + '&hideParams=' + hideParams);
+    }
+
+    $('.toggleButton').click(function() {
+        if ($(this).hasClass("active"))
+            $(this).removeClass("active");
+        else
+            $(this).addClass("active");
+
+        updateLog();
+    });
+
+</script>
+
+{include="../global_footer"}

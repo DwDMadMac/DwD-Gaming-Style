@@ -1,0 +1,61 @@
+{include="global_header"}
+
+<div class="body styled">
+    <ol class="breadcrumb1">
+        <li><a href="home">Home</a></li>
+        <li><a href="#">ACP Management</a></li>
+        <li><a href="#">Groups</a></li>
+    </ol>
+
+    <div class="row">
+        <div class="content col-md-12">
+            <div class="page-header userMod"><h1>ACP Group Management <small>Manage the groups of the Admin CP</small></h1></div>
+            <div class="col-md-3 noPadd">
+                <div class="well sidebarNav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Users</li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Manage Users</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add User</a></li>
+
+                        <li class="nav-header">Groups</li>
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-cog"></span> Manage Groups</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add Group</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="btn-group pull-right">
+                    <a href="acpusers/add" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add User</a>
+                </div>
+                <h4>Groups</h4>
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Group ID</th>
+                            <th>Group Name</th>
+                            <th>Super Group</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {loop="groupList"}
+                        <tr>
+                            <td>{$value.group_id}</td>
+                            <td>{$value.group_name}</td>
+                            <td>{$value.superGroup|YorN}</td>
+                            <td>
+                                <a href="acpusers/gmodify/{$value.group_id}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a href="acpusers/gmodify/{$value.group_id}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon glyphicon-list"></span></a>
+                                <a href="acpusers/gdelete/{$value.group_id}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></a>
+                            </td>
+                        </tr>
+                        {/loop}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include="global_footer"}
