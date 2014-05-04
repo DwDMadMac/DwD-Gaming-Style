@@ -5072,3 +5072,17 @@ position: relative;
     width: 1170px;
   }
 }
+
+.customNavBarCSS {
+    position: fixed;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(95, 12, 12);
+    -webkit-box-shadow: rgba(60, 60, 60, 0.4) 0px 1px 0px;
+    box-shadow: rgba(60, 60, 60, 0.4) 0px 1px 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 99999;
+    top: 40px;
+    z-index: 99999;
+}

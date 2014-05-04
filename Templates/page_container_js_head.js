@@ -85,6 +85,7 @@
             $(function() {
                 // Stick the #nav to the top of the window
                 var nav = $('#moderatorBar').length > 0 ? $('#moderatorBar') : $('#loginBar');
+                var nav2 = $('#floatingOverBar');
                 var navHomeY = nav.offset().top;
                 var isFixed = false;
                 var $w = $(window);
@@ -92,16 +93,27 @@
                     var scrollTop = $w.scrollTop();
                     var shouldBeFixed = scrollTop > navHomeY;
                     if (shouldBeFixed && !isFixed) {
+                        $('#moderatorBar').addClass('customModBarCSS');
+                        $('#AddClassHereNav').addClass('customNavBarCSS');
                         nav.css({
-                            position: 'fixed',
                             top: 0,
                             left: nav.offset().left,
                             width: nav.width()
                         });
+                        nav2.css({
+                           top: '40px',
+                           left: nav2.offset().left,
+                           width: nav2.width()
+                        });
                         isFixed = true;
                     } else if (!shouldBeFixed && isFixed) {
+                        $('#moderatorBar').removeClass('customModBarCSS');
+                        $('#AddClassHereNav').removeClass('customNavBarCSS');
                         nav.css({
                             position: 'static'
+                        });
+                        nav2.css({
+                           position: 'static' 
                         });
                         isFixed = false;
                     }

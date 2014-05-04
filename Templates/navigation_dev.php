@@ -13,7 +13,7 @@
                     <img src='https://downwithdestruction.net/theme/img/semioffline.png' data-placement="left" title="Events is Offline" /> Minecraft: hub.dwdg.net<br />
                 </div>
             </div>
-            <div class="nav">
+            <div id="AddClassHereNav" class="nav">
                 <ul id="nav" class="visitorTabs">
                     <xen:if is="{$showHomeLink}">
                         <li class="navi"><a href="https://downwithdestruction.net/home"><span class='l'>Home</span></a></li>
