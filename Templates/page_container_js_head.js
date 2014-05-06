@@ -85,36 +85,52 @@
             $(function() {
                 // Stick the #nav to the top of the window
                 var nav = $('#moderatorBar').length > 0 ? $('#moderatorBar') : $('#loginBar');
-                var nav2 = $('#floatingOverBar');
+                var nav2 = $('#AddClassHereNav');
                 var navHomeY = nav.offset().top;
                 var isFixed = false;
                 var $w = $(window);
+                var loggedIn = $('#moderatorBar');
+                var loggedOut = $('#loginBar')
                 $w.scroll(function() {
                     var scrollTop = $w.scrollTop();
                     var shouldBeFixed = scrollTop > navHomeY;
                     if (shouldBeFixed && !isFixed) {
-                        $('#moderatorBar').addClass('customModBarCSS');
-                        $('#AddClassHereNav').addClass('customNavBarCSS');
                         nav.css({
-                            top: 0,
+                            position: 'fixed',
                             left: nav.offset().left,
                             width: nav.width()
                         });
+                        if (nav == loggedOut) {
+                            nav2.css({
+                                top: '0px'
+                            });
+                        } else if (nav != loggedOut) {
+                            nav2.css({
+                                top: '40px'
+                            });
+                        }
                         nav2.css({
-                           top: '40px',
-                           left: nav2.offset().left,
-                           width: nav2.width()
+                            position: 'fixed',
+                            left: nav2.offset().left,
+                            width: nav2.width()
                         });
+                        $('#moderatorBar').addClass('customModBarCSS');
+                        $('#AddClassHereNav').addClass('customNavBarCSS');
                         isFixed = true;
                     } else if (!shouldBeFixed && isFixed) {
-                        $('#moderatorBar').removeClass('customModBarCSS');
-                        $('#AddClassHereNav').removeClass('customNavBarCSS');
                         nav.css({
-                            position: 'static'
+                            position: 'relative',
+                            left: '',
+                            wdith: ''
                         });
                         nav2.css({
-                           position: 'static' 
+                            position: 'relative',
+                            top: 0,
+                            left: '',
+                            wdith: ''
                         });
+                        $('#moderatorBar').removeClass('customModBarCSS');
+                        $('#AddClassHereNav').removeClass('customNavBarCSS');
                         isFixed = false;
                     }
                 });

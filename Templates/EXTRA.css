@@ -5074,7 +5074,7 @@ position: relative;
 }
 
 .customNavBarCSS {
-    position: fixed;
+    background: rgb(255, 240, 240) !important;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(95, 12, 12);
@@ -5082,7 +5082,17 @@ position: relative;
     box-shadow: rgba(60, 60, 60, 0.4) 0px 1px 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    z-index: 99999;
-    top: 40px;
-    z-index: 99999;
+    position: fixed;
+}
+<xen:if is="!{$visitor.user_id}">
+    .customNavBarCSS {
+        z-index: 99999;
+    }
+    #loginBar {
+        z-index: 999999 !important;
+    }
+</xen:if>
+.customModBarCSS {
+    top: 0;
+    position: fixed;
 }
