@@ -84,13 +84,11 @@
             <script>
             $(function() {
                 // Stick the #nav to the top of the window
-                var nav = $('#moderatorBar').length > 0 ? $('#moderatorBar') : $('#loginBar');
+                var nav = $('#moderatorBar').is(':visible') > 0 ? $('#moderatorBar') : $('#loginBar');
                 var nav2 = $('#AddClassHereNav');
                 var navHomeY = nav.offset().top;
                 var isFixed = false;
                 var $w = $(window);
-                var loggedIn = $('#moderatorBar');
-                var loggedOut = $('#loginBar')
                 $w.scroll(function() {
                     var scrollTop = $w.scrollTop();
                     var shouldBeFixed = scrollTop > navHomeY;
@@ -100,20 +98,24 @@
                             left: nav.offset().left,
                             width: nav.width()
                         });
-                        if (nav == loggedOut) {
-                            nav2.css({
-                                top: '0px'
-                            });
-                        } else if (nav != loggedOut) {
-                            nav2.css({
-                                top: '40px'
-                            });
-                        }
                         nav2.css({
                             position: 'fixed',
                             left: nav2.offset().left,
                             width: nav2.width()
                         });
+                        <xen:if is="!{$visitor.user_id}">
+                            nav2.css({
+                                top: '0px'
+                            });
+                        <xen:elseif is="{$visitor.user_id}" />
+                            nav2.css({
+                                top: '40px'
+                            });
+                        <xen:else />
+                            nav2.css({
+                                top: 'inherit'
+                            });
+                        </xen:if>
                         $('#moderatorBar').addClass('customModBarCSS');
                         $('#AddClassHereNav').addClass('customNavBarCSS');
                         isFixed = true;

@@ -5092,7 +5092,9 @@ position: relative;
         z-index: 999999 !important;
     }
 </xen:if>
-.customModBarCSS {
-    top: 0;
-    position: fixed;
+.noTop {
+    top: 0px;
+}
+.yesTop {
+    top: 40px;
 }
