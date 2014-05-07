@@ -15,8 +15,10 @@
 <xen:require js="js/xenforo/discussion_list.js" />
 
 <div class="formOverlay NoFixedOverlay">
-    
+
+    <xen:comment>
 <xen:pagenav link="{$pageRoute}" page="{$page}" perpage="{$conversationsPerPage}" total="{$totalConversations}" linkparams="{$pageNavParams}" />
+    </xen:comment>
 
 <div class="discussionList">
 	<form action="{xen:link inline-mod/conversation/switch}" method="post"
