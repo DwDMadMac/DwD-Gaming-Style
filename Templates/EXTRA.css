@@ -5074,15 +5074,14 @@ position: relative;
 }
 
 .customNavBarCSS {
-    background: rgb(255, 240, 240) !important;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(95, 12, 12);
-    -webkit-box-shadow: rgba(60, 60, 60, 0.4) 0px 1px 0px;
-    box-shadow: rgba(60, 60, 60, 0.4) 0px 1px 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.74902) 0px 1px 10px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.74902) 0px 1px 10px 0px;
 }
 <xen:if is="!{$visitor.user_id}">
     .customNavBarCSS {
