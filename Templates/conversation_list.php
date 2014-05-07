@@ -14,9 +14,11 @@
 <xen:require css="discussion_list.css" />
 <xen:require js="js/xenforo/discussion_list.js" />
 
+<div class="formOverlay NoFixedOverlay">
+    
 <xen:pagenav link="{$pageRoute}" page="{$page}" perpage="{$conversationsPerPage}" total="{$totalConversations}" linkparams="{$pageNavParams}" />
 
-<div class="discussionList section sectionMain">
+<div class="discussionList">
 	<form action="{xen:link inline-mod/conversation/switch}" method="post"
 		class="DiscussionList InlineModForm"
 		data-cookieName="conversations"
@@ -85,4 +87,6 @@
 	</div>
 	
 	<xen:pagenav link="{$pageRoute}" page="{$page}" perpage="{$conversationsPerPage}" total="{$totalConversations}" linkparams="{$pageNavParams}" />
+</div>
+
 </div>
