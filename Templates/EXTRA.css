@@ -4644,6 +4644,29 @@ td.visible-print {
 .account_personal_details .titleBar {
     color: black;
 }
+
+.forum_view .titleBar, 
+.thread_view .titleBar {
+    background-color: rgb(20, 148, 197);
+    background: url('styles/default/xenforo/gradients/category-gradient1.png') repeat-x center;
+    background: -moz-linear-gradient(top, rgb(20, 148, 197) 0%, rgb(13, 112, 150) 10%, rgb(7, 52, 70) 60%, rgb(0, 39, 54) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(20, 148, 197)), color-stop(10%,rgb(13, 112, 150)), color-stop(60%,rgb(7, 52, 70)), color-stop(100%,rgb(0, 39, 54)));
+    background: -webkit-linear-gradient(top, rgb(20, 148, 197) 0%,rgb(13, 112, 150) 10%,rgb(7, 52, 70) 60%,rgb(0, 39, 54) 100%);
+    background: -o-linear-gradient(top, rgb(20, 148, 197) 0%,rgb(13, 112, 150) 10%,rgb(7, 52, 70) 60%,rgb(0, 39, 54) 100%);
+    background: -ms-linear-gradient(top, rgb(20, 148, 197) 0%,rgb(13, 112, 150) 10%,rgb(7, 52, 70) 60%,rgb(0, 39, 54) 100%);
+    background: linear-gradient(to bottom, rgb(20, 148, 197) 0%,rgb(13, 112, 150) 10%,rgb(7, 52, 70) 60%,rgb(0, 39, 54) 100%);
+    -webkit-box-shadow: 0 1px 0 rgba(60, 60, 60, 0.4);
+    -moz-box-shadow: 0 1px 0 rgba(60, 60, 60, 0.4);
+    -khtml-box-shadow: 0 1px 0 rgba(60, 60, 60, 0.4);
+    box-shadow: 0 1px 0 rgba(60, 60, 60, 0.4);
+    border-color: rgb(20, 148, 197) rgb(13, 112, 150) rgb(7, 52, 70);
+    border-bottom: 1px solid #fff;
+}
+
+.titleBar h1 {
+    color: white;
+}
+
 #content .pageContent {
     background: white;
     border-top-left-radius: 5px;
@@ -4677,7 +4700,7 @@ td.visible-print {
 .thread_view .threadAlerts,
 .thread_view .sharePage,
 .forum_view .titleBar {
-    margin: 0 15px !important;
+    padding: 30px 20px 5px 20px !important;
 }
 .thread_view .pageNavLinkGroup {
     margin-left: 15px;
@@ -4895,6 +4918,7 @@ transition-duration: 0.5s;
     opacity: 0.5;
 }
 /* Custom Bulletin Style */
+.wikiContent ol,
 .message ol{
     counter-reset: li; /* Initiate a counter */
     list-style: none; /* Remove default numbering */
@@ -4904,9 +4928,11 @@ transition-duration: 0.5s;
     margin-bottom: 4em;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
+.wikiContent ol ol,
 .message ol ol{
     margin: 0 0 0 2em; /* Add some left margin for inner lists */
 }
+.wikiContent .primaryContent ol li,
 .message .baseHtml ol li {
 position: relative;
     display: block;
@@ -4919,12 +4945,15 @@ position: relative;
     border-radius: .3em;
     transition: all .3s ease-out;
 }
+.wikiContent .primaryContent ol li hover,
 .message .baseHtml ol li hover{
     background: #eee;
 }
+.wikiContent .primaryContent ol li:hover:before,
 .message .baseHtml ol li:hover:before{
     transform: rotate(360deg); 
 }
+.wikiContent .primaryContent ol li:before,
 .message .baseHtml ol li:before {
     content: counter(li);
     counter-increment: li;
@@ -4942,6 +4971,7 @@ position: relative;
     border-radius: 2em;
     transition: all .3s ease-out;
 }
+.wikiContent .primaryContent ul li,
 .message .baseHtml ul li {
 position: relative;
     display: block;
@@ -4954,12 +4984,15 @@ position: relative;
     border-radius: .3em;
     transition: all .3s ease-out;
 }
+.wikiContent .primaryContent ul li hover,
 .message .baseHtml ul li hover{
     background: #eee;
 }
+.wikiContent .primaryContent ul li:before,
 .message .baseHtml ul li:hover:before{
     transform: rotate(360deg); 
 }
+.wikiContent .primaryContent ul li:before,
 .message .baseHtml ul li:before {
     content: '*';
     position: absolute; 
@@ -4975,6 +5008,9 @@ position: relative;
     font-weight: bold;
     border-radius: 2em;
     transition: all .3s ease-out;
+}
+.wikiContent .primaryContent ul {
+    margin-left: 30px;
 }
 /* adds a Staff ribbon */
 .message.staff .messageUserInfo .helper  {
