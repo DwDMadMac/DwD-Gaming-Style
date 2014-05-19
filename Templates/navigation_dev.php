@@ -31,6 +31,7 @@
                                         <div class="primaryContent menuHeader">
                                 <ul class="blockLinksList">
                                             <li><a href="{xen:link 'categories/minecraft-network.94/'}">Minecraft Network</a></li>
+                                            <li><a href="{xen:link 'categories/modded-minecraft.137/'}">Modded Minecraft</a></li>
                                             <li><a href="{xen:link 'categories/league-of-legends.96/'}">League Of Legends</a></li>
                                             <li><a href="{xen:link 'categories/gta-online.95/'}">GTA Online</a></li>
                                             <li><a href="{xen:link 'categories/call-of-duty.97/'} ">Call of Duty</a></li>
