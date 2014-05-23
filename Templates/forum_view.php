@@ -52,6 +52,10 @@
 		<xen:if is="{$canPostThread}">
 			<a href="{xen:link 'forums/create-thread', $forum}" class="btn btn-primary btn-sm"><span>{xen:phrase post_new_thread}</span></a>
 		<xen:elseif is="{$visitor.user_id}" />
+                        <xen:if is="in_array({$forum.node_id}, array(137))">
+                                
+                        </xen:if>
+                <xen:elseif is="{$visitor.user_id}" />
 			<span class="element">({xen:phrase no_permission_to_post})</span>
 		<xen:else />
 			<label for="LoginControl"><a href="{xen:link login}" class="concealed element">({xen:phrase log_in_or_sign_up_to_post})</a></label>
