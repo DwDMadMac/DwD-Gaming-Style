@@ -52,11 +52,13 @@
 		<xen:if is="{$canPostThread}">
 			<a href="{xen:link 'forums/create-thread', $forum}" class="btn btn-primary btn-sm"><span>{xen:phrase post_new_thread}</span></a>
 		<xen:elseif is="{$visitor.user_id}" />
-                        <xen:if is="in_array({$forum.node_id}, array(137))">
-                                
+                        <xen:if is="{$forum.node_id} == 139">
+                                <a href="{xen:link 'applications/non-role-play-whitelist-application.22/respond'}" class="btn btn-primary btn-sm OverlayTrigger"><span>Submit Application</span></a>
+                        <xen:elseif is="{$forum.node_id} == 6" />
+                                <a href="{xen:link 'ticket/support-ticket.4/respond'}" class="btn btn-primary btn-sm OverlayTrigger"><span>Submit Your Support Ticket</span></a>
+                        <xen:else />
+                                <span class="element">({xen:phrase no_permission_to_post})</span>
                         </xen:if>
-                <xen:elseif is="{$visitor.user_id}" />
-			<span class="element">({xen:phrase no_permission_to_post})</span>
 		<xen:else />
 			<label for="LoginControl"><a href="{xen:link login}" class="concealed element">({xen:phrase log_in_or_sign_up_to_post})</a></label>
 		</xen:if>
