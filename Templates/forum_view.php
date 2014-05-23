@@ -56,6 +56,8 @@
                                 <a href="{xen:link 'applications/non-role-play-whitelist-application.22/respond'}" class="btn btn-primary btn-sm OverlayTrigger"><span>Submit Application</span></a>
                         <xen:elseif is="{$forum.node_id} == 6" />
                                 <a href="{xen:link 'ticket/support-ticket.4/respond'}" class="btn btn-primary btn-sm OverlayTrigger"><span>Submit Your Support Ticket</span></a>
+                        <xen:elseif is="{$forum.node_id} == 43" />
+                                <a href="{xen:link 'applications/introduction.12/respond'}" class="btn btn-primary btn-sm OverlayTrigger"><span>Post Your Introduction</span></a>
                         <xen:else />
                                 <span class="element">({xen:phrase no_permission_to_post})</span>
                         </xen:if>
