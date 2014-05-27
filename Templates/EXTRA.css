@@ -5139,7 +5139,7 @@ position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .panel-default > .panel-heading {
-    border: none;
+    border: #d6e9c6;
     border-bottom: 4px solid transparent;
 }
 .panel-primary > .panel-heading {
@@ -5371,16 +5371,8 @@ position: relative;
 .panel-group .panel-footer + .panel-collapse .panel-body {
   border-bottom: 1px solid #dddddd;
 }
-.panel-default {
-  border-color: none;
-}
-.panel-default > .panel-heading {
-  color: #3c763d;
-  background-color: none;
-  border-color: none;
-}
 .panel-default > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: none;
+  border-top-color: #d6e9c6;
 }
 .panel-default > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #d6e9c6;
@@ -5458,4 +5450,8 @@ position: relative;
 .vip-panel {
     min-height: 150px;
     max-height: 150px;
+}
+.donation-panel {
+    min-height: 300px;
+    max-height: 300px;
 }
