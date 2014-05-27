@@ -5181,7 +5181,7 @@ position: relative;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .panel-body {
-  padding: 15px;
+  padding: 5px 15px;
 }
 .panel > .list-group {
   margin-bottom: 0;
@@ -5447,11 +5447,22 @@ position: relative;
 .panel-danger > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #ebccd1;
 }
-.vip-panel {
+.panel-150 {
     min-height: 150px;
     max-height: 150px;
 }
-.donation-panel {
+.panel-200 {
+    min-height: 200px;
+    max-height: 200px;
+}
+.panel-250 {
+    min-height: 250px;
+    max-height: 250px;
+}
+.panel-300 {
     min-height: 300px;
     max-height: 300px;
+}
+.donate-inline {
+    display: inline-block;
 }
