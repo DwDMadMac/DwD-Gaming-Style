@@ -5466,3 +5466,6 @@ position: relative;
 .donate-inline {
     display: inline-block;
 }
+.node152 .titleBar {
+    display: none;
+}
