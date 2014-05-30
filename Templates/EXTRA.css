@@ -5469,3 +5469,11 @@ position: relative;
 .node152 .titleBar {
     display: none;
 }
+.vipPackageHeaders {
+    font-size: 20px;
+    color: #838383 !important;
+}
+.vipContent .inner {
+    background: #000 url('https://downwithdestruction.net/theme/img/dwdvip.jpg') center no-repeat;
+    border-radius: 5px;
+}
