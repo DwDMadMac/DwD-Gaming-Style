@@ -5474,6 +5474,305 @@ position: relative;
     color: #838383 !important;
 }
 .vipContent .inner {
-    background: #000 url('https://downwithdestruction.net/theme/img/dwdvip.jpg') center no-repeat;
+    background: #000 url('https://downwithdestruction.net/theme/img/dwdvip.jpg') center no-repeat !important;
     border-radius: 5px;
+}
+.content.col-md-12.vipContent {
+	top: 60px;
+}
+.YogscastContent .inner {
+    background: #000 url('https://downwithdestruction.net/theme/img/yogscastheader.png') center no-repeat;
+    border-radius: 5px;
+}
+.YogscastPackageHeaders {
+    font-size: 20px;
+    color: #838383 !important;
+}
+/* Thread Prefixes */
+/** Thread Prefixes Fixes **/
+.PrefixMenu .PrefixOption a {
+    padding: 5px 25px !important;
+}
+.titleBar .blueprefix {
+    padding-left: 38px;
+}
+.nodeList .node_11 .nodeTitle, .nodeList .prefixLink
+{
+    display: inline;
+}
+/** Thread Prefixes Ticket Design **/
+.greenprefix {
+    display: inline-block;
+    position:relative;
+    padding: 5px 10px;
+    padding-left: 23px;
+    margin: 0 .5em .5em 0;
+    background: #8dc63f;
+    color: rgba(255,255,255,.6) !important;
+    text-decoration:none;
+    font-weight: bold;
+}
+.greenprefix:hover {
+    background:#C1D3A9;
+    color:black;
+}
+.greenprefix:before {
+        content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:1;
+    background: -moz-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255, 255, 255, 0) .6em) -.6em -.6em,
+                -moz-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -moz-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -o-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -o-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -o-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -ms-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -ms-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -ms-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -webkit-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -webkit-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -webkit-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+}
+.greenprefix:after {
+    content: '';
+    position:absolute;
+    top:.25em;
+    right:.25em;
+    bottom:.25em;
+    left:.25em;
+    border: 1px rgba(0,0,0,.3) dashed;
+    outline: 1px rgba(255,255,255,.5) dashed;
+}
+
+.redprefix {
+    display: inline-block;
+    position:relative;
+    padding: 5px 10px;
+    padding-left: 23px;
+    margin: 0 .5em .5em 0;
+    background: #b30;
+    color: rgba(255,255,255,.6) !important;
+    text-decoration:none;
+    font-weight: bold;
+}
+.redprefix:hover {
+    background:#C59988;
+    color:black;
+}
+.redprefix:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:1;
+    background: -moz-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255, 255, 255, 0) .6em) -.6em -.6em,
+                -moz-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -moz-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -o-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -o-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -o-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -ms-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -ms-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -ms-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -webkit-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -webkit-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -webkit-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+}
+.redprefix:after {
+    content: '';
+    position:absolute;
+    top:.25em;
+    right:.25em;
+    bottom:.25em;
+    left:.25em;
+    border: 1px rgba(0,0,0,.3) dashed;
+    outline: 1px rgba(255,255,255,.5) dashed;
+}
+
+.brownprefix {
+    display: inline-block;
+    position:relative;
+    padding: 5px 10px;
+    padding-left: 23px;
+    margin: 0 .5em .5em 0;
+    background: #564C41;
+    color: rgba(255,255,255,.6) !important;
+    text-decoration:none;
+    font-weight: bold;
+}
+.brownprefix:hover {
+    background: #B3CC73;
+    color:white;
+}
+.brownprefix:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:1;
+    background: -moz-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255, 255, 255, 0) .6em) -.6em -.6em,
+                -moz-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -moz-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -o-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -o-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -o-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -ms-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -ms-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -ms-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -webkit-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -webkit-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -webkit-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+}
+.brownprefix:after {
+    content: '';
+    position:absolute;
+    top:.25em;
+    right:.25em;
+    bottom:.25em;
+    left:.25em;
+    border: 1px rgba(0,0,0,.3) dashed;
+    outline: 1px rgba(255,255,255,.5) dashed;
+}
+
+.blueprefix {
+    display: inline-block;
+    position:relative;
+    padding: 5px 10px;
+    padding-left: 23px;
+    margin: 0 .5em .5em 0;
+    background: #55758D;
+    color: rgba(255,255,255,.6) !important;
+    text-decoration:none;
+    font-weight: bold;
+}
+.blueprefix:hover {
+    background:#BCCBD6;
+    color:black;
+}
+.blueprefix:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:1;
+    background: -moz-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255, 255, 255, 0) .6em) -.6em -.6em,
+                -moz-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -moz-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -o-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -o-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -o-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -ms-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -ms-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -ms-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -webkit-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -webkit-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -webkit-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+}
+.blueprefix:after {
+    content: '';
+    position:absolute;
+    top:.25em;
+    right:.25em;
+    bottom:.25em;
+    left:.25em;
+    border: 1px rgba(0,0,0,.3) dashed;
+    outline: 1px rgba(255,255,255,.5) dashed;
+}
+
+.orangeprefix {
+    display: inline-block;
+    position:relative;
+    padding: 5px 10px;
+    padding-left: 23px;
+    margin: 0 .5em .5em 0;
+    background: #CF720C;
+    color: rgba(255,255,255,.6) !important;
+    text-decoration:none;
+    font-weight: bold;
+}
+.orangeprefix:hover {
+    background: #E7BB8B;
+    color: black;
+}
+.orangeprefix:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:1;
+    background: -moz-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255, 255, 255, 0) .6em) -.6em -.6em,
+                -moz-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -moz-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -o-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -o-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -o-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -ms-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -ms-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -ms-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+    background: -webkit-radial-gradient(.6em .6em, circle, #FCFCFF .55em, rgba(255,255,255,0) .6em) -.6em -.6em,
+                -webkit-radial-gradient(1em 50%, circle, #FCFCFF .35em, rgba(255,255,255,0) .4em),
+                -webkit-radial-gradient(1em 47%, circle, rgba(0,0,0,.4) .4em, transparent .43em) !important;
+}
+.orangeprefix:after {
+    content: '';
+    position:absolute;
+    top:.25em;
+    right:.25em;
+    bottom:.25em;
+    left:.25em;
+    border: 1px rgba(0,0,0,.3) dashed;
+    outline: 1px rgba(255,255,255,.5) dashed;
+}
+/** Thread Prefixes Custom Immages **/
+.xboxprefix {
+    background: transparent url(Prefix_Images/360.jpg) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
+}
+.ps3prefix {
+    background: transparent url(Prefix_Images/ps3.png) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
+}
+.pcprefix {
+    background: transparent url(Prefix_Images/pcgames.gif) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
+}
+.rantprefix {
+    background: transparent url(Prefix_Images/rant.gif) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
+}
+.rpgprefix {
+    background: transparent url(Prefix_Images/RPG.png) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
+}
+.creativeprefix {
+    background: transparent url(Prefix_Images/Creative.jpg) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
+}
+.eventsprefix {
+    background: transparent url(Prefix_Images/Events.jpg) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
+}
+.survivalprefix {
+    background: transparent url(Prefix_Images/Survival.jpg) no-repeat top left;
+    color: transparent;
+    padding-right: 33px;
 }
