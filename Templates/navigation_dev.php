@@ -4,14 +4,29 @@
     <div class="pageContent">
         <div class="header styled">
             <div id="headerslider" class="inner">
-                <a href="https://downwithdestruction.net/"><img src="https://downwithdestruction.net/theme/img/BioHazard.png" class="pull-left" /></a>
+                <xen:comment>
+                    <div onload="startTimer()" id="headerslider" class="inner">
+                <!-- Slider with buttons -->
+                        <img id="img" src="https://downwithdestruction.net/img/mc/mc-category-icon.png">
+                        <button onclick="displayPreviousImage()">Previous</button>
+                        <button onclick="displayNextImage()">Next</button>
+                <!-- Standard Community Images -->
+                    <img alt="Minecraft Network" src="https://downwithdestruction.net/img/mc/mc-category-icon.png" />
+                    <img alt="Modded Minecraft" src="https://downwithdestruction.net/img/mc/modded-mc.png" />
+                    <img alt="GTA Online" src="https://downwithdestruction.net/img/gta/GTA-Online.jpg" />
+                    <img alt="League Of Legends" src="https://downwithdestruction.net/img/lol/league_of_legends.jpg" />
+                    <img alt="Call Of Duty" src="https://downwithdestruction.net/img/cod/cod_view.jpg" />
+                </xen:comment>
+                <span class="pull-left logoImage"></span>
                 <div class='SearchBarBox pull-right'>
                     <xen:if is="{$canSearch}"><xen:include template="search_bar" /></xen:if>
                 </div>
-                <div class='status pull-right'>
-                    <img src='https://downwithdestruction.net/theme/img/online.png' data-placement="left" title="Online" /> TeamSpeak: ts.dwdg.net<br />
-                    <img src='https://downwithdestruction.net/theme/img/semioffline.png' data-placement="left" title="Events is Offline" /> Minecraft: hub.dwdg.net<br />
-                </div>
+                <xen:comment> 
+                    <div class='status pull-right'>
+                        <span class="tsStatus" data-placement="left" title="Online" > TeamSpeak: ts.dwdg.net</span><br />
+                        <span class="mcStatus" data-placement="left" title="Events is Offline" > Minecraft: hub.dwdg.net</span><br />
+                    </div>
+                </xen:comment>
             </div>
             <div id="AddClassHereNav" class="nav">
                 <ul id="nav" class="visitorTabs">

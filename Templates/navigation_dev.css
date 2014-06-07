@@ -29,7 +29,6 @@
  
 .header .inner {
     height: 130px;
-    padding: 20px;
     position:relative;
 }
  
@@ -162,4 +161,56 @@
 .nav-subNavi:before, .nav-subNavi:after {
     content: " ";
     display: table;
+}
+#imgsheaderslider1 {
+    background: url('https://downwithdestruction.net/img/mc/mc-category-icon.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+#imgsheaderslider2 {
+    background: url('https://downwithdestruction.net/img/mc/modded-mc.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+#imgsheaderslider3 {
+    background: url('https://downwithdestruction.net/img/gta/GTA-Online.jpg');
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+#imgsheaderslider4 {
+    background: url('https://downwithdestruction.net/img/lol/league_of_legends.jpg');
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+#imgsheaderslider5 {
+    background: url('https://downwithdestruction.net/img/cod/cod_view.jpg');
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.logoImage {
+    background: url('https://downwithdestruction.net/theme/img/BioHazard.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+    height: 100%;
+}
+.tsStatus {
+    background: url('https://downwithdestruction.net/theme/img/online.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.mcStatus {
+    background: url('https://downwithdestruction.net/theme/img/semioffline.png');
+    background-repeat: no-repeat;
+    background-position: left center;
 }
