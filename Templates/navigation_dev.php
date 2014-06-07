@@ -3,7 +3,7 @@
 <div id="navigation" class="pageWidth {xen:if $canSearch, withSearch}">
     <div class="pageContent">
         <div class="header styled">
-            <div class="inner">
+            <div id="headerslider" class="inner">
                 <a href="https://downwithdestruction.net/"><img src="https://downwithdestruction.net/theme/img/BioHazard.png" class="pull-left" /></a>
                 <div class='SearchBarBox pull-right'>
                     <xen:if is="{$canSearch}"><xen:include template="search_bar" /></xen:if>
@@ -61,7 +61,7 @@
                         <li class="navi" data-nav-colour="9d46b2"><a href="{xen:link 'arcade'}" >Arcade</a></li>
                         <li class="navi" data-nav-colour="4d46b2"><a href="{xen:link 'gallery'}">Gallery</a></li>
                         <xen:if is="!{xen:helper ismemberof, $visitor, 16}">
-                            <!-- If not Founder Usergroup then show nothing -->
+                            <!-- If not Staff Only Usergroup then show nothing -->
                         <xen:else />
                             <li class="navi" data-nav-colour="2d46b2"><a href="{xen:link 'resources'}">Resources</a></li>
                         </xen:if>

@@ -138,6 +138,27 @@
                 });
             });
             </script>
+            <xen:comment>Header Slider</xen:comment>
+                <script type="text/javascript" language="javascript">
+                    window.onload = function () {
+                        var headerslider = document.getElementById("headerslider");
+                        var images = headerslider.getElementsByTagName("img");
+                        for (var i = 1; i < images.length; i++) {
+                            images[i].style.display = "none";
+                        }
+                        var counter = 1;
+                        setInterval(function () {
+                            for (var i = 0; i < images.length; i++) {
+                                images[i].style.display = "none";
+                            }
+                            images[counter].style.display = "block";
+                            counter++;
+                            if (counter == images.length) {
+                                counter = 0;
+                            }
+                        }, 1000);
+                    };
+                </script>
 <xen:comment>
             <!-- OLD FLOAT JS -->
             <script>
